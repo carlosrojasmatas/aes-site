@@ -1,0 +1,187 @@
+div.events-brief {
+	margin: 0 10px;
+}
+
+div#section-events {
+	background: white url(/images/calendar-banner.png) repeat-x 0 0 scroll;
+}
+
+div#event-title { /* 	-moz-border-radius: 10px 10px 10px 10px; */
+	/* 	background: -moz-linear-gradient(center top, #CC0000, #3D3D3D) repeat */
+	/* 		scroll 0 0 transparent; */
+	border-bottom: 1px solid #660000;
+	color: #660000;
+	height: 35px;
+	margin: 15px 10px;
+	overflow: hidden;
+	padding: 12px 15px 0;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+div#event-title {
+	
+}
+
+div#event-title span {
+	font-size: 20px;
+	float: left;
+}
+
+div#event-title select {
+	-moz-border-radius: 2px 2px 2px 2px;
+	background-color: #FDFDFD;
+	border-color: #D4D4D4 #E4E4E4 #E4E4E4 #D4D4D4;
+	border-right: 1px solid #E4E4E4;
+	border-style: solid;
+	border-width: 1px;
+	padding: 3px;
+	margin-left: 3px;
+}
+
+div#event-title h2 {
+	float: left;
+}
+
+div.events-brief dt dl {
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	opacity: 0.6;
+}
+
+div.events-brief dt {
+	background-color: #A6A6A6;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+div.events-brief dd span {
+	font-size: 12px;
+	margin-top: 3px;
+}
+
+div.events-brief span {
+	padding: 5px;
+}
+
+div#eventDetails {
+	padding: 15px;
+	font: Georgia, "Times New Roman", Times, serif;
+}
+
+.title-field {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+div#eventDetails h2 {
+	border-bottom: 1px solid #B8B8B8;
+	color: #4E4E4E;
+	letter-spacing: -1px;
+	padding-bottom: 10px;
+}
+
+div.event-detail{
+	height: 100px;
+}
+
+div#event-row {
+	margin: 15px;
+	border: 1px solid #E6E6E6;
+	background: none repeat scroll 0 0 #D9D9D9;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div#event-row span.title {
+	margin: 10px 20px;
+	position: absolute;
+	font-weight: bold;
+}
+
+div#event-row span.data {
+	margin: 10px 20px;
+	position: absolute;
+	font-size: 13px;
+}
+
+div#event-row dl dt {
+	float: left;
+	padding: 0px 0;
+	width: 180px;
+	font-weight: bold;
+}
+
+div#event-row dl dd {
+	padding: 0px 0 8px 80px;
+}
+
+div#event-row img {
+	float: right;
+	margin: 10px 20px;
+}
+
+div#event-row p {
+	padding: 20px 0 0;
+	font-size: 14px;
+	color: #595959;
+}
+
+div#event-row h3 {
+	border-bottom: 1px solid #636363;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 3px;
+	background-color: #CCCCCC;
+	margin: 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-ms-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+}
+
+div#event-row div.overdue-event {
+	color: #D1D1D1;
+}
+
+div.event-detail h3 {
+	color: white;
+	border: 1px solid #636363;
+	padding: 5px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: -moz-linear-gradient(top, #CC0000, #3D3D3D);
+	background: -webkit-gradient(linear, left top, left bottom, from(#CC0000),
+		to(#3D3D3D) );
+}
+
+div.event-detail img {
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #C7C7C7;
+}
+
+div.event-detail p {
+	color: #636363;
+	padding: 10px;
+}
+
+div#event-image {
+	position: absolute;
+	top: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	background: white;
+	border: solid 1px black;
+	width: auto;
+	height: auto;
+	z-index: 999;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-box-shadow: 0 0 20px black;
+	-ms-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+}

@@ -1,0 +1,112 @@
+
+
+body.login {
+	padding: 50px;
+}
+
+form.login {
+	border : 1px solid #E4E4E4;
+	width: 470px;
+	margin: 0 auto;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #FFF;
+	-moz-box-shadow: 0 0 20px #DDD;
+	-webkit-box-shadow: 0 0 20px #DDD;
+}
+
+form.login h2 {
+	padding: 8px 10px;
+	border-bottom: 1px solid #E8E8E8;
+	background-color: #F8F8F8;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	color: #F60;
+	font: 18px/22px Arial, sans-serif;
+}
+
+form.login dl {
+	padding: 20px;
+}
+
+form.login dl dt {
+	float: left;
+	width: 80px;
+	line-height: 22px;
+	padding: 9px 0;
+}
+
+form.login dl dt label {
+	font: bold 13px Arial;
+	color: #444;
+	text-shadow: 0 1px 0 #FFF;
+}
+
+form.login dl dt label.error {
+	color: #DD0000;
+}
+
+form.login dl dd {
+	line-height: 22px;
+	padding: 8px 0;
+	padding-left: 80px;
+}
+
+form.login dl dd input {
+	padding: 5px;
+	background: #FFF;
+	border: 1px solid #DDD;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+form.login dl dd input:focus {
+	border: 1px solid #CCC;
+	border-top: 1px solid #BBB;
+	border-left: 1px solid #BBB;
+}
+
+form.login dl dd input.text {
+	width: 300px;
+}
+
+form.login dl dd input.submit {
+	border: 1px solid #DDD;
+	background-color: #F2F2F2;
+	background: -moz-linear-gradient(top, #FFF, #EEE);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+	cursor: pointer;
+	text-shadow: 0 1px 0 #FFF;
+}
+
+form.login dl dd input.submit:hover {
+	border: 1px solid #CCC;
+}
+
+form.login dl dd input.submit:focus {
+	background: -moz-linear-gradient(top, #EEE, #FFF);
+	background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+}
+
+form.login p.fail {
+	background-color: #FFF4C2;
+	border-bottom: 1px solid #FFCC34;
+	border-top: 1px solid #FFCC34;
+	padding: 10px;
+	margin-top: -1px;
+	font: normal 14px Arial;
+}
+
+form.login dl dd p.error {
+	color: #DD0000;
+	font-size: 12px;
+	line-height: 20px;
+}

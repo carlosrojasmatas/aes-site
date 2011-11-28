@@ -1,0 +1,37 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Advert
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          advert
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        title: { label: T&iacute;tulo}
+        description: { label: Descripci&oacute;n}
+        start_date: { label: Fecha de Comienzo}
+        end_date: { label: Fecha de Fin}
+        start_time: { label: Hora de Comienzo}
+        end_time: { label: Hora de Fin}
+        place: { label: Lugar}
+        type: { label: Tipo}
+      list:    
+        title: Administraci&oacute;n de Noticias y Eventos
+        display: [=title,=description,=start_date,=end_date]
+        sort: [start_date]
+        max_per_page: 20
+        batch_actions: {}
+      filter:
+        display: [title, description, start_date, end_date, place]
+      form:    ~
+      edit:
+        title: Edici&oacute; de Noticias y Eventos
+      new:
+        title: Agregar Noticias y Eventos

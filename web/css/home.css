@@ -1,0 +1,305 @@
+div#section-home {
+	background: white url(../images/home-banner.png) repeat-x 0 0 scroll;
+}
+
+body {
+	font-family: arial
+}
+
+.clear {
+	clear: both
+}
+
+#gallery {
+	position: relative;
+	height: 265px;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+#gallery a {
+	float: left;
+	position: absolute;
+}
+
+#gallery a img {
+	border: none;
+	width: 820px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+#gallery a.show {
+	z-index: 500
+}
+
+#gallery .caption {
+	z-index: 600;
+	background-color: #000;
+	color: #ffffff;
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+#gallery .caption .content {
+	margin: 5px
+}
+
+#gallery .caption .content h3 {
+	margin: 0;
+	padding: 0;
+	color: #1DCCEF;
+}
+
+div.content-box {
+/* 	border: 1px solid #990000; */
+	float: left;
+	height: 250px;
+	margin: 48px 7px 0 0;
+	position: relative;
+	width: 382px;
+	padding: 10px;
+}
+
+div.content-box-header {
+	border-bottom: 1px dotted #990000;
+}
+
+div.content-box-list {
+	padding: 5px;
+	color:#3D3D3D;
+}
+
+div.content-box-row {
+	padding: 10px 0;
+	text-decoration: none;
+}
+
+div.content-box-row a:hover {
+	color:black;
+}
+
+div.content-box-row span.date {
+	margin-right: 5px;
+}
+
+div.content-box-header a{
+	color:#990000;
+	font-family: verdana,arial;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+div.content-box-header a:hover{
+	color:black;
+}
+
+div.content-box-footer {
+	border-top: 1px dotted #990000;
+}
+
+div.boxes {
+	margin: auto;
+}
+
+div.content-box.news {
+	background: url("/images/home/news.jpg");
+}
+
+div.content-box.photos {
+	background: url("/images/home/photography.jpg");
+}
+
+div.content-box.events {
+	background: url("/images/home/calendar.jpg");
+}
+
+div.content-box.dojos {
+	background: url("/images/home/dojo.png");
+}
+
+div.transbox {
+	position: absolute;
+	background: url("../images/transparent-bg.png") repeat scroll 0 0
+		transparent;
+	position: absolute;
+	overflow: hidden;
+}
+
+div.transbox.bottom {
+	width: 100%;
+	height: 40%;
+	bottom: 0;
+}
+
+div.transbox.left {
+	width: 40%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+div.transbox.rigth {
+	width: 45%;
+	height: 100%;
+	right: 0;
+	bottom: 0;
+}
+
+div.transbox.top {
+	width: 100%;
+	height: 40%;
+}
+
+div.transbox.rigth p {
+	text-align: right;
+}
+
+div.transbox.bottom p {
+	text-align: justify;
+}
+
+div.transbox.top p {
+	text-align: justify;
+}
+
+div.transbox.left p {
+	text-align: left;
+}
+
+div.transbox p {
+	font-weight: bold;
+	font-family: serif;
+	font-size: 12px;
+	padding: 10px;
+	margin: 0px;
+	opacity: 1;
+	color: #ffffff;
+}
+
+div.transbox a {
+	float: right;
+	text-decoration: none;
+	margin: 3px;
+	color: #CC0000;
+	font-weight: bold;
+}
+
+#featured {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 3px solid #A30000;
+	height: 310px;
+	padding-right: 250px;
+	position: relative;
+	width: 68%;
+}
+
+#featured ul.ui-tabs-nav {
+	left: 400px;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 406px;
+}
+
+#featured ul.ui-tabs-nav li {
+	color: #666666;
+	font-size: 12px;
+	padding: 1px 0 1px 13px;
+}
+
+#featured ul.ui-tabs-nav li span {
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+#featured .ui-tabs-panel {
+	background: repeat scroll 0 0 url("/images/news-back.png");
+	height: 310px;
+	overflow: hidden;
+	position: relative;
+	width: 400px;
+}
+
+#featured .ui-tabs-hide {
+	display: none;
+}
+
+#featured li.ui-tabs-nav-item a {
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #333333;
+	display: block;
+	outline: none; height : 60px;
+	line-height: 20px;
+	height: 60px;
+}
+
+#featured li.ui-tabs-nav-item a:hover {
+	background: none repeat scroll 0 0 #F2F2F2;
+}
+
+#featured li.ui-tabs-selected {
+	background: url("/images/selected-item.png") no-repeat scroll left top
+		transparent;
+	
+}
+
+#featured ul.ui-tabs-nav li.ui-tabs-selected a {
+	background: repeat scroll 0 0 url("/images/news-back.png");
+	margin: 0 0 0 2px;
+	color:white;
+}
+
+#featured ul.ui-tabs-nav li img {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #EEEEEE;
+	float: left;
+	margin: 2px 5px;
+	padding: 2px;
+}
+
+#featured .ui-tabs-panel .info {
+	background: url("/images/transparent-bg.png") repeat scroll 0 0
+		transparent;
+	height: 90px;
+	left: 0;
+	position: absolute;
+	width:100%;
+	top: 220px;
+}
+
+#featured .info h2 {
+	color: #FFFFFF;
+	font-family: Georgia, serif;
+	font-size: 18px;
+	margin: 0;
+	overflow: hidden;
+	padding: 5px;
+}
+
+#featured .info p {
+	color: #F0F0F0;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 15px;
+	margin: 0 5px;
+}
+
+#featured .info a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#featured .info a:hover {
+	text-decoration: underline;
+}

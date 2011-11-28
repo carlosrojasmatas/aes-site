@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+div#logo {
+  background: url("../images/new_logo.png") no-repeat scroll 0 0 transparent;
+  clear: left;
+  float: left;
+  height: 120px;
+  margin: 5px 0 10px 20px;
+  width: 100%;
+  border-bottom: 1px solid #BABABA;
+  padding-bottom: 20px;
+}
+
+#head{
+	margin-bottom: 20px;
+	float: left;
+	width: 100%
+}
+	
+
+#head ul {
+	padding: 7px 0;
+	list-style-type: none;
+}
+
+#head ul li {
+	float: left;
+	padding-left: 5px;
+}
+
+#head ul li a {
+/* 	display: block; */
+/* 	padding: 5px; */
+/* 	text-decoration: none; */
+/* 	color: #000000; */
+/* 	-moz-border-radius: 3px; */
+/* 	-webkit-border-radius: 3px; */
+/* 	text-shadow: 0 1px 0 #000; */
+/* 	font: bold 13px Arial; */
+	
+	border: medium none;
+	text-align:center;
+color: #000000;
+background-color:#BABABA;
+cursor: pointer;
+float: left;
+font-family: helvetica,arial,sans-serif;
+font-size: 14px;
+outline: 0 none;
+padding: 20px;
+position: relative;
+text-decoration: none;
+width: 120px;;
+z-index: 3;
+}
+
+
+#head ul li a.out {
+	color: blue;
+	font-weight: bolder;
+}
+
+#head ul li a:hover,
+#head ul li.active a {
+	background-color: #2a2a2a;
+	color: #EEE;
+}
+.break {
+	clear: both;
+}

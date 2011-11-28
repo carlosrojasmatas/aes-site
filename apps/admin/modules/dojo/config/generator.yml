@@ -1,0 +1,39 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Dojo
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dojo
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: { label: Nombre}
+        province: { label: Provincia}
+        city: { label: Ciudad}
+        address: { label: Direcci&oacute;n}
+        status: { label: Estado}
+        email: { label: Email}
+        phone: { label: Telefono}
+        sensei: { label: Sensei}
+      list:    
+        title: Administraci&oacute;n de Dojos
+        display: [=name,=city,=status,=sensei]
+        sort: [name]
+        max_per_page: 20
+        batch_actions: {}
+      filter:
+        display: [name, province, city, province, sensei, status]
+      form:
+        display: [name, province, city, address, status, email, phone, sensei, photo]
+      edit:
+        title: Edici&oacute;n de Dojos
+        display: [name, province, city, address, status, email, phone, sensei, photo]
+      new:
+        title: Agregar Dojo

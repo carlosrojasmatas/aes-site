@@ -1,0 +1,186 @@
+form.news-form dl dd {
+	line-height: 22px;
+	padding: 8px 0 8px 80px;
+}
+
+form.news-form dl dt {
+	float: left;
+	line-height: 22px;
+	padding: 9px 0;
+	width: 80px;
+}
+
+form.news-form dl dd {
+	line-height: 22px;
+	padding: 8px 0 8px 80px;
+}
+
+form.news-form dl dd input.text {
+	width: 300px;
+}
+
+form.news-form dl dt label {
+	color: #444444;
+	font: bold 13px Arial;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+input.button {
+	-moz-border-radius: 3px 3px 3px 3px;
+	background: -moz-linear-gradient(center top, #7A7A7A, #B8B8B8) repeat
+		scroll 0 0 transparent;
+	border: 1px solid #000000;
+	float: right;
+	margin: 5px 5px;
+	color: #000000;
+	cursor: pointer;
+	font: bold 11px Arial;
+	padding: 4px 3px;
+	text-shadow: 0 1px 0 #444444;
+	text-transform: uppercase;
+}
+
+div#section-news {
+	background: white url(/images/news-banner.png) repeat-x 0 0 scroll;
+}
+
+div.news-list {
+	padding: 15px 0;
+	margin: 15px 0;
+}
+
+div.news-list div.news-row {
+	padding: 12px;
+	height: 110px;
+	border-top: 1px dotted #990000;
+	border-left: 10px solid #990000;
+}
+
+div.news-list div.news-row p{
+	font-size: 12px
+}
+
+div.news-list div.news-footer {
+	border-top: 1px dotted #990000;
+}
+
+div.news-list div.news-row div.news-title {
+	margin:5px 4px 8px 4px;
+}
+
+div.news-list div.news-row div.news-title a{
+	outline: none;
+}
+
+div.news-list div.news-row img {
+	outline: none;
+	float: left;
+	margin: 0px 7px 0px 0px;
+}
+
+
+/*advert list styles*/
+#slideshow {
+	background: none repeat scroll 0 0;
+	height: 820px;
+	border: 0.5px solid #D1D1D1;
+	margin: auto;
+	position: relative;
+	width: 97%;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-box-shadow: 7px 0 27px black;
+	-ms-box-shadow: 7px 0 27px black;
+	-webkit-box-shadow: 7px 0 27px black;
+}
+
+#slideshow #slidesContainer {
+	margin: 0 auto;
+	padding: 20px;
+	width: auto;
+	height: 768px;
+	/*   over	flow:auto; allow scrollbar */
+	position: relative;
+}
+
+#slideshow #slidesContainer .slide {
+	margin: 0 auto;
+	width: 620px; /* reduce by 20 pixels to avoid horizontal scroll */
+	height: 768px;
+}
+
+/**
+ * Slideshow controls style rules.
+ */
+.control {
+	display: block;
+	width: 39px;
+	height: 768px;
+	text-indent: -10000px;
+	position: absolute;
+	cursor: pointer;
+}
+
+#leftControl {
+	top: 100px;
+	left: 0;
+	background: transparent url(/images/slide/control_left.png) no-repeat 0
+		0;
+}
+
+#rightControl {
+	top: 100px;
+	right: 0;
+	background: transparent url(/images/slide/control_right.png) no-repeat 0
+		0;
+}
+
+.slide p {
+	font-family: Georgia, Times, serif;
+	line-height: 1.5;
+	text-align: justify;
+	margin: 20px 10px;
+}
+
+.slide h2 {
+	font: 24px Georgia, Times, serif;
+	color: #4E4E4E;
+	padding-bottom: 5px;
+	letter-spacing: -1px;
+	border-bottom: solid 1px;
+	font-weight: bold;
+}
+
+.slide img {
+	float: right;
+	margin: 0 0 10px 15px;
+	border: none;
+}
+
+div.buttonBar {
+	margin: 5px;
+	border: 1px solid #cccccc;
+	padding: 5px;
+	height: 20px;
+	width: 300px;
+	position: absolute;
+	bottom: 0;
+}
+
+div#advert-image {
+	position: absolute;
+	top: 20%;
+	padding: 10px;
+	background: white;
+	border: solid 1px black;
+	width: auto;
+	height: auto;
+	z-index: 999;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-box-shadow: 0 0 20px black;
+	-ms-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+}

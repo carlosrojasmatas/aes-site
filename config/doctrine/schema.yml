@@ -1,0 +1,82 @@
+## User base model ##
+User:
+  options:
+  actAs: [Timestampable]
+  columns:
+    id:                     { type: integer, primary: true, autoincrement: true }
+    guard_id:               { type: integer, notnull: true}
+
+Resource:
+  actAs: [Timestampable]
+  columns:
+    id:               { type: integer, primary: true, autoincrement: true }
+    name:             { type: string, notnull: true}
+    description:      { type: string, notnull: true}
+    status:           { type: enum, length: 11, values: ['enabled', 'disabled'],  notnull: true}
+    parent_id:        { type: integer, notnull: true}
+    extension:        { type: string, notnull: true  }
+    size:             { type: long, notnull: true  }
+    path:             { type: string, notnull: true  }
+    icon_path:        { type: string}
+    thumbnail_path:   { type: string}
+
+AlbumResource:
+  inheritance:
+    extends: Resource
+    type: column_aggregation
+    keyField: type
+    keyValue: 'image'
+  columns: 
+    sender:  { type: string, notnull: true};
+    city:    { type: string, notnull: true};
+    type:    { type: enum, length: 11, values: ['image', 'video'],  notnull: true} 
+  relations:
+    Parent:
+      class: Album
+      local: parent_id
+      foreign: id
+      type: one
+
+Advert:
+  actAs: [Timestampable]
+  columns:
+    id:             { type: integer, primary: true, autoincrement: true }
+    title:          { type: string, notnull: true }
+    description:    { type: string, notnull: true }
+    start_date:     { type: date, notnull: false }
+    end_date:     	{ type: date, notnull: false }
+    start_time:     { type: string, notnull: false }
+    end_time:       { type: string, notnull: false }
+    place:      	{ type: string, notnull: false }
+    type:      		{ type: enum, length: 11, values: ['advert', 'event'],  notnull: true}
+    main_image_path:     { type: string, notnull: true }
+    image_name:     { type: string, notnull: true }
+    resized_image_path:  { type: string, notnull: true }
+    icon_image_path:  { type: string, notnull: true }
+      
+Dojo:
+  actAs: [Timestampable]
+  columns:
+    id:        { type: integer, primary: true, autoincrement: true }
+    name:      { type: string, notnull: true }
+    province:  { type: string, notnull: true }
+    city:      { type: string, notnull: true }
+    address:   { type: string, notnull: true }
+    status:    { type: enum, length: 11, values: ['enabled', 'disabled'],  notnull: true}
+    email:   { type: string, notnull: true }
+    phone:     { type: string, notnull: true }
+    sensei:    { type: string, notnull: true }
+    photo:     { type: string, notnull: true }
+    
+Album:
+  actAs: [Timestampable]
+  columns:
+    id:        { type: integer, primary: true, autoincrement: true }
+    name:      { type: string, notnull: true }
+    type:      { type: enum, length: 11, values: ['public', 'private'],  notnull: true}
+  relations:
+    Resources:
+      class: Resource
+      local: id
+      foreign: parent_id
+      type: many

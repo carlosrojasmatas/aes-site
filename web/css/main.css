@@ -1,0 +1,509 @@
+* {
+	font-family: arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #990000;;
+	font-weight: bold;
+}
+a:hover {
+	color: black;
+}
+
+
+div.line {
+	border-top: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+	clear: both;
+	display: block;
+	margin: auto;
+	width: 800px;
+}
+
+#header {
+	background: transparent url(../images/new_logo.png) no-repeat;
+	height: 130px;
+	width: 100%;
+	float: left;
+	clear: left;
+	margin: 5px 0 10px 20px;
+}
+
+#pageWrap {
+	background: transparent url(../images/back.png) repeat-y;
+	background-color: #ffffff;
+	margin: auto;
+	overflow: visible;
+	width: 1024px;
+}
+
+#pageBody {
+	padding: 0 0 20px;
+	margin: 110px auto;
+	width: 100%;
+}
+
+div#mainMenu {
+	margin: 20px auto;
+	width: 80%;
+}
+
+div.hoverBtn {
+	position: relative;
+	float: left;
+	background: black url(../images/nav.png) repeat-x 0 0 scroll;
+}
+
+div.hoverBtn a {
+	position: relative;
+	z-index: 2;
+	display: block;
+	width: 136px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.1em;
+	text-decoration: none;
+	color: #000;
+	background: transparent none repeat-x 0 0 scroll;
+}
+
+div.hoverBtn div {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	background: white url(../images/navHover.png) repeat-x 0 0 scroll;
+}
+
+div#mainContent {
+	border-style: none;
+	border-color: #cccccc;
+	border-width: 1px;
+	margin: auto;
+	width: 80%;
+	height: 800px;
+	/* 	-moz-border-radius: 15px; */
+	/* 	-ms-border-radius: 15px; */
+	/* 	-webkit-border-radius: 15px; */
+	/* 	-moz-box-shadow: 0 0 20px black; */
+	/* 	-ms-box-shadow: 0 0 20px black; */
+	/* 	-webkit-box-shadow: 0 0 20px black; */
+}
+
+div.section-header {
+	height: 200px;
+	width: 820;
+	margin: 0 0 10px 0;
+	margin-top: 15px;
+	-moz-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+	box-shadow: 0 0 20px black;
+	-moz-border-radius: 18px;
+	-ms-border-radius: 18px;
+	-webkit-border-radius: 18px;
+}
+
+div.imgWithText {
+	border: 1px solid #CCCCCC;
+	float: left;
+	margin: 15px;
+	padding: 12px;
+}
+
+div.text {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #3D3D3D;
+	height: 100%;
+	background: url(../images/home/tiger.jpg) no-repeat center;
+}
+
+div.text span {
+	color: #990000;
+	width: 750px;
+	padding-bottom: 10px;
+	display: block;
+	margin: 15px;
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: 1px solid #B8B8B8;
+}
+
+div#footer {
+	vertical-align: middle;
+	height: 140px;
+	padding-right: 10px;
+	margin: 15px 0 0 0;
+}
+
+div#footer span {
+	color: #666666;
+	font-size: 10px;
+	font-style: oblique;
+}
+
+div#footer div.link-to-pages {
+	display: inline;
+	margin-left: 40px;
+}
+
+div#footer div.link-to-pages a{
+	border: none;
+	color: white;
+}
+
+div#footer div.link-to-pages img{
+}
+
+
+div#footer img {
+	margin: 0 0 0 70px;
+	vertical-align: middle;
+}
+
+div.text p {
+	padding-top: 10px;
+	text-align: justify;
+	margin: 20px 0;
+	line-height: 110%;
+}
+
+.clear {
+	clear: both;
+}
+
+html,body {
+	height: 100%;
+	margin-bottom: 1px;
+}
+
+.clearfix {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	border-bottom: black 1px solid;
+	clear: both;
+	height: 0;
+}
+
+#container {
+	margin: 20px auto;
+	width: 91%;
+}
+
+ul,li {
+	margin: 0;
+	padding: 0;
+}
+
+#blob {
+	background: #0b2b61;
+	border-right: 1px solid #0059ec;
+	border-left: 1px solid #0059ec;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	background: -moz-linear-gradient(top, #3D3D3D, #CC0000);
+	background: -webkit-gradient(linear, left top, left bottom, from(#3D3D3D),
+		to(#CC0000) );
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-box-shadow: 2px 3px 10px #011331;
+	-webkit-box-shadow: 2px 3px 10px #011331;
+}
+
+#nav {
+	position: relative;
+	background: #292929;
+	float: left;
+}
+
+#nav li {
+	float: left;
+	list-style: none;
+	border-right: 1px solid #4a4a4a;
+	border-left: 1px solid black;
+}
+
+#nav li a {
+	color: #e3e3e3;
+	outline: 0;
+	z-index: 3;
+	position: relative;
+	cursor: pointer;
+	float: left;
+	font-size: 14px;
+	font-family: helvetica, arial, sans-serif;
+	text-decoration: none;
+	padding: 20px 29px;
+	width: 100%;
+	border: none;
+	font-weight: normal;	
+}
+
+#nav li a:HOVER {
+	font-weight: normal;
+}
+
+#nav li a:active {
+	border: 0px;
+}
+
+#new-form {
+	position: absolute;
+	top: 50%;
+	padding: 20px;
+	background: white;
+	border: solid 1px black;
+	width: auto;
+	margin: auto;
+	height: auto;
+	z-index: 999;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-box-shadow: 0 0 20px black;
+	-ms-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+}
+
+#new-form input[type=text] {
+	width: 228px;
+}
+
+#new-form form p.success {
+  background-color: #FFF4C2;
+  border-bottom: 1px solid #FFCC34;
+  border-top: 1px solid #FFCC34;
+  font: 14px Arial;
+  margin-top: -1px;
+  padding: 10px;
+}
+
+#new-form dl dd.tiny-content {
+	width: 800px;
+}
+
+
+div#popup-overlay {
+	background-color: rgba(0, 0, 0, 0.3);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	opacity: 1;
+}
+
+a.adminLink {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #BFBFBF;
+	padding: 4px;
+	border: 1px solid #828282;
+}
+
+a.adminLink:hover {
+	color: white;
+	font-weight: bolder;
+}
+
+div.paginator {
+	margin-left: 10px;
+	position: relative;
+	top: 10px;
+	bottom: 0;
+}
+
+div.paginator a {
+	outline: 0;
+}
+
+div.paginator-number {
+	padding: 5px 5px 5px 5px;
+	float: left;
+	width: 10px;
+	margin-left: 3px;
+	margin-top: 5px;
+	font-size: 14px
+}
+
+div.paginator-number a {
+	color:#990000;
+	text-decoration: none;
+}
+
+div.paginator-number a:HOVER {
+	color:black;
+	text-shadow: red;
+}
+
+/*Form errors*/
+div#new-form form dl dt {
+	float: left;
+	width: 160px;
+	padding: 5px 0;
+	line-height: 22px;
+	position: relative;
+}
+
+div#new-form form dl.details {
+	
+}
+
+div#new-form form dl.details dd p {
+	display: inline;
+	padding: 5px;
+	border: 1px dashed #DDD;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #FAFAFA;
+	font-size: 13px;
+	font-weight: bold;
+	color: #555;
+}
+
+div#new-form form dl dt span.required {
+	color: #DD0000;
+	font: 20px/12px Arial, sans-serif;
+	position: absolute;
+	right: 11px;
+	top: 14px;
+}
+
+div#new-form form dl dt label {
+	font-weight: bold;
+	color: #666;
+}
+
+div#new-form form dl dt label.error {
+	color: #DD0000;
+}
+
+div#new-form form dl dd {
+	min-height: 22px;
+	line-height: 22px;
+	padding: 5px 10px;
+	padding-left: 100px;
+}
+
+div#new-form form dl dd.only {
+	padding: 0;
+	border-bottom: 1px solid #DDD;
+	margin: -10px 0 20px;
+}
+
+div#new-form form dl dd.only p {
+	font: bold 12px Arial, sans-serif;
+	padding: 5px 5px 5px 0;
+	background-color: #FFF;
+	display: inline-block;
+	position: relative;
+	top: 12px;
+	color: #F60;
+}
+
+div#new-form form dl dd input,div#new-form form dl dd select,div#new-form form dl dd textarea
+	{
+	padding: 3px;
+}
+
+div#new-form form dl dd input.text,div#new-form form dl dd select,div#new-form form dl dd textarea
+	{
+	border: 1px solid #E4E4E4;
+	border-top: 1px solid #D4D4D4;
+	border-left: 1px solid #D4D4D4;
+	background-color: #FDFDFD;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+div#new-form form dl dd input.text:focus,div#new-form form dl dd select:focus,div#new-form form dl dd textarea:focus
+	{
+	border: 1px solid #DDD;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+
+div#new-form form dl dd select {
+	padding: 3px 1px;
+	width: 240px;
+}
+
+div#new-form form dl dd select option {
+	padding: 0 2px;
+}
+
+div#new-form form dl dd textarea {
+	width: 350px;
+	height: 50px;
+	font: 12px Arial, sans-serif;
+	resize: none;
+}
+
+div#new-form form dl dd input.medium {
+	width: 200px;
+}
+
+div#new-form form dl dd select.medium {
+	width: 210px;
+}
+
+div#new-form form dl dd input.small {
+	width: 50px;
+}
+
+div#new-form form dl dd input.large {
+	width: 350px;
+}
+
+div#new-form form dl{
+	width: 450px;
+}
+
+div#new-form form dl dd input.error {
+	background-color: #FEF6F8;
+	border: 1px solid #E897AF;
+	border-right: 1px solid #F6D5DE;
+	border-bottom: 1px solid #F6D5DE;
+}
+
+div#new-form form dl dd p.note {
+	color: #888;
+	font-size: 12px;
+	line-height: 0px;
+	font-style: italic;
+	margin-left:20px;
+}
+
+div#new-form form dl dd p.note.error {
+	color: #DD0000;
+	font-style: normal;
+}
+
+a.back-button p {
+	float:left;
+	margin: 0;	
+}
+a.back-button img {
+	float:left;
+position: relative;
+bottom: 15px;
+}
+
+a.close-button{
+	outline: 0;
+}
+
+
+
+

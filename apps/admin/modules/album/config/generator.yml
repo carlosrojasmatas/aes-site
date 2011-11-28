@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Album
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          album
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: { label: Nombre}
+        province: { label: Provincia}
+        created_at: { label: Creado el}
+      list:    
+        title: Administraci&oacute;n de Albums
+        display: [=name, =created_at]
+        sort: [name]
+        max_per_page: 20
+        batch_actions: {}
+      filter:
+        display: [name]
+      form:
+        display: [name]
+      edit:
+        title: Edici&oacute;n de Album
+        display: [name]
+      new:
+        title: Agregar Album

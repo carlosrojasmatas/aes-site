@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           AlbumResource
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          album_resource
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: { label: Nombre}
+        description: { label: Descripci&oacute;n}
+        city: { label: Ciudad}
+        sender: { label: Enviado Por}
+        size: { label: Tama&ntilde;o}
+        created_at: { label: Creado}
+      list:    
+        title: Administraci&oacute;n de Fotos
+        display: [=name,description, =sender, =city, size,created_at  ]
+        sort: [name]
+        max_per_page: 20
+        batch_actions: {}
+      filter:
+        display: [name]
+      form:
+        display: [name,description,sender,city, path]
+      edit:
+        title: Edici&oacute;n de Fotos
+      new:
+        title: Agregar Album

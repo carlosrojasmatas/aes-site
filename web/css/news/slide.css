@@ -1,0 +1,79 @@
+#slideshow {
+  background: none repeat scroll 0 0;
+  height: 768px;
+  margin: auto;
+  position: relative;
+  width: 97%;
+}
+
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:620px;
+  height:768px;
+/*   over	flow:auto; allow scrollbar */
+  position:relative;
+ 
+}
+
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:620px; /* reduce by 20 pixels to avoid horizontal scroll */
+  height:768px;
+ 
+}
+
+
+/**
+ * Slideshow controls style rules.
+ */
+.control {
+  display:block;
+  width:39px;
+  height:768px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl {
+  top:100px;
+  left:0;
+  background:transparent url(/images/slide/control_left.png) no-repeat 0 0;
+}
+#rightControl {
+  top:100px;
+  right:0;
+  background:transparent url(/images/slide/control_right.png) no-repeat 0 0;
+}
+
+.slide p {
+  font-family: Georgia, Times, serif;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 20px 10px;
+}
+.slide h2 {
+  font: 24px Georgia, Times, serif;
+  color:#4E4E4E;
+  padding-bottom: 5px;
+  letter-spacing:-1px;
+  border-bottom: solid 1px;
+  font-weight: bold;
+}
+.slide img {
+  float:right;
+  margin:0 0 10px 15px;
+  border-color: #4E4E4E;
+  
+}
+
+div.buttonBar{
+	margin: 5px;
+	border: 1px solid #cccccc;
+	padding: 5px;
+	height: 20px;
+	width: 300px;
+	position: absolute;
+	bottom: 0;
+	
+}
+

@@ -1,0 +1,36 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  resource_upload: %SF_UPLOAD_DIR%/resources/
+  sfImageTransformPlugin:
+    default_adapter: GD # GD or ImageMagick
+    default_image:
+      mime_type: image/png
+      filename: Untitled.png
+      width: 100
+      height: 100
+      color: '#FFFFFF'
+    font_dir: /usr/share/fonts/truetype/msttcorefonts
+    mime_type:
+      auto_detect: true
+      library: gd_mime_type
+  sf_captchagd:
+        image_width:                300 # image width in pixels
+        image_height:               90 # image height in pixels
+        chars:                      "123456789" # possible chars in captcha
+        length:                     6 # length of captcha
+        font_size:                  18 # font size
+        force_new_captcha:          true # if true - captcha regenerated EVERY request, even if user input true value before
+
+        # possible chars colors
+        font_color:                 ["252525", "8b8787", "550707", "3526E6", "88531E"]
+
+        # chars fonts
+        fonts:                      ["akbar/akbar.ttf", "brushcut/BRUSHCUT.TTF", "molten/molten.ttf", "planet_benson/Planetbe.ttf", "whoobub/WHOOBUB_.TTF"] 
+        background_color:           DDDDDD # image background color
+        border_color:               000000 # image border color
+  
+dev:
+  admin_url: /admin_dev.php 
