@@ -1,3 +1,14 @@
+
+
+div#calendarContainer{
+	background: url("/images/home/tiger.jpg") no-repeat scroll center center transparent;
+	height: 100%;
+	width: auto;
+	
+}
+
+
+/*Deprecated --> old style --> DELETE!*/
 div.events-brief {
 	margin: 0 10px;
 }
