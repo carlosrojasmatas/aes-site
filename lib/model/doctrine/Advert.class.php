@@ -110,7 +110,7 @@ class Advert extends BaseAdvert
 		$resource = Resource::createNew($this, $resource);
 		$this->save();
 	}
-
+	
 	public static function getEventPager($month=false){
 		if($month){
 		  $q= Doctrine_Query::create()

@@ -9,8 +9,8 @@ $(function() {
 		labelHeight : 25,
 		navLinks: {
 			enableToday: true,
-			enableNextYear: true,
-			enablePrevYear: true,
+			enableNextYear: false,
+			enablePrevYear: false,
 			p:'&lsaquo; Ant', 
 			n:'Sig &rsaquo;', 
 			t:'Hoy'
@@ -25,16 +25,51 @@ $(function() {
 		},
 		onDayLinkClick: function(dateIn) { 
         },
+        onEventLinkClick: function(event) {
+			return false; 
+		},
         onMonthChanging: function(dateIn) {
-        	alert(dateIn.getMonth());
-			//this could be an Ajax call to the backend to get this months events
-			//var events = [ 	{ "EventID": 7, "StartDate": new Date(2012, 1, 1), "Title": "10:00 pm - EventTitle1", "URL": "#", "Description": "This is a sample event description", "CssClass": "Birthday" },
-			//				{ "EventID": 8, "StartDate": new Date(2012, 1, 2), "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This //is a sample event description", "CssClass": "Meeting" }
-//			];
-//			$.jMonthCalendar.ReplaceEventCollection(events);
-			return true;
+        	var year= dateIn.getFullYear();
+        	var date= new Date();
+        	var currYear= date.getFullYear();
+        	if(year != currYear){
+        		alert("Solo es posible acceder a eventos del año en curso.");
+        	}
+			return false;
 		}
 	};
-	$.jMonthCalendar.Initialize(options, null);
+	var date= new Date();
+	loadsEventsForCurrentYear(options);
 
 });
+
+function loadsEventsForCurrentYear(options){
+		var date = new Date();
+		var year= date.getFullYear();
+		$.getJSON("../events/fetchEvents2/?year=" + year,
+			function(data) {
+					$.jMonthCalendar.Initialize(options,data);
+					
+					for(ev in data){
+						var id= data[ev].EventID;
+						var selector= "#Event_"+ id;
+						$(selector).qtip({
+							content: "<h4>" + data[ev].Title + "</h4> <br>" + data[ev].Description,
+							show: {
+								delay:1000,
+							},
+							style: { 
+								name: 'red', // Inherit from preset style
+								tip: 'leftTop',
+								border: {
+							         width: 3,
+							         radius: 8,
+							         color: '#990000'
+							      },
+							    width: 400
+							}
+						});
+					}
+			});
+		
+}

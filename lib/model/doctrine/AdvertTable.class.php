@@ -46,4 +46,13 @@ class AdvertTable extends Doctrine_Table
 	}
 	
 	
+	public function getEvents($year){
+		 $q= Doctrine_Query::create()
+			->addFrom("Advert a")
+			->addWhere("type= :type",array("type"=>"event"))
+			->addWhere("year(start_date) = :year",array("year"=>$year))
+			->addOrderBy("start_date desc");
+		return $q->execute(null,Doctrine::HYDRATE_ARRAY);		
+	}
+	
 }

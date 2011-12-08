@@ -33,6 +33,10 @@ class eventsActions extends sfActions
 		$this->forward("events", "index");
 	}
 
+	
+	/**
+	 * @deprecated
+	 */
 	public function executeFetchEvents(sfWebRequest $request){
 		$month= $request->getParameter("month");
 		if($month == 0){
@@ -43,6 +47,33 @@ class eventsActions extends sfActions
 		$pager->setPage($request->getParameter('page', 1));
 		$pager->init();
 		return $this->renderPartial("eventList",array("pager"=>$pager));
+	}
+	
+	public function executeFetchEvents2(sfWebRequest $request){
+		$year= $request->getParameter("year");
+		$this->content=$this->buildEventWrappers(Advert::getRepository()->getEvents($year));
+		$this->setTemplate("json");
+	}
+	
+	
+	private function buildEventWrappers($eventModel){
+		$events= array();
+		
+		foreach ($eventModel as $eventKey => $event){
+			$start= $event["start_date"];
+			$end= $event["end_date"];
+			$days = abs(strtotime($end) - strtotime($start)) / (60*60*24);
+			sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url', 'Asset', 'Tag'));
+			for($i=0;$i<=$days;$i++){
+				$eventHolder["EventID"]= $i."-".$event["id"];
+				$eventHolder["StartDateTime"]= date("Y-m-d"	, strtotime( "+".$i." days",strtotime($start)));
+				$eventHolder["Title"]= $event["title"];
+				$eventHolder["URL"]= url_for("news/showDetails")."?id=".$event["id"];
+				$eventHolder["Description"]= $event["description"];
+				$events[]=$eventHolder;
+			}
+		}
+		return $events;
 	}
 
 

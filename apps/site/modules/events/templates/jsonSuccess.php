@@ -1,1 +1,1 @@
-<?php echo json_encode($events)?>
+<?php echo json_encode($content)?>
