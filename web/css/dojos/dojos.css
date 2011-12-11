@@ -1,6 +1,7 @@
 div#section-dojos {
 	background: white url(/images/dojos-banner.png) repeat-x 0 0 scroll;
 }
+
 div.list-dojo-header {
 	padding: 3px;
 	margin: 10px;
@@ -18,17 +19,15 @@ div.list-dojo-header h2 {
 }
 
 div.list-dojo {
-  color: #666666;
-  float: left;
-  font-family: Arial,Helvetica,sans-serif;
-  margin: 0 10px 10px 0;
-  padding: 1px;
-  width: 40%;
+	color: #666666;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 10px 10px 0;
+	padding: 1px;
 }
 
-
 div.list-dojo td {
-	font-size:12px;
+	font-size: 12px;
 	padding: 5px;
 }
 
@@ -37,19 +36,19 @@ div.list-dojo td.dojo-field {
 	width: 50%;
 }
 
-div.list-dojo td.dojo-footer a{
+div.list-dojo td.dojo-footer a {
 	color: red;
 	float: right;
 }
 
-div.list-dojo a {
-	color: #4E4E4E;
-	text-decoration: none;
-}
+/* div.list-dojo a { */
+/* 	color: #4E4E4E; */
+/* 	text-decoration: none; */
+/* } */
 
-div.list-dojo a:HOVER {
-	font-weight: bolder;
-}
+/* div.list-dojo a:HOVER { */
+/* 	font-weight: bolder; */
+/* } */
 
 .dojo-row-even {
 	background-color: #D4D4D4;
@@ -100,45 +99,53 @@ div#dojos-header {
 	font-weight: bold;
 }
 
-div#dojo-row img{
+div#dojo-row img {
 	float: right;
 	border: none;
-	height:60px;
+	height: 60px;
 }
 
-div#dojo-row span.dojo-header{
+div#dojo-row span.dojo-header {
 	float: left;
 	font-weight: bold;
 	width: 200px;
 	padding-bottom: 3px;
 }
 
-div#dojo-row{
+div#dojo-row {
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #595959 #595959 #595959 -moz-use-text-color;
+	border-style: solid;
+	border-width: 1px 1px 1px 10px;
+	float: left;
+	height: 232px;
 	margin: 0 15px 15px;
-	border: 1px solid #595959;
-	border-left:10px solid;
 	padding: 2px 2px 25px 5px;
-	height: 205px;
+	position: relative;
+	width: 355px;
 }
 
-div#dojo-row p{
-	padding:20px 0 0;
+div#dojo-row p {
+	padding: 20px 0 0;
 	font-size: 14px;
-	color:#595959;
-	
+	color: #595959;
 }
-div#dojo-row h3{
+
+div#dojo-row h3 {
 	border: 1px solid #636363;
 	font-size: 18px;
-	font-weight:normal;
+	font-weight: normal;
 	padding: 5px;
-	margin:10px;
+	margin: 10px;
 	background-color: #CCCCCC;
 }
 
 div#dojo-row dl dt label {
 	color: black;
-	font-size: 12px;	
+	font-size: 12px;
 }
 
 div#dojo-row dl dt {
@@ -149,23 +156,20 @@ div#dojo-row dl dt {
 	position: relative;
 }
 
-div#dojo-row dl dd {
-/* 	min-height: 22px; */
+div#dojo-row dl dd { /* 	min-height: 22px; */
 	line-height: 12px;
-/* 	padding: 5px 10px; */
-/* 	padding-left: 130px; */
+	/* 	padding: 5px 10px; */
+	/* 	padding-left: 130px; */
 	font-size: 12px;
 }
 
 div#dojo-row a.dojo-map {
-  bottom: -110px;
-  left: -120px;
-  position: relative;
+	bottom: -110px;
+	left: -120px;
+	position: relative;
 }
 
-
-
-div.dojo-data{
+div.dojo-data {
 	float: right;
 	width: 100%;
 	position: relative;
@@ -179,7 +183,7 @@ div.dojo-popup {
 	background: white;
 	border: solid 2px black;
 	width: auto;
-	margin:auto;
+	margin: auto;
 	height: auto;
 	z-index: 999;
 	-moz-box-shadow: 0 0 20px black;
@@ -187,22 +191,20 @@ div.dojo-popup {
 	-webkit-box-shadow: 0 0 20px black;
 }
 
-
-div#map-container{
+div#map-container {
 	border: solid 1px #C9C9C9;
 	width: 57%;
 	right: 0;
 	float: left;
 	margin-bottom: 10px;
 }
-div#map-container div#map{
+
+div#map-container div#map {
 	padding: 10px;
 	height: 750px;
 }
 
-
-div#dojos-header form select
-{
+div#dojos-header form select {
 	padding: 3px;
 	border: 1px solid #E4E4E4;
 	border-top: 1px solid #D4D4D4;
@@ -211,25 +213,25 @@ div#dojos-header form select
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
-div#dojos-header form select:focus
-{
+
+div#dojos-header form select:focus {
 	border: 1px solid #DDD;
 	border-top: 1px solid #CCC;
 	border-left: 1px solid #CCC;
 }
 
 div#add-dojo {
-  height: 200px;
+	height: 200px;
 }
 
 div#add-dojo a#new-dojo {
-  bottom: -134px;
-  font-size: 36px;
-  font-weight: bold;
-  left: 509px;
-  position: relative;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  outline: none;
+	bottom: -134px;
+	font-size: 36px;
+	font-weight: bold;
+	left: 509px;
+	position: relative;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	outline: none;
 }
 
 div#add-dojo a#new-dojo:HOVER {
@@ -237,15 +239,96 @@ div#add-dojo a#new-dojo:HOVER {
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-img.captcha{
+img.captcha {
 	padding: 10px;
 	margin: 10px 10px 0 10px;
 }
 
 div#add-dojo-banner {
-  display: block;
-  float: right;
-  margin: 0 10px 5px;
-}
+	display: block;
+	float: right;
+	margin: 0 10px 5px;
+	width: 250px;
+	height: 50px;
+	background: url('/images/add-dojo-back.png') no-repeat scroll 0 0 transparent
 }
 
+div#add-dojo-banner a{
+	outline: none;
+	position:relative;
+	top: 30%;
+	left: 25%;
+	font-size: 18px;
+	color: black;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;	
+}
+
+div#add-dojo-banner a:HOVER{
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+}
+
+div#new-dojo-form {
+  background: none repeat scroll 0 0 white;
+/*   border-bottom: 1px solid #D1D1D1; */
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  width: 780px;
+  z-index: 999;
+}
+
+div#new-dojo-form form dl {
+  width: 450px;
+}
+
+div#new-dojo-form form dl dt {
+  float: left;
+  line-height: 22px;
+  padding: 5px 0;
+  position: relative;
+  width: 160px;
+}
+
+div#new-dojo-form form dl dd {
+  line-height: 22px;
+  min-height: 22px;
+  padding: 5px 10px 5px 100px;
+}
+
+#new-dojo-form input[type="text"] {
+  width: 228px;
+}
+
+div#new-dojo-form form dl dd p.note {
+  color: #888888;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 0;
+  margin-left: 20px;
+}
+
+div#new-dojo-form form dl dt label {
+  color: #666666;
+  font-weight: bold;
+}
+
+div#new-dojo-form form dl dd input, div#new-dojo-form form dl dd select, div#new-dojo-form form dl dd textarea {
+  padding: 3px;
+}
+
+div#new-dojo-form form dl dt span.required {
+  color: #DD0000;
+  font: 20px/12px Arial,sans-serif;
+  position: absolute;
+  right: 11px;
+  top: 14px;
+}
+h2{
+	border-bottom: 1px solid #D1D1D1;
+    color: #990000;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    text-shadow: 0 2px #D1D1D1;
+}

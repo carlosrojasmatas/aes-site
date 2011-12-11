@@ -1,4 +1,10 @@
-<div id="new-form">
+<?php use_javascript("jquery-qtip-1.0.0-rc3140944/jquery.qtip-1.0.js")?>
+<?php use_javascript("jquery-ui-1.8.12.custom.min.js")?>
+<?php use_javascript("tiny_mce/jquery.tinymce.js")?>
+<?php use_javascript("dojos/dojos.js")?>
+<?php use_stylesheet("dojos/dojos.css")?>
+<h2>Carg&aacute; tu dojo!</h2>
+<div id="new-dojo-form">
 		<form  method="post" enctype="multipart/form-data" action="<?php echo url_for("dojos/index")?>">
 		<dl>
 			<dt><label for="<?php echo $form['name']->renderId() ?>"<?php echo $form['name']->hasError() ? ' class="error"' : '' ?>>Nombre:</label><span class="required">*</span></dt>

@@ -53,8 +53,9 @@ function loadsEventsForCurrentYear(options){
 					for(ev in data){
 						var id= data[ev].EventID;
 						var selector= "#Event_"+ id;
+						var description= data[ev].Description.substring(0,400) + "...";
 						$(selector).qtip({
-							content: "<h4>" + data[ev].Title + "</h4> <br>" + data[ev].Description,
+							content: "<h4>" + data[ev].Title + "</h4> <br>" + description,
 							show: {
 								delay:1000,
 							},

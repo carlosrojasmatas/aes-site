@@ -98,7 +98,7 @@ class Dojo extends BaseDojo
 			->from("Dojo a");
 		}
 		$q->addOrderBy("name DESC");
-		$pager=new sfDoctrinePager("Dojo",3);
+		$pager=new sfDoctrinePager("Dojo",4);
 		$pager->setQuery($q);
 		return $pager;
 	}

@@ -29,7 +29,7 @@
 					<td colspan="2" class="dojo-footer">
 						<a href="#Dojo" class="dojo-map-linker" address="<?php echo $dojo->getAddress()?>" 
 						fullAddress="<?php echo $dojo->getFullAddress()?>" 
-						dojo="<?php echo $dojo->getName()?>">Ver en mapa</a></td>
+						dojo="<?php echo $dojo->getName()?>" style="float: left; outline: none;"><img title="Ver en mapa" src="/images/maps.png"/></a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -65,7 +65,7 @@
 </div>
 
 <div id="img-container" class="dojo-popup" style="display: none;">
+	<a href="#" id="img-close" class="aes-link close-button"><img title="Cerrar" src="/images/close.png"/></a>
 	<img src="" style="display: block;">
-	<button id="close" style="margin: 10px;">Cerrar</button>
 </div>
 

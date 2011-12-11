@@ -1,4 +1,4 @@
-
+<?php use_javascript("jquery-qtip-1.0.0-rc3140944/jquery.qtip-1.0.js")?>
 <?php use_javascript("jquery-ui-1.8.12.custom.min.js")?>
 <?php use_javascript("tiny_mce/jquery.tinymce.js")?>
 <?php use_javascript("dojos/dojos.js")?>
@@ -24,11 +24,12 @@
 <div class="list-dojo" >
 		<?php include_partial("dojoList",array("pager"=>$pager))?>
 </div>
-<div id="map-container">
-	<div id="map"></div>
+<div id="map-container" style="display: none;">
+	<div id="map" style="display: none;"></div>
 </div>
+<div class="clearfix"></div>
 <div id="add-dojo-banner">
-Agrega tu dojo
+<a id="new-dojo" href="<?php echo url_for("dojos/new")?>"><span>Agrega tu Dojo!</span></a>
 </div>
 <div class="dojo-detail"></div>
 

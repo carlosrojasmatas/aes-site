@@ -9,10 +9,9 @@ $(function() {
 //		$("#new-form").show("slow");
 //	});
 //	
-//	$("#button-cancel").click(function() {
-//		$("#popup-overlay").remove();
-//		$("#new-form").hide("slow");
-//	});
+	$("#button-cancel").click(function() {
+		window.location="index"
+	});
 	
 //	$("#map").dialog({
 //		autoOpen : false,
@@ -68,7 +67,9 @@ $(function() {
 function rebindControls(){
 	$(".dojo-map-linker").each(function(index) {
 		$(this).click(function() {
+			$( "#map" ).dialog("open");
 			locateInMap($(this).attr("fullAddress"),$(this).attr("address"),$(this).attr("dojo"),true);
+			return false;
 		});
 	});
 	$(".dojo-photo").each(
@@ -80,7 +81,7 @@ function rebindControls(){
 						
 				});
 			});
-	$("#close").click(function() {
+	$("#img-close").click(function() {
 
 		$("#popup-overlay").remove();
 		$("#img-container").hide("slow");
@@ -111,6 +112,15 @@ function startMaps() {
 			gmOnLoad = false;
 		}
 	}
+	
+	$( "#map" ).dialog({
+        autoOpen:false,
+        modal: true,
+        width: 555,
+        height: 400,
+        resizeStop: function(event, ui) {google.maps.event.trigger(map, 'resize')  },
+        open: function(event, ui) {google.maps.event.trigger(map, 'resize'); }
+    });  
 }
 
 function locateRegion(region){
