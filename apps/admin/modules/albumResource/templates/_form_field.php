@@ -8,25 +8,23 @@
 	<?php echo $form[$name]->renderError() ?>
 	<div>
 
-	<?php if($name != "path"):?>
-	<?php echo $form[$name]->renderLabel($label) ?>
-
+		<?php echo $form[$name]->renderLabel($label) ?>
 		<div class="content">
-		<?php echo $form[$name]->render($attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes) ?>
+			<?php echo $form[$name]->render($attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes) ?>
 		</div>
 
 		<?php if ($help): ?>
-		<div class="help">
-		<?php echo __($help, array(), 'messages') ?>
-		</div>
+			<div class="help">
+				<?php echo __($help, array(), 'messages') ?>
+			</div>
 		<?php elseif ($help = $form[$name]->renderHelp()): ?>
-		<div class="help">
-		<?php echo $help ?>
-		</div>
+			<div class="help">
+				<?php echo $help ?>
+			</div>
 		<?php endif; ?>
-	<?php else:?>
+	<?php if($name == "path"):?>
 		<img src="<?php echo $form[$name]->getValue()?>"/>
 	<?php endif;?>
 	</div>
 </div>
-		<?php endif; ?>
+<?php endif; ?>

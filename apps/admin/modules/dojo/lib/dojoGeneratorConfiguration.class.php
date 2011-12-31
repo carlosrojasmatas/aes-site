@@ -10,4 +10,13 @@
  */
 class dojoGeneratorConfiguration extends BaseDojoGeneratorConfiguration
 {
+/**
+   * Gets the form class name.
+   *
+   * @return string The form class name
+   */
+  public function getFormClass()
+  {
+    return 'AdminDojoForm';
+  }
 }

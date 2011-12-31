@@ -6,9 +6,6 @@
 <?php use_stylesheet("jquery-ui/smoothness/jquery-ui-1.8.12.custom.css")?>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry&sensor=false"></script>
 <div class="section-header" id="section-dojos">
-	<div id="add-dojo">
-		<a id="new-dojo" href="<?php echo url_for("dojos/new")?>"><span>CLICK AC&Aacute;!</span></a>
-	</div>
 </div>
 <div id="dojos-header">
 	<span style="float: left; font-size: 20px" id="dojos-title">Dojos de <?php echo $selected?></span>
@@ -29,7 +26,8 @@
 </div>
 <div class="clearfix"></div>
 <div id="add-dojo-banner">
-<a id="new-dojo" href="<?php echo url_for("dojos/new")?>"><span>Agrega tu Dojo!</span></a>
+<span>Queres agregar tu dojo? Hace click <a id="new-dojo" href="<?php echo url_for("dojos/new")?>">aca</a> para cargar tus datos. En breve alguien te estar&aacute; contactando para verificarlos y agregarte a la lista definitiva! </span>
+
 </div>
 <div class="dojo-detail"></div>
 

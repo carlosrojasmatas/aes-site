@@ -27,18 +27,22 @@ div.list-dojo {
 }
 
 div.list-dojo td {
-	font-size: 12px;
-	padding: 5px;
+	font-size: 11px;
+	padding: 2px;
 }
 
 div.list-dojo td.dojo-field {
 	color: black;
-	width: 50%;
+	width: 35%;
 }
 
-div.list-dojo td.dojo-footer a {
+div.list-dojo tr.dojo-footer {
 	color: red;
-	float: right;
+	height: 100px;
+}
+
+div.list-dojo tr.dojo-footer a {
+	color: red;
 }
 
 /* div.list-dojo a { */
@@ -49,7 +53,6 @@ div.list-dojo td.dojo-footer a {
 /* div.list-dojo a:HOVER { */
 /* 	font-weight: bolder; */
 /* } */
-
 .dojo-row-even {
 	background-color: #D4D4D4;
 	color: black;
@@ -102,14 +105,15 @@ div#dojos-header {
 div#dojo-row img {
 	float: right;
 	border: none;
-	height: 60px;
+	height: 50px;
 }
 
 div#dojo-row span.dojo-header {
 	float: left;
+	font-size: 15px;
 	font-weight: bold;
-	width: 200px;
-	padding-bottom: 3px;
+	width: 130px;
+	padding: 4px;
 }
 
 div#dojo-row {
@@ -121,13 +125,14 @@ div#dojo-row {
 	border-style: solid;
 	border-width: 1px 1px 1px 10px;
 	float: left;
-	height: 232px;
-	margin: 0 15px 15px;
+	height: 210px;
+	margin: 0 10px 15px;
 	padding: 2px 2px 25px 5px;
 	position: relative;
-	width: 355px;
+	width: 221px;
 }
 
+}
 div#dojo-row p {
 	padding: 20px 0 0;
 	font-size: 14px;
@@ -246,89 +251,92 @@ img.captcha {
 
 div#add-dojo-banner {
 	display: block;
-	float: right;
 	margin: 0 10px 5px;
-	width: 250px;
+	width: auto;
 	height: 50px;
-	background: url('/images/add-dojo-back.png') no-repeat scroll 0 0 transparent
+	font-size: 14px;
+	color: #666666;
+	padding: 10px 10px 10px 30px;
+	border: 1px outset #660000 ;
+	
 }
 
-div#add-dojo-banner a{
+
+div#add-dojo-banner a {
 	outline: none;
-	position:relative;
-	top: 30%;
-	left: 25%;
 	font-size: 18px;
 	color: black;
-	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;	
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
-div#add-dojo-banner a:HOVER{
+div#add-dojo-banner a:HOVER {
 	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 div#new-dojo-form {
-  background: none repeat scroll 0 0 white;
-/*   border-bottom: 1px solid #D1D1D1; */
-  height: auto;
-  margin: auto;
-  padding: 20px;
-  position: absolute;
-  width: 780px;
-  z-index: 999;
+	background: none repeat scroll 0 0 white;
+	/*   border-bottom: 1px solid #D1D1D1; */
+	height: auto;
+	margin: auto;
+	padding: 20px;
+	position: absolute;
+	width: 780px;
+	z-index: 999;
 }
 
 div#new-dojo-form form dl {
-  width: 450px;
+	width: 450px;
 }
 
 div#new-dojo-form form dl dt {
-  float: left;
-  line-height: 22px;
-  padding: 5px 0;
-  position: relative;
-  width: 160px;
+	float: left;
+	line-height: 22px;
+	padding: 5px 0;
+	position: relative;
+	width: 160px;
 }
 
 div#new-dojo-form form dl dd {
-  line-height: 22px;
-  min-height: 22px;
-  padding: 5px 10px 5px 100px;
+	line-height: 22px;
+	min-height: 22px;
+	padding: 5px 10px 5px 100px;
 }
 
 #new-dojo-form input[type="text"] {
-  width: 228px;
+	width: 228px;
 }
 
 div#new-dojo-form form dl dd p.note {
-  color: #888888;
-  font-size: 12px;
-  font-style: italic;
-  line-height: 0;
-  margin-left: 20px;
+	color: #888888;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 0;
+	margin-left: 20px;
 }
 
 div#new-dojo-form form dl dt label {
-  color: #666666;
-  font-weight: bold;
+	color: #666666;
+	font-weight: bold;
 }
 
-div#new-dojo-form form dl dd input, div#new-dojo-form form dl dd select, div#new-dojo-form form dl dd textarea {
-  padding: 3px;
+div#new-dojo-form form dl dd input,div#new-dojo-form form dl dd select,div#new-dojo-form form dl dd textarea
+	{
+	padding: 3px;
 }
 
 div#new-dojo-form form dl dt span.required {
-  color: #DD0000;
-  font: 20px/12px Arial,sans-serif;
-  position: absolute;
-  right: 11px;
-  top: 14px;
+	color: #DD0000;
+	font: 20px/12px Arial, sans-serif;
+	position: absolute;
+	right: 11px;
+	top: 14px;
 }
-h2{
+
+h2 {
 	border-bottom: 1px solid #D1D1D1;
-    color: #990000;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    text-shadow: 0 2px #D1D1D1;
+	color: #990000;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	text-shadow: 0 2px #D1D1D1;
 }

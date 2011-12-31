@@ -8,7 +8,7 @@
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class DojoForm extends BaseDojoForm
+class AdminDojoForm extends BaseDojoForm
 {
   public function configure()
   {
@@ -28,7 +28,7 @@ class DojoForm extends BaseDojoForm
   	$this->setValidator('status',new sfValidatorString(array('required' => false)));
   	$this->setValidator('email',new sfValidatorEmail());
   	
-	$this->useFields(array("name","province","city","address","email","phone","sensei","photo","captcha","status"));
+	$this->useFields(array("name","province","city","address","email","phone","sensei","photo","status"));
   	
   }
 }

@@ -97,8 +97,9 @@ class Dojo extends BaseDojo
 			$q=Doctrine_Query::create()
 			->from("Dojo a");
 		}
+		$q->addWhere("status= :status",array("status"=>"enabled"));
 		$q->addOrderBy("name DESC");
-		$pager=new sfDoctrinePager("Dojo",4);
+		$pager=new sfDoctrinePager("Dojo",6);
 		$pager->setQuery($q);
 		return $pager;
 	}

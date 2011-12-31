@@ -10,4 +10,7 @@
  */
 class albumResourceGeneratorConfiguration extends BaseAlbumResourceGeneratorConfiguration
 {
+	function getFormClass(){
+		return 'AdminAlbumResourceForm';
+	}
 }

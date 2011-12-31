@@ -18,18 +18,19 @@ generator:
         description: { label: Descripci&oacute;n}
         city: { label: Ciudad}
         sender: { label: Enviado Por}
+        status: { label: Estado}
         size: { label: Tama&ntilde;o}
         created_at: { label: Creado}
       list:    
         title: Administraci&oacute;n de Fotos
-        display: [=name,description, =sender, =city, size,created_at  ]
+        display: [=name,description, =sender, =city,=status, size,created_at  ]
         sort: [name]
         max_per_page: 20
         batch_actions: {}
       filter:
         display: [name]
       form:
-        display: [name,description,sender,city, path]
+        display: [name,description,sender,city, status,path]
       edit:
         title: Edici&oacute;n de Fotos
       new:

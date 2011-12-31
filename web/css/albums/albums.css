@@ -128,3 +128,26 @@ img.captcha{
 	padding: 10px;
 	margin: 10px 10px 0 10px;
 }
+
+
+div#add-photo-banner {
+	display: block;
+	margin: 0 10px 5px;
+	width: auto;
+	height: 30px;
+	font-size: 12px;
+	color: #666666;
+	padding: 10px 10px 10px 30px;
+	float:right;
+}
+
+div#add-photo-banner a {
+	outline: none;
+	font-size: 14px;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+div#add-photo-banner a:HOVER {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

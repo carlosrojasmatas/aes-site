@@ -25,8 +25,8 @@
 					<td class="dojo-field">Email:</td>
 					<td><?php echo $dojo->getEmail()?></td>
 				</tr>
-				<tr>
-					<td colspan="2" class="dojo-footer">
+				<tr class="dojo-footer">
+					<td colspan="2" >
 						<a href="#Dojo" class="dojo-map-linker" address="<?php echo $dojo->getAddress()?>" 
 						fullAddress="<?php echo $dojo->getFullAddress()?>" 
 						dojo="<?php echo $dojo->getName()?>" style="float: left; outline: none;"><img title="Ver en mapa" src="/images/maps.png"/></a></td>

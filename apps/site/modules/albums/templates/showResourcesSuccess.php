@@ -9,10 +9,12 @@
 
 
 <div id="toolbar" class="gallery-header" >
-	<span><?php echo $album->getName()?></span>
 		<?php if($album->getType()=='public' || sfContext::getInstance()->getUser()->hasCredential('admin')):?>
-	 			<button id="add-resource">Agregar foto</button>
+	 			<div id="add-photo-banner">
+					<span>Si tenes una foto de este &aacute;lbum y queres publicarla hac&eacute; click <a id="add-resource" href="#">aca</a></span>
+				</div>
 	 	<?php endif;?>
+	<span><?php echo $album->getName()?></span>
 </div>
 
 <div class="image-container">
