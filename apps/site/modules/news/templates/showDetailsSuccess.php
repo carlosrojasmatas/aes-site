@@ -13,7 +13,7 @@
 						<b>Fecha: </b> <?php echo $advert->getStartDate()?><br>
 						<b>Lugar: </b> <?php echo $advert->getPlace()?>
 					<?php endif;?>
-					<a id="show-image" href="#"><img src="<?php echo $advert->getResizedImagePath()?>" /></a>
+					<a id="show-image" href="#"><img height="220" src="<?php echo $advert->getImage()?>" /></a>
 					<?php echo $advert->getDescription()?>
 	     		</p>	
 		<a href="index" class="back-button"><img src="/images/back-btn.png"><p>Volver al listado</p> </a>
@@ -23,5 +23,5 @@
 <div id="advert-image" style="display: none;">
 	<a href="#" id="img-close" class="aes-link close-button"><img title="Cerrar" src="/images/close.png"/></a>
 	<br>
-	<img src="<?php echo $advert->getMainImage();?>">
+	<img src="<?php echo $advert->getImage();?>">
 </div>

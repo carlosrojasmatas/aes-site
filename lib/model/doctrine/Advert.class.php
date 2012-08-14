@@ -40,7 +40,7 @@ class Advert extends BaseAdvert
 		$advert= new Advert();
 		$advert->modify($form);
 		$advert->save();
-		$advert->saveMainImage($form);
+		$advert->saveImage($form);
 		foreach ($form->getValue("attachements") as $attachement){
 			if($attachement){
 				$this->addResource($attachement);
@@ -63,43 +63,41 @@ class Advert extends BaseAdvert
 		}
 	}
 
-	public function getMainImage(){
-		return $this->getMainImagePath() . $this->getImageName();
+	public function getImage(){
+		return $this->getImagePath() . $this->getImageName();
 	}
 
-	public function saveResizedImage(){
-		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
-		$small = new sfImage($path.$this->getImageName());
-		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
-		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_resized".$extension;
-		$small->thumbnail(300, 240);
-		$small->saveAs($path.$fullName);
-		$this->setResizedImagePath($this->getMainImagePath().$fullName);
-	}
+//	public function saveResizedImage(){
+//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
+//		$small = new sfImage($path.$this->getImageName());
+//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
+//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_resized".$extension;
+//		$small->thumbnail(300, 240);
+//		$small->saveAs($path.$fullName);
+//		$this->setResizedImagePath($this->getMainImagePath().$fullName);
+//	}
 	
-	public function saveIconImage(){
-		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
-		$small = new sfImage($path.$this->getImageName());
-		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
-		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_icon".$extension;
-		$small->thumbnail(80, 80);
-		$small->saveAs($path.$fullName);
-		$this->setIconImagePath($this->getMainImagePath().$fullName);
-	}
+//	public function saveIconImage(){
+//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
+//		$small = new sfImage($path.$this->getImageName());
+//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
+//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_icon".$extension;
+//		$small->thumbnail(80, 80);
+//		$small->saveAs($path.$fullName);
+//		$this->setIconImagePath($this->getMainImagePath().$fullName);
+//	}
 
-	public function saveMainImage($form){
-		if($form->getValue("main_image")){
-			$imageFile= $form->getValue("main_image");
-			$fileName=$imageFile->generateFileName();
-			$imageFullPath=sfConfig::get("app_resource_upload").$this->getId();
-			if(!file_exists($imageFullPath)){
-				mkdir($imageFullPath,0777);
+	public function saveImage($form){
+		if($form->getValue("image")){
+			$imageFile= $form->getValue("image");
+			$imageName=$imageFile->generateFileName();
+			$imagePath=sfConfig::get("app_resource_upload").$this->getId();
+			if(!file_exists($imagePath)){
+				mkdir($imagePath,0777);
 			}
-			$imageFile->save($imageFullPath."/".$fileName);
-			$this->setMainImagePath("/uploads/resources/".$this->getId()."/");
-			$this->setImageName($fileName);
-			$this->saveResizedImage();
-			$this->saveIconImage();
+			$imageFile->save($imagePath."/".$imageName);
+			$this->setImagePath("/uploads/resources/".$this->getId()."/");
+			$this->setImageName($imageName);
 			$this->save();
 		}
 	}

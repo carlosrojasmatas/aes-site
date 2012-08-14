@@ -11,5 +11,6 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfImageTransformPlugin');
     $this->enablePlugins('sfDoctrineGuardPlugin');
     $this->enablePlugins('sfCaptchaGDPlugin');
+    $this->enablePlugins('sfPicasaPlugin');
   }
 }

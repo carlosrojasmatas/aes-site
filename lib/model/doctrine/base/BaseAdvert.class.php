@@ -14,37 +14,31 @@
  * @property string $end_time
  * @property string $place
  * @property enum $type
- * @property string $main_image_path
+ * @property string $image_path
  * @property string $image_name
- * @property string $resized_image_path
- * @property string $icon_image_path
  * 
- * @method integer getId()                 Returns the current record's "id" value
- * @method string  getTitle()              Returns the current record's "title" value
- * @method string  getDescription()        Returns the current record's "description" value
- * @method date    getStartDate()          Returns the current record's "start_date" value
- * @method date    getEndDate()            Returns the current record's "end_date" value
- * @method string  getStartTime()          Returns the current record's "start_time" value
- * @method string  getEndTime()            Returns the current record's "end_time" value
- * @method string  getPlace()              Returns the current record's "place" value
- * @method enum    getType()               Returns the current record's "type" value
- * @method string  getMainImagePath()      Returns the current record's "main_image_path" value
- * @method string  getImageName()          Returns the current record's "image_name" value
- * @method string  getResizedImagePath()   Returns the current record's "resized_image_path" value
- * @method string  getIconImagePath()      Returns the current record's "icon_image_path" value
- * @method Advert  setId()                 Sets the current record's "id" value
- * @method Advert  setTitle()              Sets the current record's "title" value
- * @method Advert  setDescription()        Sets the current record's "description" value
- * @method Advert  setStartDate()          Sets the current record's "start_date" value
- * @method Advert  setEndDate()            Sets the current record's "end_date" value
- * @method Advert  setStartTime()          Sets the current record's "start_time" value
- * @method Advert  setEndTime()            Sets the current record's "end_time" value
- * @method Advert  setPlace()              Sets the current record's "place" value
- * @method Advert  setType()               Sets the current record's "type" value
- * @method Advert  setMainImagePath()      Sets the current record's "main_image_path" value
- * @method Advert  setImageName()          Sets the current record's "image_name" value
- * @method Advert  setResizedImagePath()   Sets the current record's "resized_image_path" value
- * @method Advert  setIconImagePath()      Sets the current record's "icon_image_path" value
+ * @method integer getId()          Returns the current record's "id" value
+ * @method string  getTitle()       Returns the current record's "title" value
+ * @method string  getDescription() Returns the current record's "description" value
+ * @method date    getStartDate()   Returns the current record's "start_date" value
+ * @method date    getEndDate()     Returns the current record's "end_date" value
+ * @method string  getStartTime()   Returns the current record's "start_time" value
+ * @method string  getEndTime()     Returns the current record's "end_time" value
+ * @method string  getPlace()       Returns the current record's "place" value
+ * @method enum    getType()        Returns the current record's "type" value
+ * @method string  getImagePath()   Returns the current record's "image_path" value
+ * @method string  getImageName()   Returns the current record's "image_name" value
+ * @method Advert  setId()          Sets the current record's "id" value
+ * @method Advert  setTitle()       Sets the current record's "title" value
+ * @method Advert  setDescription() Sets the current record's "description" value
+ * @method Advert  setStartDate()   Sets the current record's "start_date" value
+ * @method Advert  setEndDate()     Sets the current record's "end_date" value
+ * @method Advert  setStartTime()   Sets the current record's "start_time" value
+ * @method Advert  setEndTime()     Sets the current record's "end_time" value
+ * @method Advert  setPlace()       Sets the current record's "place" value
+ * @method Advert  setType()        Sets the current record's "type" value
+ * @method Advert  setImagePath()   Sets the current record's "image_path" value
+ * @method Advert  setImageName()   Sets the current record's "image_name" value
  * 
  * @package    aes
  * @subpackage model
@@ -99,19 +93,11 @@ abstract class BaseAdvert extends sfDoctrineRecord
              ),
              'notnull' => true,
              ));
-        $this->hasColumn('main_image_path', 'string', null, array(
+        $this->hasColumn('image_path', 'string', null, array(
              'type' => 'string',
              'notnull' => true,
              ));
         $this->hasColumn('image_name', 'string', null, array(
-             'type' => 'string',
-             'notnull' => true,
-             ));
-        $this->hasColumn('resized_image_path', 'string', null, array(
-             'type' => 'string',
-             'notnull' => true,
-             ));
-        $this->hasColumn('icon_image_path', 'string', null, array(
              'type' => 'string',
              'notnull' => true,
              ));

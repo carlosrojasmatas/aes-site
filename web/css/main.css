@@ -98,12 +98,13 @@ div.section-header {
 	width: 820;
 	margin: 0 0 10px 0;
 	margin-top: 15px;
-	-moz-box-shadow: 0 0 20px black;
-	-webkit-box-shadow: 0 0 20px black;
 	box-shadow: 0 0 20px black;
-	-moz-border-radius: 18px;
 	-ms-border-radius: 18px;
+	-webkit-box-shadow: 0 0 20px black;
 	-webkit-border-radius: 18px;
+	-moz-box-shadow: 0 0 20px black;
+	box-shadow: 0 0 20px black;
+	border-radius: 18px;
 }
 
 div.imgWithText {

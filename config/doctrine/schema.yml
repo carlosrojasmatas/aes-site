@@ -49,10 +49,8 @@ Advert:
     end_time:       { type: string, notnull: false }
     place:      	{ type: string, notnull: false }
     type:      		{ type: enum, length: 11, values: ['advert', 'event'],  notnull: true}
-    main_image_path:     { type: string, notnull: true }
+    image_path:     { type: string, notnull: true }
     image_name:     { type: string, notnull: true }
-    resized_image_path:  { type: string, notnull: true }
-    icon_image_path:  { type: string, notnull: true }
       
 Dojo:
   actAs: [Timestampable]
