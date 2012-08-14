@@ -12,14 +12,7 @@ class dojosActions extends sfActions
 {
 	public function executeIndex(sfWebRequest $request)
 	{
-		$this->form = new DojoForm();
-		if($request->getMethod() == sfRequest::POST){
-			$this->form->bind($request->getParameter($this->form->getName()), $request->getFiles($this->form->getName()));
-			if ($this->form->isValid())
-			{
-				$dojo= Dojo::create($this->form);
-			}
-		}
+		
 		$this->regions= Dojo::$regions;
 		$this->selected= $request->getParameter("region");
 		
@@ -40,6 +33,13 @@ class dojosActions extends sfActions
 	public function executeNew(sfWebRequest $request)
 	{
 		$this->form = new DojoForm();
+		if($request->getMethod() == sfRequest::POST){
+			$this->form->bind($request->getParameter($this->form->getName()), $request->getFiles($this->form->getName()));
+			if ($this->form->isValid()){
+				$dojo= Dojo::create($this->form);
+				return $this->forward("dojos", "index");
+			}
+		}
 	}
 	
 	public function executeDetail(sfWebRequest $request){

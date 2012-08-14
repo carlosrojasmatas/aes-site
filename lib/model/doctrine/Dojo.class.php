@@ -73,9 +73,6 @@ class Dojo extends BaseDojo
 				mkdir($imageFullPath,0777);
 			}
 			$photoFile->save($imageFullPath."/".$fileName);
-			$photo = new sfImage($imageFullPath."/".$fileName);
-			$photo->thumbnail(300, 240);
-			$photo->saveAs($imageFullPath."/".$fileName);
 			$this->setPhoto("/uploads/resources/dojos/".$this->getId()."/".$fileName);
 			$this->save();
 		}

@@ -3,9 +3,10 @@
 <?php use_javascript("tiny_mce/jquery.tinymce.js")?>
 <?php use_javascript("dojos/dojos.js")?>
 <?php use_stylesheet("dojos/dojos.css")?>
+<?php use_stylesheet("main.css")?>
 <h2>Carg&aacute; tu dojo!</h2>
 <div id="new-dojo-form">
-		<form  method="post" enctype="multipart/form-data" action="<?php echo url_for("dojos/index")?>">
+		<form  method="post" enctype="multipart/form-data" action="<?php echo url_for("dojos/new")?>">
 		<dl>
 			<dt><label for="<?php echo $form['name']->renderId() ?>"<?php echo $form['name']->hasError() ? ' class="error"' : '' ?>>Nombre:</label><span class="required">*</span></dt>
 				<dd><?php echo $form["name"]->render()?>

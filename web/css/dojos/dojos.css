@@ -333,6 +333,23 @@ div#new-dojo-form form dl dt span.required {
 	top: 14px;
 }
 
+div#new-dojo-form form dl dt label.error {
+	color: #DD0000;
+}
+
+
+div#new-dojo-form form dl dd input.error {
+	background-color: #FEF6F8;
+	border: 1px solid #E897AF;
+	border-right: 1px solid #F6D5DE;
+	border-bottom: 1px solid #F6D5DE;
+}
+
+div#new-dojo-form form dl dd p.note.error {
+	color: #DD0000;
+	font-style: normal;
+}
+
 h2 {
 	border-bottom: 1px solid #D1D1D1;
 	color: #990000;
