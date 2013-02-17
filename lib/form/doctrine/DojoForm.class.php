@@ -21,14 +21,14 @@ class DojoForm extends BaseDojoForm
     $this->setWidget('sensei',  new sfWidgetFormInputText()) ;	 
     $this->setWidget('status',  new sfWidgetFormChoice(array('choices'=>array("enabled"=>"Aceptado","disabled"=>"No aprobado")))) ;	 
     $this->setWidget('photo',  new sfWidgetFormInputFile(array("label"=>"Seleccionar"))) ;	 
-	$this->setWidget('captcha',new sfWidgetCaptchaGD());    
+//	$this->setWidget('captcha',new sfWidgetCaptchaGD());    
   	
 	$this->setValidator("photo", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
-  	$this->setValidator('captcha',new sfCaptchaGDValidator());
+//  	$this->setValidator('captcha',new sfCaptchaGDValidator());
   	$this->setValidator('status',new sfValidatorString(array('required' => false)));
   	$this->setValidator('email',new sfValidatorEmail());
   	
-	$this->useFields(array("name","province","city","address","email","phone","sensei","photo","captcha","status"));
+	$this->useFields(array("name","province","city","address","email","phone","sensei","photo","status"));
   	
   }
 }

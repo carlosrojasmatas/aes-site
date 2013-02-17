@@ -1,11 +1,11 @@
-#Sun Apr 03 21:08:51 ART 2011
+#Sun Feb 17 17:05:22 ART 2013
 DELEGATES_PREFERENCE=delegateValidatorList
 USER_BUILD_PREFERENCE=enabledBuildValidatorList
 USER_MANUAL_PREFERENCE=enabledManualValidatorList
-USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationfalseversion1.2.201.v201101270100
+USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationtrueversion1.2.200.v201005271900
 eclipse.preferences.version=1
 override=true
-suspend=false
+suspend=true
 vals/org.eclipse.jst.jsp.core.JSPContentValidator/global=FF01
 vals/org.eclipse.php.ui.HTMLValidatorForPHP/global=FF01
 vals/org.eclipse.wst.dtd.core.dtdDTDValidator/global=FF01

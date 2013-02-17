@@ -30,6 +30,3 @@
 
 </div>
 <div class="dojo-detail"></div>
-
-
-	</div>

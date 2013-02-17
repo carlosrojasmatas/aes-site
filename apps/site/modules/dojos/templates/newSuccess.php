@@ -47,10 +47,6 @@
 				<dd><?php echo $form["photo"]->render()?>
 					<p class="note<?php echo $form['photo']->hasError() ? ' error' : '' ?>">Seleccione una foto</p>
 				</dd>
-			<dt><label for="<?php echo $form['captcha']->renderId() ?>"<?php echo $form['captcha']->hasError() ? ' class="error"' : '' ?>>Verificaci&oacute;n:</label><span class="required">*</span></dt>
-				<dd><?php echo $form["captcha"]->render()?>
-					<p class="note<?php echo $form['captcha']->hasError() ? ' error' : '' ?>">Escriba lo que aparece en la imagen</p>
-				</dd>
 		</dl>
 		<div class="clearfix"></div>
 		<div style="float: right; margin: 5px;">

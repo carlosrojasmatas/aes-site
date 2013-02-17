@@ -7,4 +7,12 @@ all:
     param:
       dsn:      mysql:host=localhost;dbname=aes
       username: root
-      password: despegar
+      password: root
+
+prod:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=190.228.29.66;dbname=jka
+      username: jka
+      password: jka1234

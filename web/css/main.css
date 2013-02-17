@@ -180,7 +180,7 @@ div.text p {
 
 html,body {
 	height: 100%;
-	margin-bottom: 1px;
+	margin: 0px;
 }
 
 .clearfix {
