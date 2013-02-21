@@ -45,14 +45,9 @@ div.list-dojo tr.dojo-footer a {
 	color: red;
 }
 
-/* div.list-dojo a { */
-/* 	color: #4E4E4E; */
-/* 	text-decoration: none; */
-/* } */
-
-/* div.list-dojo a:HOVER { */
-/* 	font-weight: bolder; */
-/* } */
+/* div.list-dojo a { */ /* 	color: #4E4E4E; */
+	/* 	text-decoration: none; */ /* } */ /* div.list-dojo a:HOVER { */
+	/* 	font-weight: bolder; */ /* } */
 .dojo-row-even {
 	background-color: #D4D4D4;
 	color: black;
@@ -163,8 +158,7 @@ div#dojo-row dl dt {
 
 div#dojo-row dl dd { /* 	min-height: 22px; */
 	line-height: 12px;
-	/* 	padding: 5px 10px; */
-	/* 	padding-left: 130px; */
+	/* 	padding: 5px 10px; */ /* 	padding-left: 130px; */
 	font-size: 12px;
 }
 
@@ -250,18 +244,31 @@ img.captcha {
 }
 
 div#add-dojo-banner {
-	display: block;
-	margin: 0 10px 5px;
-	width: auto;
-	height: 50px;
-	font-size: 14px;
+	border: 1px outset #660000;
 	color: #666666;
-	padding: 10px 10px 10px 30px;
-	border: 1px outset #660000 ;
-	
+	display: block;
+	font-size: 14px;
+	margin: auto;
+	padding: 10px 10px 10px 260px;
+	width: auto;
+	background: #fefcea; /* Old browsers */
+	background: -moz-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefcea),
+		color-stop(100%, #f1da36) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #fefcea 0%, #f1da36 100%);
+	/* W3C */
+	filter: progid : DXImageTransform.Microsoft.gradient (   startColorstr =
+		'#fefcea', endColorstr = '#f1da36', GradientType = 0 ); /* IE6-9 */
 }
 
-
+}
 div#add-dojo-banner a {
 	outline: none;
 	font-size: 18px;
@@ -336,7 +343,6 @@ div#new-dojo-form form dl dt span.required {
 div#new-dojo-form form dl dt label.error {
 	color: #DD0000;
 }
-
 
 div#new-dojo-form form dl dd input.error {
 	background-color: #FEF6F8;

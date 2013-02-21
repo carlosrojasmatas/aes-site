@@ -34,3 +34,6 @@ all:
   
 dev:
   admin_url: /admin_dev.php 
+prod:
+  admin_url: /admin.php 
+  

@@ -33,7 +33,7 @@
 					<p class="note<?php echo $form['address']->hasError() ? ' error' : '' ?>">Por favor, ingrese la direcci&oacute;n COMPLETA del dojo</p>
 				</dd>
 
-			<dt><label for="<?php echo $form['phone']->renderId() ?>"<?php echo $form['phone']->hasError() ? ' class="error"' : '' ?>>Telefono:</label></dt>
+			<dt><label for="<?php echo $form['phone']->renderId() ?>"<?php echo $form['phone']->hasError() ? ' class="error"' : '' ?>>Telefono:</label><span class="required">*</span></dt>
 				<dd><?php echo $form["phone"]->render()?>
 				<p class="note<?php echo $form['phone']->hasError() ? ' error' : '' ?>">Ingrese un tel&eacute;fono</p>
 				</dd>

@@ -3,6 +3,7 @@
 <?php use_javascript("events/events.js")?>
 <?php use_stylesheet("events/events.css")?>
 <?php use_stylesheet("events/core.css")?>
+
 <div class="section-header" id="section-events">
 </div>
 

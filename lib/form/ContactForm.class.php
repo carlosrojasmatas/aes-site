@@ -15,15 +15,15 @@ class ContactForm extends BaseForm
 		$this->setWidgets(array(
       'name'         => new sfWidgetFormInputText(),
       'comment'       => new sfWidgetFormTextarea(),
-      'captcha'   => new sfWidgetCaptchaGD(),
+//      'captcha'   => new sfWidgetCaptchaGD(),
       'email'       => new sfWidgetFormInputText()
 		));
 
 		$this->setValidators(array(
 	      	'name'       => new sfValidatorString(array("required"=>true)),
 	      	'comment'   => new sfValidatorString(array("required"=>true)),
-	      	'email' => new sfValidatorEmail(array("required"=>true)),
-	    	'captcha' =>new sfCaptchaGDValidator()
+	      	'email' => new sfValidatorEmail(array("required"=>true))
+//	    	'captcha' =>new sfCaptchaGDValidator()
 		));
 
 		$this->widgetSchema->setNameFormat('contact[%s]');

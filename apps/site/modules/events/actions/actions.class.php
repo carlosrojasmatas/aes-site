@@ -84,9 +84,10 @@ class eventsActions extends sfActions
 	}
 	
    public function executeEventDetail(sfWebRequest $request){
-		$id= $request->getParameter("id");
 		
+   		$id= $request->getParameter("id");
 		$this->event= Advert::getRepository()->find($id);
+		
 	}
 	
 

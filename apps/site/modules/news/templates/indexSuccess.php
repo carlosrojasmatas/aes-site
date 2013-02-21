@@ -20,6 +20,7 @@
 </div>
 
 <?php if ($form->hasErrors()):?>
+     <?php echo "hay errores, por que?"?>
 	<div id="popup-overlay" ></div>
 <?php endif;?>
 <div id="new-form" style="<?php echo $form->hasErrors()?"display:block":"display:none".";"?>">
