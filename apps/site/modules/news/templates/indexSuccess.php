@@ -1,11 +1,10 @@
-<?php use_javascript("jquery-ui-1.8.12.custom.min.js")?>
 <?php use_javascript("jquery-ui/jquery.ui.timepicker.js")?>
 <?php use_javascript("news/news.js")?>
 <?php use_javascript("tiny_mce/jquery.tinymce.js")?>
 <?php use_stylesheet("news/news.css")?>
 <?php use_stylesheet("jquery-ui/jquery-ui-timepicker.css")?>
 
-<?php use_stylesheet("jquery-ui/smoothness/jquery-ui-1.8.12.custom.css")?>
+<?php use_stylesheet("jquery-ui/ui-lightness/jquery-ui-1.10.3.custom.min.css")?>
 <div class="section-header" id="section-news">
 	
 </div>

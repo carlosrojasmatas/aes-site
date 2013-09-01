@@ -145,7 +145,7 @@ $(function(){
 	});
 	$(".deleteButton").click(function(){
 		
-			var attrId= $(this).attr("id");
+			var attrId= $(this).prop("id");
 			var id= attrId.substr(attrId.indexOf("_")+1,attrId.length);
 			$("#form_" + id).submit();
 			

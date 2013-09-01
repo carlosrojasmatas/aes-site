@@ -9,7 +9,8 @@ $(document).ready(function() {
 //		});
 //		
 //	});
-	$("#featured").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+	$('.flexslider').flexslider();
+//	$("#featured").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
 });
 
 function slideShow() {

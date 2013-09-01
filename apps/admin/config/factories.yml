@@ -41,3 +41,10 @@ all:
     param:
       cache_key_use_vary_headers: true
       cache_key_use_host_name:    true
+ 
+  logger:
+    class: sfFileLogger
+    param:
+      level:   err
+      loggers: ~
+      file:    %SF_LOG_DIR%/%SF_APP%_%SF_ENVIRONMENT%.log

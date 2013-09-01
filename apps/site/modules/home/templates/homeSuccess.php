@@ -1,84 +1,27 @@
 <?php use_javascript("home.js")?>
+<?php use_javascript("jquery.flexslider-min.js")?>
 <?php use_stylesheet("home.css")?>
-<div class="section-header" id="section-home">
-	
+<?php use_stylesheet("flexslider.css")?>
+
+<div class="flex-container">
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img height="600px" width="800px" src="<?php echo $news[0]->getImage()?>" />
+      <p class="flex-caption"><?php echo strip_tags(strlen($news[0]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[0]->getDescription())?></p>
+    </li>
+    <li>
+      <img height="600px" width="800px" src="<?php echo $news[1]->getImage()?>" />
+      <p class="flex-caption"><?php echo strip_tags(strlen($news[0]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[0]->getDescription())?></p>
+    </li>
+    <li>
+      <img height="600px" width="800px" src="<?php echo $news[2]->getImage()?>" />
+      <p class="flex-caption"><?php echo strip_tags(strlen($news[0]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[0]->getDescription())?></p>
+    </li>
+  </ul>
+</div>
 </div>
 
-<div id="featured" >
- <ul class="ui-tabs-nav">
-     <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1">
-     	<a href="#fragment-1">
-     		<img height="50" src="<?php echo $news[0]->getImage()?>" alt="" />
-     		<span><?php echo strip_tags(strlen($news[0]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[0]->getDescription())?></span>
-     	</a>
-     </li>
-     <li class="ui-tabs-nav-item" id="nav-fragment-2">
-     	<a href="#fragment-2"><img height="50" src="<?php echo $news[1]->getImage()?>" alt="" />
-     		<span><?php echo strip_tags(strlen($news[1]->getDescription())>110?substr($news[1]->getDescription(),0,110)."...":$news[1]->getDescription())?>
-     		</span>
-     	</a>
-     </li>
-     <li class="ui-tabs-nav-item" id="nav-fragment-3">
-     	<a href="#fragment-3">
-     		<img height="50" src="<?php echo $news[2]->getImage()?>" alt="" />
-     		<span><?php echo strip_tags(strlen($news[2]->getDescription())>110?substr($news[2]->getDescription(),0,110)."...":$news[2]->getDescription())?></span>
-     	</a>
-     </li>
-     <li class="ui-tabs-nav-item" id="nav-fragment-4">
-     	<a href="#fragment-4">
-     		<img height="50" src="<?php echo $news[3]->getImage()?>" alt="" />
-     		<span><?php echo strip_tags(strlen($news[3]->getDescription())>110?substr($news[3]->getDescription(),0,110)."...":$news[3]->getDescription())?></span>
-     	</a>
-     </li>
-     <li class="ui-tabs-nav-item" id="nav-fragment-5">
-     	<a href="#fragment-5">
-     		<img height="50" src="<?php echo $news[4]->getImage()?>" alt="" />
-     		<span><?php echo strip_tags(strlen($news[4]->getDescription())>110?substr($news[4]->getDescription(),0,110)."...":$news[4]->getDescription())?></span>
-     	</a>
-     </li>
- </ul>
- <!-- First Content -->
- <div id="fragment-1" class="ui-tabs-panel" style="">
-  <img src="<?php echo $news[0]->getImage()?>" alt="" />
-  <div class="info" >
-  <h2><a href="<?php echo url_for("news/showDetails")."?id=".$news[0]->getId()?>" ><?php echo $news[0]->getTitle()?></a></h2>
-  <?php echo strlen($news[0]->getDescription())>150?substr($news[0]->getDescription(),0,150)."...":$news[0]->getDescription()?>
-  </div>
- </div>
- <!-- Second Content -->
- <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
-  <img src="<?php echo $news[1]->getImage()?>" alt="" />
-  <div class="info" >
-  <h2><a href="<?php echo url_for("news/showDetails")."?id=".$news[1]->getId()?>" ><?php echo $news[1]->getTitle()?></a></h2>
-  <?php echo strlen($news[1]->getDescription())>150?substr($news[1]->getDescription(),0,150)."...":$news[1]->getDescription()?>
-  </div>
- </div>
- <!-- Third Content -->
- <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
-  <img src="<?php echo $news[2]->getImage()?>" alt="" />
-  <div class="info" >
-  <h2><a href="<?php echo url_for("news/showDetails")."?id=".$news[2]->getId()?>" ><?php echo $news[2]->getTitle()?></a></h2>
-  <?php echo strlen($news[2]->getDescription())>150?substr($news[2]->getDescription(),0,150)."...":$news[2]->getDescription()?>
-  </div>
- </div>
- <!-- Fourth Content -->
- <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
-  <img src="<?php echo $news[3]->getImage()?>" alt="" />
-  <div class="info" >
-  <h2><a href="<?php echo url_for("news/showDetails")."?id=".$news[3]->getId()?>" ><?php echo $news[3]->getTitle()?></a></h2>
-  <?php echo strlen($news[3]->getDescription())>150?substr($news[3]->getDescription(),0,150)."...":$news[3]->getDescription()?>
-  </div>
- </div>
- <!-- Fifth Content -->
- <div id="fragment-5" class="ui-tabs-panel ui-tabs-hide" style="">
-  <img src="<?php echo $news[4]->getImage()?>" alt="" />
-  <div class="info" >
-  <h2><a href="<?php echo url_for("news/showDetails")."?id=".$news[4]->getId()?>" ><?php echo $news[4]->getTitle()?></a></h2>
-  <?php echo strlen($news[4]->getDescription())>150?substr($news[4]->getDescription(),0,150)."...":$news[4]->getDescription()?></a>
-  </div>
- </div>
- 
-</div>
 <div class="clear"></div>
 
 <div class="boxes" >
