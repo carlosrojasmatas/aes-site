@@ -41,6 +41,7 @@ class Advert extends BaseAdvert
 		$advert->modify($form);
 		$advert->save();
 		$advert->saveImage($form);
+		$advert->saveFrontImage($form);
 		foreach ($form->getValue("attachements") as $attachement){
 			if($attachement){
 				$this->addResource($attachement);
@@ -67,25 +68,29 @@ class Advert extends BaseAdvert
 		return $this->getImagePath() . $this->getImageName();
 	}
 
-//	public function saveResizedImage(){
-//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
-//		$small = new sfImage($path.$this->getImageName());
-//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
-//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_resized".$extension;
-//		$small->thumbnail(300, 240);
-//		$small->saveAs($path.$fullName);
-//		$this->setResizedImagePath($this->getMainImagePath().$fullName);
-//	}
-	
-//	public function saveIconImage(){
-//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
-//		$small = new sfImage($path.$this->getImageName());
-//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
-//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_icon".$extension;
-//		$small->thumbnail(80, 80);
-//		$small->saveAs($path.$fullName);
-//		$this->setIconImagePath($this->getMainImagePath().$fullName);
-//	}
+	public function getFImage(){
+		return $this->getFImagePath() . $this->getFImageName();
+	}
+
+	//	public function saveResizedImage(){
+	//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
+	//		$small = new sfImage($path.$this->getImageName());
+	//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
+	//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_resized".$extension;
+	//		$small->thumbnail(300, 240);
+	//		$small->saveAs($path.$fullName);
+	//		$this->setResizedImagePath($this->getMainImagePath().$fullName);
+	//	}
+
+	//	public function saveIconImage(){
+	//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
+	//		$small = new sfImage($path.$this->getImageName());
+	//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
+	//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_icon".$extension;
+	//		$small->thumbnail(80, 80);
+	//		$small->saveAs($path.$fullName);
+	//		$this->setIconImagePath($this->getMainImagePath().$fullName);
+	//	}
 
 	public function saveImage($form){
 		if($form->getValue("image")){
@@ -102,16 +107,31 @@ class Advert extends BaseAdvert
 		}
 	}
 
+	public function saveFrontImage($form){
+		if($form->getValue("f_image")){
+			$imageFile= $form->getValue("f_image");
+			$imageName=$imageFile->generateFileName();
+			$imagePath=sfConfig::get("app_resource_upload").$this->getId();
+			if(!file_exists($imagePath)){
+				mkdir($imagePath,0777);
+			}
+			$imageFile->save($imagePath."/".$imageName);
+			$this->setFImagePath("/uploads/resources/".$this->getId()."/");
+			$this->setFImageName($imageName);
+			$this->save();
+		}
+	}
+
 
 
 	public function addResource(sfValidatedFile $resource){
 		$resource = Resource::createNew($this, $resource);
 		$this->save();
 	}
-	
+
 	public static function getEventPager($month=false){
 		if($month){
-		  $q= Doctrine_Query::create()
+			$q= Doctrine_Query::create()
 			->addFrom("Advert a")
 			->addWhere("type= :type",array("type"=>"event"))
 			->addWhere("month(start_date) = :month OR month(end_date)= :month",array("month"=>$month));
@@ -125,10 +145,10 @@ class Advert extends BaseAdvert
 		$pager->setQuery($q);
 		return $pager;
 	}
-	
+
 	public static function getNewsPager($month=false){
 		if($month){
-		  $q= Doctrine_Query::create()
+			$q= Doctrine_Query::create()
 			->addFrom("Advert a")
 			->addWhere("month(start_date) = :month OR month(end_date)= :month",array("month"=>$month));
 		}else{
@@ -146,7 +166,7 @@ class Advert extends BaseAdvert
 		$date= $day." de ".$this->months[$month];
 		return $date;
 	}
-	
+
 	public function getEndPreformattedDate(){
 		list($year, $month, $day) = preg_split('[-]', $this->getEndDate());
 		$date= $day." de ".$this->months[$month];
