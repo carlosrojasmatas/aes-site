@@ -9,7 +9,10 @@ $(document).ready(function() {
 //		});
 //		
 //	});
-	$('.flexslider').flexslider();
+	$('.flexslider').flexslider({
+		easing:"swing",
+		direction:"vertical"
+	});
 //	$("#featured").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
 });
 

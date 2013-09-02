@@ -3,11 +3,11 @@
 <?php use_stylesheet("home.css")?>
 <?php use_stylesheet("flexslider.css")?>
 
-<div class="flex-container">
+<div class="flex-nav-container">
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <img height="600px" width="800px" src="<?php echo $news[0]->getImage()?>" />
+      <img height="400px" width="800px" src="<?php echo $news[0]->getImage()?>" />
       <p class="flex-caption"><?php echo strip_tags(strlen($news[0]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[0]->getDescription())?></p>
     </li>
     <li>
