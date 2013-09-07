@@ -82,7 +82,9 @@ div.news-list div.news-row img {
 /*advert list styles*/
 #slideshow {
 	background: none repeat scroll 0 0;
-	height: 820px;
+	/*height: 820px;*/
+	padding: 25px;
+	font-size:medium;
 	border: 0.5px solid #D1D1D1;
 	margin: auto;
 	position: relative;
@@ -99,7 +101,6 @@ div.news-list div.news-row img {
 	margin: 0 auto;
 	padding: 20px;
 	width: auto;
-	height: 768px;
 	/*   over	flow:auto; allow scrollbar */
 	position: relative;
 }
@@ -107,7 +108,6 @@ div.news-list div.news-row img {
 #slideshow #slidesContainer .slide {
 	margin: 0 auto;
 	width: 620px; /* reduce by 20 pixels to avoid horizontal scroll */
-	height: 768px;
 }
 
 /**
