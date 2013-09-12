@@ -26,7 +26,6 @@
 </div>
 <div class="clearfix"></div>
 <div id="add-dojo-banner">
-<span>Queres agregar tu dojo? Hace click <a id="new-dojo" href="<?php echo url_for("dojos/new")?>">aca</a></span>
-
+	<span>Queres agregar tu dojo? Hace click <a id="new-dojo" href="<?php echo url_for("dojos/new")?>">aca</a></span>
 </div>
 <div class="dojo-detail"></div>
