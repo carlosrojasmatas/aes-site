@@ -22,7 +22,7 @@ class AdvertForm extends BaseAdvertForm
   	$this->setWidget("start_time", new sfWidgetFormInputText());
   	$this->setWidget("end_date", new sfWidgetFormInputText());
   	$this->setWidget("end_time", new sfWidgetFormInputText());
-  	$this->setWidget("type",new sfWidgetFormChoice(array('choices' => array('advert' => 'Noticia', 'event' => 'Evento'))));
+  	$this->setWidget("type",new sfWidgetFormChoice(array('choices' => array('advert' => 'Noticia', 'event' => 'Evento','inst' => 'Institucional','hombu' => 'Hombu'))));
   	
   	
   	

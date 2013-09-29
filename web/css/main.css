@@ -1,3 +1,18 @@
+@font-face {
+	font-family: 'rationale_oneregular';
+	src: url('../fonts/rationale/rationale-regular-webfont.eot');
+	src: url('../fonts/rationale/rationale-regular-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../fonts/rationale/rationale-regular-webfont.woff')
+		format('woff'),
+		url('../fonts/rationale/rationale-regular-webfont.ttf')
+		format('truetype'),
+		url('../fonts/rationale/rationale-regular-webfont.svg#rationale_oneregular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 * {
 	font-family: arial, sans-serif;
 }
@@ -7,10 +22,52 @@ a {
 	color: #990000;;
 	font-weight: bold;
 }
+
 a:hover {
 	color: black;
 }
 
+div.separator-line {
+	border: none;
+	height: 4px;
+	width: 100%;
+	margin: auto auto 40px;
+	background: url(../images/separator.png) repeat;
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+}
+
+.introline {
+	margin: 20px 0;
+}
+
+.intro-text { /*	float: left;*/
+	width: auto;
+}
+
+.intro-text h3 {
+	font-family: rationale_oneregular;
+	font-size: 26px;
+	text-align: center;
+	color: #6b6b6b;
+	text-shadow: 4px 4px 10px rgba(150, 150, 150, 1);
+	margin-bottom: 0;
+}
+
+.intro-text h3 span {
+	font-family: rationale_oneregular;
+	color: #cc0000;
+}
+
+.intro-text p {
+	font-family: rationale_oneregular;
+	font-size: 20px;
+	text-align: justify;
+	color: #6b6b6b;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
 
 div.line {
 	border-top: solid;
@@ -19,7 +76,7 @@ div.line {
 	clear: both;
 	display: block;
 	margin: auto;
-	width: 800px;
+	width: 90%;
 }
 
 #header {
@@ -32,11 +89,14 @@ div.line {
 }
 
 #pageWrap {
-	background: transparent url(../images/back.png) repeat-y;
+	/*	background: transparent url(../images/back.png) repeat-y;*/
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	background-color: #ffffff;
 	margin: auto;
 	overflow: visible;
-	width: 1024px;
+	width: 85%;
 }
 
 #pageBody {
@@ -83,10 +143,10 @@ div#mainContent {
 	border-color: #cccccc;
 	border-width: 1px;
 	margin: auto;
-	width: 80%;
+	width: 90%;
 	height: 800px;
-	/* 	-moz-border-radius: 15px; */
-	/* 	-ms-border-radius: 15px; */
+	padding-top: 15px;
+	/* 	-moz-border-radius: 15px; */ /* 	-ms-border-radius: 15px; */
 	/* 	-webkit-border-radius: 15px; */
 	/* 	-moz-box-shadow: 0 0 20px black; */
 	/* 	-ms-box-shadow: 0 0 20px black; */
@@ -115,7 +175,7 @@ div.imgWithText {
 }
 
 div.text {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Yanone, Arial, Helvetica, sans-serif;
 	padding: 20px;
 	font-size: 13px;
 	font-weight: bold;
@@ -150,17 +210,17 @@ div#footer span {
 
 div#footer div.link-to-pages {
 	display: inline;
-	margin-left: 40px;
+	margin-left: 10%;
 }
 
-div#footer div.link-to-pages a{
+div#footer div.link-to-pages a {
 	border: none;
 	color: white;
 }
 
-div#footer div.link-to-pages img{
+div#footer div.link-to-pages img {
+	
 }
-
 
 div#footer img {
 	margin: 0 0 0 70px;
@@ -194,8 +254,8 @@ html,body {
 }
 
 #container {
-	margin: 20px auto;
-	width: 91%;
+	margin: 3% auto;
+	width: 90%;
 }
 
 ul,li {
@@ -242,10 +302,10 @@ ul,li {
 	font-size: 14px;
 	font-family: helvetica, arial, sans-serif;
 	text-decoration: none;
-	padding: 20px 29px;
+	padding: 20px 18px;
 	width: 100%;
 	border: none;
-	font-weight: normal;	
+	font-weight: normal;
 }
 
 #nav li a:HOVER {
@@ -279,18 +339,17 @@ ul,li {
 }
 
 #new-form form p.success {
-  background-color: #FFF4C2;
-  border-bottom: 1px solid #FFCC34;
-  border-top: 1px solid #FFCC34;
-  font: 14px Arial;
-  margin-top: -1px;
-  padding: 10px;
+	background-color: #FFF4C2;
+	border-bottom: 1px solid #FFCC34;
+	border-top: 1px solid #FFCC34;
+	font: 14px Arial;
+	margin-top: -1px;
+	padding: 10px;
 }
 
 #new-form dl dd.tiny-content {
 	width: 800px;
 }
-
 
 div#popup-overlay {
 	background-color: rgba(0, 0, 0, 0.3);
@@ -338,12 +397,12 @@ div.paginator-number {
 }
 
 div.paginator-number a {
-	color:#990000;
+	color: #990000;
 	text-decoration: none;
 }
 
 div.paginator-number a:HOVER {
-	color:black;
+	color: black;
 	text-shadow: red;
 }
 
@@ -467,7 +526,7 @@ div#new-form form dl dd input.large {
 	width: 350px;
 }
 
-div#new-form form dl{
+div#new-form form dl {
 	width: 450px;
 }
 
@@ -483,7 +542,7 @@ div#new-form form dl dd p.note {
 	font-size: 12px;
 	line-height: 0px;
 	font-style: italic;
-	margin-left:20px;
+	margin-left: 20px;
 }
 
 div#new-form form dl dd p.note.error {
@@ -492,19 +551,16 @@ div#new-form form dl dd p.note.error {
 }
 
 a.back-button p {
-	float:left;
-	margin: 0;	
-}
-a.back-button img {
-	float:left;
-position: relative;
-bottom: 15px;
+	float: left;
+	margin: 0;
 }
 
-a.close-button{
+a.back-button img {
+	float: left;
+	position: relative;
+	bottom: 15px;
+}
+
+a.close-button {
 	outline: 0;
 }
-
-
-
-

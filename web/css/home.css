@@ -64,7 +64,7 @@ div.content-box {
 	height: 250px;
 	margin: 48px 7px 0 0;
 	position: relative;
-	width: 382px;
+	width: 220px;
 	padding: 10px;
 }
 
@@ -93,7 +93,7 @@ div.content-box-row span.date {
 div.content-box-header a{
 	color:#990000;
 	font-family: verdana,arial;
-	font-size: 20px;
+	font-size: 14px;
 	text-decoration: none;
 }
 

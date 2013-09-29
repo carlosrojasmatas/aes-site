@@ -9,9 +9,12 @@ $(document).ready(function() {
 //		});
 //		
 //	});
-	$('.flexslider').flexslider({
-		easing:"swing",
-		direction:"vertical"
+	$('#mix-in').slidorion({
+		effect: 'slideRandom',
+		autoPlay: false,
+		hoverPause: false,
+		interval: 5000,
+		speed: 800
 	});
 //	$("#featured").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
 });

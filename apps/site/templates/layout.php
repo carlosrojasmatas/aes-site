@@ -37,6 +37,8 @@
 			<ul id="nav">
 				<li <?php echo ($selected=="home/home")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/home")?>">Home</a></li>
 				<li <?php echo ($selected=="home/whoWeAre")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/whoWeAre")?>">Quienes Somos</a></li>
+				<li <?php echo ($selected=="home/hombu")?"id='selected'":""?>><a class="menu-link" href="#">Hombu Dojo</a></li>
+				<li <?php echo ($selected=="home/aes")?"id='selected'":""?>><a class="menu-link" href="#">Institucionales</a></li>
 				<li <?php echo ($selected=="news/index" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/index")?>">Noticias y Eventos</a></li>
 				<li <?php echo ($selected=="events/index" || $selected=="events/eventDetail")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Calendario</a></li>
 				<li <?php echo ($selected=="dojos/index" || $selected=="dojos/new")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("dojos/index")?>">Dojos</a></li>
@@ -56,7 +58,7 @@
 				<a href="http://www.jka.or.jp/english/e_index.html" target="_blank"><img src="/images/logo-jka.png" /></a> 
 				<a href="http://www.karatesamurai.com.ar/" target="_blank"><img src="/images/samurai.png" /></a> 
 			</div>
-			<img src="/images/aessm.png" align="" /> <span>Asociaci&#243;n Escuelas Shotokan - Argentina</span>
+			<img src="/images/aessm.png" /> <span>Asociaci&#243;n Escuelas Shotokan - Argentina</span>
 		</div>
 	</div>
 
