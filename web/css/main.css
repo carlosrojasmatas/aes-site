@@ -40,6 +40,7 @@ div.separator-line {
 
 .introline {
 	margin: 20px 0;
+	
 }
 
 .intro-text { /*	float: left;*/
@@ -59,6 +60,7 @@ div.separator-line {
 	font-family: rationale_oneregular;
 	color: #cc0000;
 }
+
 
 .intro-text p {
 	font-family: rationale_oneregular;
@@ -93,7 +95,7 @@ div.line {
 	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
-	background-color: #ffffff;
+	background-color: #FAF8F5;
 	margin: auto;
 	overflow: visible;
 	width: 85%;
@@ -174,9 +176,20 @@ div.imgWithText {
 	padding: 12px;
 }
 
+div.text h2 {
+	font-family: rationale_oneregular;
+	font-size: 24px;
+	text-shadow: 4px 4px 10px rgba(150, 150, 150, 1);
+	color: #cc0000;
+	padding-bottom: 10px;
+	display: block;
+	margin: 15px;
+	font-weight: bold;
+	border-bottom: 1px solid #B8B8B8;
+}
+
 div.text {
 	font-family: Yanone, Arial, Helvetica, sans-serif;
-	padding: 20px;
 	font-size: 13px;
 	font-weight: bold;
 	color: #3D3D3D;
@@ -210,7 +223,7 @@ div#footer span {
 
 div#footer div.link-to-pages {
 	display: inline;
-	margin-left: 10%;
+	float:left;
 }
 
 div#footer div.link-to-pages a {

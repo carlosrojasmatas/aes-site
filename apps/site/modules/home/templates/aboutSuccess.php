@@ -1,5 +1,41 @@
-<div class="text">
-	<span>Quienes Somos</span>
+<?php use_stylesheet("about.css")?>
+<?php use_javascript("about.js")?>
+<div id="cssmenu">
+	<ul>
+		<li><a href="#"><span>Sobre nosotros</span></a>
+			<ul>
+				<li><a href="#">Quienes somos</a></li>
+				<li><a href="#">Historia del Karate</a></li>
+				<li><a href="#">Nuestro Maestro</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>Institucional</span></a>
+			<ul>
+				<li><a href="#">Consejo directivo</a></li>
+				<li><a href="#">Organigrama</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>Hombu Dojo</span></a>
+			<ul>
+				<li><a href="#">Acerca del Dojo</a></li>
+				<li><a href="#">Ubicaci&oacute;n</a></li>
+				<li><a href="#">Fotos</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>C&oacute;digo de conducta</span></a>
+			<ul>
+				<li><a href="#">Normativa</a></li>
+				<li><a href="#">Reglamento interno</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>Form&aacute; parte</span></a>
+		</li>
+		
+	</ul>
+</div>
+<div class="text about-section">
+	<h2>Quienes Somos</h2>
 	<p>Asociaci&#243;n Escuelas de Karate Shotokan es la agrupaci&#243;n de
 		karate-do de la Rep&#250;blica Argentina reconocida oficialmente por
 		la Japan Karate Association (JKA) que desde el a&#241;o 1966 en que el
@@ -26,7 +62,7 @@
 		Latinoam&#233;rica, Europa, Australia y el propio Jap&#243;n (donde
 		incluso se han perfeccionado los m&#225;s destacados de nuestros
 		practicantes, entrenadores y &#225;rbitros).</p>
-	<span>Objetivos</span>
+	<h2>Objetivos</h2>
 	<p>El objetivo fundamental, es la transmisi&#243;n y perfeccionamiento
 		de las t&#233;cnicas y pr&#225;cticas de karate, con todo lo que ello
 		supone desde un punto de vista deportivo y de sana competici&#243;n,
@@ -41,7 +77,7 @@
 		solo insertarse en la sociedad en su conjunto, sino realizar con su
 		comportamiento solidario y su ejemplo un genuino aporte a la sociedad
 		de la que procede y en la que act&#250;a.</p>
-	<span>Hacia el Futuro</span>
+	<h2>Hacia el Futuro</h2>
 	<p>La consigna es clara: continuar por senda trazada por el Sensei
 		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
 		nuestra disciplina, con una profunda fidelidad a los principios

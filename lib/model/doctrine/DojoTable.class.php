@@ -17,6 +17,15 @@ class DojoTable extends Doctrine_Table
         return Doctrine_Core::getTable('Dojo');
     }
     
+    public function getTop($nr){
+    	$query = Doctrine_Query::create()->
+		addFrom("Dojo d")
+		->addOrderBy("created_at DESC")
+		->limit($nr);
+		
+		return $query->execute();
+    }
+    
     public function findByProvince($province){
     	$query = Doctrine_Query::create()
     			->from("Dojo d")

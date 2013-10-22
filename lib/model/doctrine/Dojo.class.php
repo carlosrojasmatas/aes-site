@@ -52,7 +52,7 @@ class Dojo extends BaseDojo
 		$dojo->savePhoto($form);
 		return $dojo;
 	}
-
+	
 	public function modify(DojoForm $data){
 		$this->setName($data->getValue("name"));
 		$this->setSensei($data->getValue("sensei"));

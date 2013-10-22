@@ -58,23 +58,48 @@ body {
 	color: #1DCCEF;
 }
 
-div.content-box {
-/* 	border: 1px solid #990000; */
+div.content-box { /* 	border: 1px solid #990000; */
 	float: left;
 	height: 250px;
 	margin: 48px 7px 0 0;
 	position: relative;
 	width: 220px;
-	padding: 10px;
+	background-color: white;
+	/*	padding: 10px;*/
+	height: 250px;
+	border: 1px solid #cc0000;
+	height: 250px;
+}
+
+div.content-box-body {
+	padding: 5px;
 }
 
 div.content-box-header {
-	border-bottom: 1px dotted #990000;
+	padding: 10px 0;
+	text-align: center;
+	background: #ff3019; /* Old browsers */
+	background: -moz-linear-gradient(top, #cc0000 0%, #000 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc000),
+		color-stop(100%, #000) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #cc0000 0%, #000 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #cc0000 0%, #000 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #cc0000 0%, #000 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #cc0000 0%, #000 100%);
+	/* W3C */
+	filter: progid :     DXImageTransform.Microsoft.gradient (     
+		 startColorstr =  
+		  '#cc0000', endColorstr =     '#000 ', GradientType =     0 );
+	/* IE6-9 */
 }
 
 div.content-box-list {
 	padding: 5px;
-	color:#3D3D3D;
+	color: #3D3D3D;
 }
 
 div.content-box-row {
@@ -83,34 +108,68 @@ div.content-box-row {
 }
 
 div.content-box-row a:hover {
-	color:black;
+	color: black;
 }
 
 div.content-box-row span.date {
 	margin-right: 5px;
 }
 
-div.content-box-header a{
-	color:#990000;
-	font-family: verdana,arial;
-	font-size: 14px;
+div.content-box-header a {
+	color: white;
+	font-family: rationale_oneregular;
+	font-size: 18px;
 	text-decoration: none;
 }
 
-div.content-box-header a:hover{
-	color:black;
+div.content-box-header a:hover {
+	color: black;
 }
 
-div.content-box-footer {
-	border-top: 1px dotted #990000;
+div.content-box-footer { /*	border-top: 1px dotted #990000;*/
+	
+}
+
+div.add-dojo {
+	float: left;
+	border: 1px solid #828282;
+	color: #828282;
+	width: 90%;
+	padding: 40px 15px;
+	margin: 42px auto;
+	background: url("../images/home/dojo-icon.png") no-repeat scroll 85px white;
+	background-position: center right;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+}
+
+div.add-dojo span {
+	margin-right: 20px;
+}
+
+div.add-dojo h2{
+	font-weight: bold;
+	font-family: rationale_oneregular;
+	color:#990000;
+	font-size: 20px;
+	
+}
+
+div.add-dojo a {
+	font-family: rationale_oneregular;
 }
 
 div.boxes {
 	margin: auto;
+	padding-left: 60px;
 }
 
 div.content-box.news {
-	background: url("/images/home/news.jpg");
+	background: url("../images/home/news.jpg");
 }
 
 div.content-box.photos {
@@ -122,7 +181,7 @@ div.content-box.events {
 }
 
 div.content-box.dojos {
-	background: url("/images/home/dojo.png");
+	background: url("../images/home/dojo.png");
 }
 
 div.transbox {
@@ -239,7 +298,8 @@ div.transbox a {
 	background: none repeat scroll 0 0 #FFFFFF;
 	color: #333333;
 	display: block;
-	outline: none; height : 60px;
+	outline: none;
+	height: 60px;
 	line-height: 20px;
 	height: 60px;
 }
@@ -251,13 +311,12 @@ div.transbox a {
 #featured li.ui-tabs-selected {
 	background: url("/images/selected-item.png") no-repeat scroll left top
 		transparent;
-	
 }
 
 #featured ul.ui-tabs-nav li.ui-tabs-selected a {
 	background: repeat scroll 0 0 url("/images/news-back.png");
 	margin: 0 0 0 2px;
-	color:white;
+	color: white;
 }
 
 #featured ul.ui-tabs-nav li img {
@@ -274,7 +333,7 @@ div.transbox a {
 	height: 90px;
 	left: 0;
 	position: absolute;
-	width:100%;
+	width: 100%;
 	top: 220px;
 }
 

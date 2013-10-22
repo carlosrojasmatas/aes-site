@@ -32,7 +32,7 @@ class AdvertTable extends Doctrine_Table
 		return $query->execute();
 	}
 	
-	public function getTopFive($type=null){
+	public function getTop($nr,$type=null){
 		$query = Doctrine_Query::create()->
 		addFrom("Advert a")
 		->addOrderBy("start_date DESC")
@@ -40,7 +40,7 @@ class AdvertTable extends Doctrine_Table
 		
 		if($type){
 			$query->addWhere("a.type = ?",array($type));
-			$query->addWhere("a.start_date >= ?",array(date("Y-n-j")));
+//			$query->addWhere("a.start_date >= ?",array(date("Y-n-j")));
 		}
 		return $query->execute();
 	}

@@ -15,6 +15,9 @@ class Advert extends BaseAdvert
 
 	const ADVERT= "advert";
 	const EVENT= "event";
+	const INST= "inst";
+	const HOMBU= "hombu";
+	
 	private $months =array("01"=>"Enero",
 						"02"=>"Febrero",
 						"03"=>"Marzo",

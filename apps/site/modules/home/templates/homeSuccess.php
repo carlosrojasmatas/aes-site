@@ -41,64 +41,72 @@
 	<div class="content-box-header" >
 		<a href="<?php echo url_for("news/index")?>">Institucionales </a>
 	</div>
-	<div class="content-box-list">
-		<?php foreach($events as $event):?>
-			<div class="content-box-row">
-				<span class="date"><?php echo $event->getStartpreformattedDate();?></span>
-				<a href="<?php echo url_for('news/showDetails')?>?id=<?php echo $event->getId();?>"><?php echo $event->getTitle();?></a>
-			</div>
-		<?php endforeach;?>
+	<div class="content-box-body">
+		<div class="content-box-list">
+			<?php foreach($insts as $inst):?>
+				<div class="content-box-row">
+					<a style="font-size:12px" href="<?php echo url_for('news/showDetails')?>?id=<?php echo $inst->getId();?>"><?php echo $inst->getTitle();?></a>
+				</div>
+			<?php endforeach;?>
+		</div>
 	</div>
-	<div class="content-box-footer" >
-	</div>
+	<div class="content-box-footer" ></div>
 </div>
 <!-- Hombu dojo -->
 <div class="content-box">
 	<div class="content-box-header" >
 		<a href="<?php echo url_for("news/index")?>">Desde el Hombu</a>
 	</div>
-	<div class="content-box-list">
-		<?php foreach($events as $event):?>
-			<div class="content-box-row">
-				<span class="date"><?php echo $event->getStartpreformattedDate();?></span>
-				<a href="<?php echo url_for('news/showDetails')?>?id=<?php echo $event->getId();?>"><?php echo $event->getTitle();?></a>
-			</div>
-		<?php endforeach;?>
+	<div class="content-box-body">
+		<div class="content-box-list">
+			<?php foreach($hombus as $hombu):?>
+				<div class="content-box-row">
+					<a href="<?php echo url_for('news/showDetails')?>?id=<?php echo $hombu->getId();?>"><?php echo $hombu->getTitle();?></a>
+				</div>
+			<?php endforeach;?>
+		</div>
 	</div>
-	<div class="content-box-footer" >
-	</div>
+	<div class="content-box-footer" ></div>
 </div>
 <!-- Eventos -->
 <div class="content-box">
 	<div class="content-box-header" >
-		<a href="<?php echo url_for("news/index")?>">Pr&oacute;ximos Eventos - <?php $date= getdate(); echo $date["year"]?> </a>
+		<a href="<?php echo url_for("news/index")?>">Pr&oacute;ximos Eventos</a>
 	</div>
-	<div class="content-box-list">
-		<?php foreach($events as $event):?>
-			<div class="content-box-row">
-				<span class="date"><?php echo $event->getStartpreformattedDate();?></span>
-				<a href="<?php echo url_for('news/showDetails')?>?id=<?php echo $event->getId();?>"><?php echo $event->getTitle();?></a>
-			</div>
-		<?php endforeach;?>
+	<div class="content-box-body">
+		<div class="content-box-list">
+			<?php foreach($events as $event):?>
+				<div class="content-box-row">
+					<span class="date"><?php echo $event->getStartpreformattedDate();?></span>
+					<a href="<?php echo url_for('news/showDetails')?>?id=<?php echo $event->getId();?>"><?php echo $event->getTitle();?></a>
+				</div>
+			<?php endforeach;?>
+		</div>
 	</div>
-	<div class="content-box-footer" >
-	</div>
+	<div class="content-box-footer" ></div>
 </div>
 <!-- Nuevos dojos -->
 <div class="content-box">
 	<div class="content-box-header" >
-		<a href="<?php echo url_for("albums/index")?>">Nuevas Fotos</a>
+		<a href="<?php echo url_for("albums/index")?>">Nuevos Dojos</a>
 	</div>
-	<div class="content-box-list">
-		<?php foreach($albums as $album):?>
-			<!-- aqui irian los eventos que faltan del 2010 -->
-			<div class="content-box-row">
-				<a href="<?php echo url_for("albums/showResources")?>?type=image&albumId=<?php echo $album->getId();?>"><?php echo $album->getName();?></a>
-			</div>
-		<?php endforeach;?>
-	</div>	
+	<div class="content-box-body">
+		<div class="content-box-list">
+			<?php foreach($dojos as $dojo):?>
+				<!-- aqui irian los eventos que faltan del 2010 -->
+				<div class="content-box-row">
+					<a href="<?php echo url_for("albums/showResources")?>?type=image&albumId=<?php echo $dojo->getId();?>"><?php echo $dojo->getName();?></a>
+				</div>
+			<?php endforeach;?>
+		</div>	
+	</div>
 	<div class="content-box-footer" >
 	</div>
+</div>
+<div class="add-dojo"> 
+	<h2>Carga tu Dojo!</h2>
+	<span>No apareces en el <a href="<?php echo url_for("dojos/index")?>">listado oficial</a> de Dojos de AES? 
+	Envianos tu informaci&oacute;n y registrate en el sitio haciendo click <a href="<?php echo url_for("dojos/new")?>">ACA</a></span>
 </div>
 <div class="clear"></div>
 </div>

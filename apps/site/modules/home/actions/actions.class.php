@@ -12,12 +12,15 @@ class homeActions extends sfActions
 {
 	
 	public function executeHome(sfWebRequest $request){
-		$this->news= Advert::getRepository()->getTopFive();	
-		$this->events= Advert::getRepository()->getTopFive(Advert::EVENT);
+		$this->news= Advert::getRepository()->getTop(5);	
+		$this->events= Advert::getRepository()->getTop(5,Advert::EVENT);
+		$this->insts= Advert::getRepository()->getTop(5,Advert::INST);
+		$this->hombus= Advert::getRepository()->getTop(5,Advert::HOMBU);
 		$this->albums= Album::getRepository()->getTopFive();
+		$this->dojos= Dojo::getRepository()->getTop(5);
 	}
 	
-	public function executeWhoWeAre($request){
+	public function executeAbout($request){
 			
 	}
 	
