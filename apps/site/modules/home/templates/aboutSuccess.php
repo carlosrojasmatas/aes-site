@@ -2,10 +2,10 @@
 <?php use_javascript("about.js")?>
 <div id="cssmenu">
 	<ul>
-		<li><a href="#"><span>Sobre nosotros</span></a>
+		<li><a href="#" ><span>Sobre nosotros</span></a>
 			<ul>
-				<li><a href="#">Quienes somos</a></li>
-				<li><a href="#">Historia del Karate</a></li>
+				<li><a id="about-menu">Quienes somos</a></li>
+				<li><a  id="history-menu">Historia del Karate</a></li>
 				<li><a href="#">Nuestro Maestro</a></li>
 			</ul>
 		</li>
@@ -34,7 +34,8 @@
 		
 	</ul>
 </div>
-<div class="text about-section">
+<!-- Sobre nosotros -->
+<div id="about-section" class="text about-section">
 	<h2>Quienes Somos</h2>
 	<p>Asociaci&#243;n Escuelas de Karate Shotokan es la agrupaci&#243;n de
 		karate-do de la Rep&#250;blica Argentina reconocida oficialmente por
@@ -88,3 +89,19 @@
 		procederes violentos, como enuncia el Dojo Kun.</p>
 
 </div>
+<!-- Fin Sobre nosotros -->
+
+<!-- Historia del karate -->
+<div id="history-section" class="text about-section">
+<h2>Historia del Karate</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+<!-- Fin Historia del karate -->
+

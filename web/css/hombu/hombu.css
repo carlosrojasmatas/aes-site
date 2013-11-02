@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+div.info {
+	color: #828282;
+	margin: 50px;
+	padding: 20px;
+	width: auto;
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+}
+
+div.info h2 {
+  color: #990000;
+  font-family: rationale_oneregular;		
+}
+
+div.hombu-map {
+	border: solid 1px #C9C9C9;
+	width: 500px;
+	height: 750px;
+	position: relative;
+}

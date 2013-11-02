@@ -39,7 +39,7 @@
 <!-- Institucionales -->
 <div class="content-box">
 	<div class="content-box-header" >
-		<a href="<?php echo url_for("news/index")?>">Institucionales </a>
+		<a href="<?php echo url_for("news/index")?>">Comunicaciones </a>
 	</div>
 	<div class="content-box-body">
 		<div class="content-box-list">
@@ -105,8 +105,8 @@
 </div>
 <div class="add-dojo"> 
 	<h2>Carga tu Dojo!</h2>
-	<span>No apareces en el <a href="<?php echo url_for("dojos/index")?>">listado oficial</a> de Dojos de AES? 
-	Envianos tu informaci&oacute;n y registrate en el sitio haciendo click <a href="<?php echo url_for("dojos/new")?>">ACA</a></span>
+	<span>Envianos tus datos  haciendo click <a href="<?php echo url_for("dojos/new")?>"> >>ACA<< </a> <br><br>
+	Complet&aacute; el formulario y registrate en el <a href="<?php echo url_for("dojos/new")?>"> listado oficial </a> de Dojos AES!!!</span>
 </div>
 <div class="clear"></div>
 </div>

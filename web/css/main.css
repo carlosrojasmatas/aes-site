@@ -40,7 +40,6 @@ div.separator-line {
 
 .introline {
 	margin: 20px 0;
-	
 }
 
 .intro-text { /*	float: left;*/
@@ -61,7 +60,6 @@ div.separator-line {
 	color: #cc0000;
 }
 
-
 .intro-text p {
 	font-family: rationale_oneregular;
 	font-size: 20px;
@@ -72,9 +70,6 @@ div.separator-line {
 }
 
 div.line {
-	border-top: solid;
-	border-width: 1px;
-	border-color: #cccccc;
 	clear: both;
 	display: block;
 	margin: auto;
@@ -82,12 +77,18 @@ div.line {
 }
 
 #header {
-	background: transparent url(../images/new_logo.png) no-repeat;
-	height: 130px;
-	width: 100%;
+	background: white url(../images/new_logo.png) no-repeat;
+	height: 150px;
+/*	border-bottom:2px solid gray;*/
+	background-position: bottom left;
+	position:relative;
+	width: 1024px;
+	left:20px;
 	float: left;
 	clear: left;
-	margin: 5px 0 10px 20px;
+	margin: 0px 0px 0px 0px;
+	padding-top: 2px;
+	padding-right: 20px;
 }
 
 #pageWrap {
@@ -95,7 +96,7 @@ div.line {
 	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
-	background-color: #FAF8F5;
+/*	background-color: #FAF8F5;*/
 	margin: auto;
 	overflow: visible;
 	width: 85%;
@@ -211,7 +212,11 @@ div.text span {
 div#footer {
 	vertical-align: middle;
 	height: 140px;
+	width: 99%;
 	padding-right: 10px;
+	padding-top: 55px; margin : 15px 0 0 0; background : white;
+	border-top: 2px solid gray;
+	background: white;
 	margin: 15px 0 0 0;
 }
 
@@ -223,7 +228,7 @@ div#footer span {
 
 div#footer div.link-to-pages {
 	display: inline;
-	float:left;
+	float: left;
 }
 
 div#footer div.link-to-pages a {

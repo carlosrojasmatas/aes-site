@@ -132,16 +132,14 @@ div.content-box-footer { /*	border-top: 1px dotted #990000;*/
 
 div.add-dojo {
 	float: left;
-	border: 1px solid #828282;
+	border: 1px solid #990000;
 	color: #828282;
 	width: 90%;
-	padding: 40px 15px;
+	height:150px;
+	padding: 12px 17px 0;
 	margin: 42px auto;
-	background: url("../images/home/dojo-icon.png") no-repeat scroll 85px white;
+	background: url("../images/home/dojo-icon.png") no-repeat scroll 85px #F7F7F7;
 	background-position: center right;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
 	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);

@@ -37,7 +37,7 @@
 			<ul id="nav">
 				<li <?php echo ($selected=="home/home")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/home")?>">Home</a></li>
 				<li <?php echo ($selected=="home/about")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/about")?>">Quienes Somos</a></li>
-				<li <?php echo ($selected=="home/hombu")?"id='selected'":""?>><a class="menu-link" href="#">Hombu Dojo</a></li>
+				<li <?php echo ($selected=="hombu/index")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("hombu/index")?>">Hombu Dojo</a></li>
 				<li <?php echo ($selected=="home/aes")?"id='selected'":""?>><a class="menu-link" href="#">Comunicaciones</a></li>
 				<li <?php echo ($selected=="news/index" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/index")?>">Noticias</a></li>
 				<li <?php echo ($selected=="events/index" || $selected=="events/eventDetail")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Calendario</a></li>
@@ -54,7 +54,7 @@
 		</div>
 		<div class="line"></div>
 		<div id="footer">
-			<div class="link-to-pages" flo>
+			<div class="link-to-pages">
 				<a href="http://www.jka.or.jp/english/e_index.html" target="_blank"><img src="/images/logo-jka.png" /></a> 
 			</div>
 			<div class="link-to-pages">
