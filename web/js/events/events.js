@@ -55,19 +55,14 @@ function loadsEventsForCurrentYear(options){
 						var selector= "#Event_"+ id;
 						var description= data[ev].Description.substring(0,400) + "...";
 						$(selector).qtip({
-							content: "<h4>" + data[ev].Title + "</h4> <br>" + description,
+							content: "<h3>" + data[ev].Title + "</h3> <br>" + description,
 							show: {
 								delay:1000,
 							},
 							style: { 
-								name: 'red', // Inherit from preset style
-								tip: 'leftTop',
-								border: {
-							         width: 3,
-							         radius: 8,
-							         color: '#990000'
-							      },
-							    width: 400
+								classes:'qtip-red qtip-shadow',
+								 width: 500, // Overrides width set by CSS (but no max-width!)
+							     height: 200 
 							}
 						});
 					}

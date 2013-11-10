@@ -16,10 +16,13 @@
 					<a id="show-image" href="#"><img height="220" src="<?php echo $advert->getImage()?>" /></a>
 					<?php echo $advert->getDescription()?>
 	     		</p>	
-		<a href="index" class="back-button"><img src="/images/back-btn.png"><p>Volver al listado</p> </a>
 		</div>
 	</div>
+	<div id="news-footer">
+			<a href="index" class="back-button"><img src="/images/back-btn.png"><p>Volver al listado</p> </a>
+	</div>
 </div>
+
 <div id="advert-image" style="display: none;">
 	<a href="#" id="img-close" class="aes-link close-button"><img title="Cerrar" src="/images/close.png"/></a>
 	<br>

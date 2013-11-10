@@ -5,9 +5,14 @@
 <?php use_stylesheet("jquery-ui/jquery-ui-timepicker.css")?>
 
 <?php use_stylesheet("jquery-ui/ui-lightness/jquery-ui-1.10.3.custom.min.css")?>
-<div class="section-header" id="section-news">
-	
+<div class="separator-line"></div>
+<div class="introline">
+	<div class="intro-text" >
+		<h3><span>Noticias AES</span></h3>
+		<p>En esta secci&oacute;n encontrar&aacute;s las novedades respecto a cursos, torneos, ex&aacute;menes y toda la informaci&oacute;n oficial de nuestra organizaci&oacute;n </p>
+	</div>
 </div>
+<div class="separator-line"></div>
 
 <?php if(sfContext::getInstance()->getUser()->hasCredential("admin")):?>
 	<input type="button" class="button" id="addNew" value="Agregar Noticia"/>

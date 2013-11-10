@@ -12,12 +12,41 @@ div.info {
 
 div.info h2 {
   color: #990000;
-  font-family: rationale_oneregular;		
 }
 
-div.hombu-map {
+div.info-container {
+	padding: 10px;
+	margin: 60px 20px;
+	border: 1px solid #990000;
+	height: 280px;
+}
+
+div.partial-info {
+	float:left;
+	position: relative;
+	margin: 0px 10px;
+	padding: 10px;
+	width: 50%;
+	font-size: 16px;
+}
+
+div.partial-info h2 {
+	color:#990000;
+	font-family: rationale_oneregular;
+}
+
+div.partial-info h3 {
+	color:#990000;
+	font-family: rationale_oneregular;
+}
+
+div.partial-info p{
+	font-family: rationale_oneregular;
+}
+
+div.map-container {
+	border: 1px solid #990000;
 	border: solid 1px #C9C9C9;
-	width: 500px;
-	height: 750px;
+	float:left;
 	position: relative;
 }

@@ -2,34 +2,33 @@
 <?php use_javascript("about.js")?>
 <div id="cssmenu">
 	<ul>
-		<li><a href="#" ><span>Sobre nosotros</span></a>
+		<li><a href="#"><span>Sobre nosotros</span></a>
 			<ul>
 				<li><a id="about-menu">Quienes somos</a></li>
 				<li><a  id="history-menu">Historia del Karate</a></li>
-				<li><a href="#">Nuestro Maestro</a></li>
+				<li><a id="sensei-menu">Nuestro Maestro</a></li>
 			</ul>
 		</li>
 		<li><a href="#"><span>Institucional</span></a>
 			<ul>
-				<li><a href="#">Consejo directivo</a></li>
-				<li><a href="#">Organigrama</a></li>
+				<li><a id="board-menu">Consejo directivo</a></li>
+				<li><a id="org-menu">Organigrama</a></li>
 			</ul>
 		</li>
 		<li><a href="#"><span>Hombu Dojo</span></a>
 			<ul>
-				<li><a href="#">Acerca del Dojo</a></li>
-				<li><a href="#">Ubicaci&oacute;n</a></li>
-				<li><a href="#">Fotos</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a id="abouthombu-menu">Acerca del Dojo</a></li>
+				<li><a id="locationhombu-menu">Ubicaci&oacute;n</a></li>
+				<li><a id="fotoshombu-menu">Fotos</a></li>
+				<li><a id="contacthombu-menu">Contacto</a></li>
 			</ul>
 		</li>
 		<li><a href="#"><span>C&oacute;digo de conducta</span></a>
 			<ul>
-				<li><a href="#">Normativa</a></li>
-				<li><a href="#">Reglamento interno</a></li>
+				<li><a id="normativa-menu">Normativa</a></li>
+				<li><a id="reglamento-menu">Reglamento interno</a></li>
+				<li><a id="join-menu"><span>Form&aacute; parte</span></a></li>
 			</ul>
-		</li>
-		<li><a href="#"><span>Form&aacute; parte</span></a>
 		</li>
 		
 	</ul>
@@ -105,3 +104,127 @@
 </div>
 <!-- Fin Historia del karate -->
 
+<!-- nuestro maestro -->
+<div id="sensei-section" class="text about-section">
+<h2>Nuestro Maestro</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+<!-- Fin nuestro maestro -->
+
+<!-- nuestro maestro -->
+<div id="board-section" class="text about-section">
+<h2>Consejo directivo</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+<!-- Fin nuestro maestro -->
+
+<div id="org-section" class="text about-section">
+<h2>Organigrama</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+<div id="abouthombu-section" class="text about-section">
+<h2>Acerca del Hombu Dojo</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+<div id="locationhombu-section" class="text about-section">
+<h2>Ubicaci&oacute;n del Hombu Dojo</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+<div id="fotoshombu-section" class="text about-section">
+<h2>Fotos del Hombu Dojo</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+<div id="contacthombu-section" class="text about-section">
+<h2>Datos de contacto</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+<div id="normativa-section" class="text about-section">
+<h2>Normativa</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+
+<div id="reglamento-section" class="text about-section">
+<h2>Reglamento interno</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>
+
+<div id="join-section" class="text about-section">
+<h2>Forma parte</h2>
+<p>La consigna es clara: continuar por senda trazada por el Sensei
+		Funakoshi y en la constante divulgaci&oacute;n y perfeccionamiento de
+		nuestra disciplina, con una profunda fidelidad a los principios
+		esenciales del karate tradicional y su adecuaci&oacute;n a los tiempos
+		modernos y por sobre todas las cosas: perfeccionando el
+		car&aacute;cter, siendo correctos, leales puntuales, tratando de
+		superarnos, respetando a los dem&aacute;s y abteni&eacute;ndonos de
+		procederes violentos, como enuncia el Dojo Kun.</p>
+</div>

@@ -5,8 +5,17 @@
 <?php use_stylesheet("dojos/dojos.css")?>
 <?php use_stylesheet("jquery-ui/smoothness/jquery-ui-1.8.12.custom.css")?>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry&sensor=false"></script>
-<div class="section-header" id="section-dojos">
+
+<div class="separator-line"></div>
+<div class="intro-line">
+	<div class="intro-text" >
+		<h3><span>Listado de Dojos<span></h3>
+		<p>Este es el listado oficial de Dojos certificados de AES. Si no apareces en el mismo pod&eacute;s enviarnos tus datos haciendo click <a href="<?php echo url_for("dojos/new")?>"> >>ACA<< </a>
+		</p>
+	</div>
 </div>
+<div class="separator-line"></div>
+
 <div id="dojos-header">
 	<span style="float: left; font-size: 20px" id="dojos-title">Dojos de <?php echo $selected?></span>
 	<form id="search-form" action="<?php echo url_for("dojos/index")?>" style="float: right;">
@@ -25,9 +34,6 @@
 	<div id="map" style="display: none;"></div>
 </div>
 <div class="clearfix"></div>
-<div id="add-dojo-banner">
-<span>Queres agregar tu dojo? Hace click <a id="new-dojo" href="<?php echo url_for("dojos/new")?>">aca</a></span>
-</div>
 
 
 <div class="dojo-detail"></div>

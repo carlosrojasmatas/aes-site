@@ -139,7 +139,7 @@ class Advert extends BaseAdvert
 			->from("Advert a");
 		}
 		$q->addOrderBy("start_date DESC");
-		$pager=new sfDoctrinePager("Advert",4);
+		$pager=new sfDoctrinePager("Advert",5);
 		$pager->setQuery($q);
 		return $pager;
 	}

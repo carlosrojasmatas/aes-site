@@ -1,7 +1,7 @@
 <?php foreach ($pager->getResults() as $dojo):?>
 <div id="dojo-row">
 	<span class="dojo-header"> <?php echo $dojo->getName();?></span>
-	<a href="#" class="dojo-photo"><img  src="<?php echo $dojo->getPhoto();?>"></a>
+	<img  src="<?php echo $dojo->getPhoto();?>">
 	<div class="dojo-data">
 		<table>
 			<tbody>

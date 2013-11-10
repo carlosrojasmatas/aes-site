@@ -31,7 +31,7 @@ div.separator-line {
 	border: none;
 	height: 4px;
 	width: 100%;
-	margin: auto auto 40px;
+	margin: 20px auto 40px;
 	background: url(../images/separator.png) repeat;
 	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
@@ -147,7 +147,7 @@ div#mainContent {
 	border-width: 1px;
 	margin: auto;
 	width: 90%;
-	height: 800px;
+/*	height: 800px;*/
 	padding-top: 15px;
 	/* 	-moz-border-radius: 15px; */ /* 	-ms-border-radius: 15px; */
 	/* 	-webkit-border-radius: 15px; */
@@ -273,7 +273,7 @@ html,body {
 
 #container {
 	margin: 3% auto;
-	width: 90%;
+	width: 85%;
 }
 
 ul,li {
@@ -581,4 +581,9 @@ a.back-button img {
 
 a.close-button {
 	outline: 0;
+}
+
+#menu {
+	position: relative;
+	margin: auto;
 }

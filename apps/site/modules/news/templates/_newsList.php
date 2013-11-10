@@ -6,11 +6,13 @@
 				    <input type="button" class="button deleteButton" id="delete_<?php echo $advert->getId()?>" value="Borrar"/>
 				</form>
 				<?php endif;?>
-				<div class="news-title">
-					<a href="<?php echo url_for('news/showDetails').'?id='.$advert->getId()?>"><?php echo $advert->getTitle()?></a>
+				<div class="new-content">
+					<div class="new-image"><img height="70" src="<?php echo $advert->getImage()?>"/></div>
+					<div class="news-title">
+						<a href="<?php echo url_for('news/showDetails').'?id='.$advert->getId()?>"><?php echo $advert->getTitle()?></a>
+					</div>
+					<?php echo strlen($advert->getDescription())>200?substr($advert->getDescription(),0,200)."...":$advert->getDescription()?>
 				</div>
-				<img height="70" src="<?php echo $advert->getImage()?>"/>
-				<?php echo strlen($advert->getDescription())>200?substr($advert->getDescription(),0,200)."...":$advert->getDescription()?>
 			</div>
 <?php endforeach;?>
 <div style="clear: both;"></div>
