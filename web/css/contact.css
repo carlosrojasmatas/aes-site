@@ -1,37 +1,37 @@
-div#new-form{
-    background: none repeat scroll 0 0 white;
-    border: 1px solid #ABABAB;
-    height: auto;
-    margin: auto;
-    margin: 20px;
-    padding: 20px;
-    width: auto;
-    z-index: 0;
-    position:relative;
-    -moz-border-radius: 0;
-    -moz-box-shadow: 0 0 0 0 ;
-    top:0;
-}
-
-
-div#new-form form dl dd textarea {
-    font: 12px Arial,sans-serif;
-    height: 50px;
-    width: 350px;
+div#new-form {
+	background: none repeat scroll 0 0 white;
+	border: 0px;
+	height: auto;
+	margin: 60px auto;
+	padding: 20px;
+	width: auto;
+	z-index: 0;
+	position: relative;
+	-moz-border-radius: 0px; 
+	-ms-border-radius : 0px;
+	-webkit-border-radius : 0px;
+	-ms-border-radius: 0px;
+	top: 0;
 }
 
 div#new-form form dl dd textarea {
-    -moz-border-radius: 0px 0px 0px 0px;
-    background-color: white;
-    border-bottom: 1px solid #ABABAB;
-    border-left: 1px solid #ABABAB;
-    border-right: 1px solid #ABABAB;
-    border-top: 1px solid #ABABAB;
-    width: 500px;
-    height: 200px;
+	font: 12px Arial, sans-serif;
+	height: 50px;
+	width: 350px;
 }
 
-img.captcha{
+div#new-form form dl dd textarea {
+	/*    -moz-border-radius: 0px 0px 0px 0px;*/
+	background-color: white;
+	border-bottom: 1px solid #ABABAB;
+	border-left: 1px solid #ABABAB;
+	border-right: 1px solid #ABABAB;
+	border-top: 1px solid #ABABAB;
+	width: 500px;
+	height: 200px;
+}
+
+img.captcha {
 	padding: 10px;
 	margin: 10px 10px 0 10px;
 }

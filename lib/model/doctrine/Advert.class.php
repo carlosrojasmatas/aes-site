@@ -17,7 +17,7 @@ class Advert extends BaseAdvert
 	const EVENT= "event";
 	const INST= "inst";
 	const HOMBU= "hombu";
-	
+
 	private $months =array("01"=>"Enero",
 						"02"=>"Febrero",
 						"03"=>"Marzo",
@@ -70,25 +70,25 @@ class Advert extends BaseAdvert
 		return $this->getImagePath() . $this->getImageName();
 	}
 
-//	public function saveResizedImage(){
-//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
-//		$small = new sfImage($path.$this->getImageName());
-//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
-//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_resized".$extension;
-//		$small->thumbnail(300, 240);
-//		$small->saveAs($path.$fullName);
-//		$this->setResizedImagePath($this->getMainImagePath().$fullName);
-//	}
-	
-//	public function saveIconImage(){
-//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
-//		$small = new sfImage($path.$this->getImageName());
-//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
-//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_icon".$extension;
-//		$small->thumbnail(80, 80);
-//		$small->saveAs($path.$fullName);
-//		$this->setIconImagePath($this->getMainImagePath().$fullName);
-//	}
+	//	public function saveResizedImage(){
+	//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
+	//		$small = new sfImage($path.$this->getImageName());
+	//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
+	//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_resized".$extension;
+	//		$small->thumbnail(300, 240);
+	//		$small->saveAs($path.$fullName);
+	//		$this->setResizedImagePath($this->getMainImagePath().$fullName);
+	//	}
+
+	//	public function saveIconImage(){
+	//		$path = sfConfig::get("app_resource_upload").$this->getId()."/";
+	//		$small = new sfImage($path.$this->getImageName());
+	//		$extension= substr($this->getImageName(), strpos($this->getImageName(), "."));
+	//		$fullName= substr($this->getImageName(), 0,strpos($this->getImageName(), "."))."_icon".$extension;
+	//		$small->thumbnail(80, 80);
+	//		$small->saveAs($path.$fullName);
+	//		$this->setIconImagePath($this->getMainImagePath().$fullName);
+	//	}
 
 	public function saveImage($form){
 		if($form->getValue("image")){
@@ -111,10 +111,10 @@ class Advert extends BaseAdvert
 		$resource = Resource::createNew($this, $resource);
 		$this->save();
 	}
-	
+
 	public static function getEventPager($month=false){
 		if($month){
-		  $q= Doctrine_Query::create()
+			$q= Doctrine_Query::create()
 			->addFrom("Advert a")
 			->addWhere("type= :type",array("type"=>"event"))
 			->addWhere("month(start_date) = :month OR month(end_date)= :month",array("month"=>$month));
@@ -128,10 +128,10 @@ class Advert extends BaseAdvert
 		$pager->setQuery($q);
 		return $pager;
 	}
-	
+
 	public static function getNewsPager($month=false){
 		if($month){
-		  $q= Doctrine_Query::create()
+			$q= Doctrine_Query::create()
 			->addFrom("Advert a")
 			->addWhere("month(start_date) = :month OR month(end_date)= :month",array("month"=>$month));
 		}else{
@@ -144,12 +144,29 @@ class Advert extends BaseAdvert
 		return $pager;
 	}
 
+	public static function getCommsPager($month=false){
+		if($month){
+			$q= Doctrine_Query::create()
+			->addFrom("Advert a")
+			->addWhere("month(start_date) = :month OR month(end_date)= :month",array("month"=>$month))
+			->addWhere("a.type = ?",Advert::INST);
+		}else{
+			$q=Doctrine_Query::create()
+			->from("Advert a");
+		}
+		$q->addOrderBy("start_date DESC");
+		$q->addWhere("a.type = ?",Advert::INST);
+		$pager=new sfDoctrinePager("Advert",5);
+		$pager->setQuery($q);
+		return $pager;
+	}
+
 	public function getStartPreformattedDate(){
 		list($year, $month, $day) = preg_split('[-]', $this->getStartDate());
 		$date= $day." de ".$this->months[$month];
 		return $date;
 	}
-	
+
 	public function getEndPreformattedDate(){
 		list($year, $month, $day) = preg_split('[-]', $this->getEndDate());
 		$date= $day." de ".$this->months[$month];

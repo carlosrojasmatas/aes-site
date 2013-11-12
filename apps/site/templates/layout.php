@@ -38,7 +38,7 @@
 				<li <?php echo ($selected=="home/home")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/home")?>">Home</a></li>
 				<li <?php echo ($selected=="home/about")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/about")?>">Quienes Somos</a></li>
 				<li <?php echo ($selected=="hombu/index")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("hombu/index")?>">Hombu Dojo</a></li>
-				<li <?php echo ($selected=="home/aes")?"id='selected'":""?>><a class="menu-link" href="#">Comunicaciones</a></li>
+				<li <?php echo ($selected=="news/comms" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/comms")?>">Comunicaciones</a></li>
 				<li <?php echo ($selected=="news/index" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/index")?>">Noticias</a></li>
 				<li <?php echo ($selected=="events/index" || $selected=="events/eventDetail")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Calendario</a></li>
 				<li <?php echo ($selected=="dojos/index" || $selected=="dojos/new")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("dojos/index")?>">Dojos</a></li>

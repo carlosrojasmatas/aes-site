@@ -4,9 +4,17 @@
 <?php use_stylesheet("albums/albums.css")?>
 <?php use_stylesheet("jquery-ui/smoothness/jquery-ui-1.8.12.custom.css")?>
 
-<div class="section-header" id="section-albums">
-</div>
 
+<div class="separator-line"></div>
+<div class="intro-line">
+	<div class="intro-text" >
+		<h3><span>Fotos y Videos<span></h3>
+		<p>Esta secci&oacute;n contiene fotos y videos de torneos, cursos y encuentros y todo tipo de actividades desarrolladas en el marco de AES. 
+		A trav&eacute;s de esta p&aacute;gina podr&aacute;s enviarnos tus propias fotos para que formen parte del sitio.</a>
+		</p>
+	</div>
+</div>
+<div class="separator-line"></div>
 <div class="bar">
 	<?php if(sfContext::getInstance()->getUser()->hasCredential("admin")):?>
 		<button id="create-album" style="margin:20px;">Crear Album</button>

@@ -45,7 +45,7 @@
 		<div class="content-box-list">
 			<?php foreach($insts as $inst):?>
 				<div class="content-box-row">
-					<a style="font-size:12px" href="<?php echo url_for('news/showDetails')?>?id=<?php echo $inst->getId();?>"><?php echo $inst->getTitle();?></a>
+					<a href="<?php echo url_for('news/showDetails')?>?id=<?php echo $inst->getId();?>"><?php echo $inst->getTitle();?></a>
 				</div>
 			<?php endforeach;?>
 		</div>

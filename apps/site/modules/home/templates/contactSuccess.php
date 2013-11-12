@@ -1,7 +1,16 @@
 <?php echo use_stylesheet("contact.css")?>
 
-<div class="section-header" style="background: white url(/images/contact-banner.png) repeat-x 0 0 scroll;">
+
+<div class="separator-line"></div>
+<div class="intro-line">
+	<div class="intro-text" >
+		<h3><span>Cont&aacute;ctanos<span></h3>
+		<p>Este sitio fue pensado para que lo hagamos crecer entre todos, es por ello que tu opini&oacute;n o sugerencia es m&aacute;s que bienvenida.
+		Envianos cualquier idea o inquietud que nos ayude a hacer de este un lugar m&aacute;s &uucute;til d&iacute;a a d&iacute;a 
+		</p>
+	</div>
 </div>
+<div class="separator-line"></div>
 <div id="new-form" >
 
 	<form class="contact-form" method="post" enctype="multipart/form-data" action="<?php echo url_for("home/contact")?>">

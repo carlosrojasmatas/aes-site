@@ -1,7 +1,7 @@
 /* Slidorion Stylesheet */
 .slidorion {
-	width: 90%;			/* Set to slidorion width. Is equal to .slider + .accordion width */
-	height: 400px;			/* Set to slidorion height. Is equal to .slider and .accordion height */
+	width: 80%;			/* Set to slidorion width. Is equal to .slider + .accordion width */
+	height: 350px;			/* Set to slidorion height. Is equal to .slider and .accordion height */
 	left: 50%;
 	background: #CBCBCB;
 	padding: 10px;

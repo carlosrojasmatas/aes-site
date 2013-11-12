@@ -27,6 +27,21 @@ class newsActions extends sfActions
 		$this->pager->init();
 	}
 
+	public function executeComms(sfWebRequest $request)
+	{
+		$this->form = new AdvertForm();
+		if($request->getMethod() == sfRequest::POST){
+			$this->form->bind($request->getParameter($this->form->getName()), $request->getFiles($this->form->getName()));
+			if ($this->form->isValid())
+			{
+				$advert= Advert::create($this->form);
+			}
+		}
+		$this->pager= Advert::getCommsPager();
+		$this->pager->setPage($request->getParameter('page', 1));
+		$this->pager->init();
+	}
+
 	public function executeNew(sfWebRequest $request)
 	{
 		$this->form = new AdvertForm();

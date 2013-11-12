@@ -48,7 +48,9 @@ Advert:
     start_time:     { type: string, notnull: false }
     end_time:       { type: string, notnull: false }
     place:      	{ type: string, notnull: false }
-    type:      		{ type: enum, length: 11, values: ['advert', 'event','inst','hombu'],  notnull: true}
+    type:      		{ type: enum, length: 11, values: ['advert', 'event'],  notnull: true}
+    f_image_path:     { type: string, notnull: true }
+    f_image_name:     { type: string, notnull: true }
     image_path:     { type: string, notnull: true }
     image_name:     { type: string, notnull: true }
       

@@ -103,8 +103,13 @@ div.content-box-list {
 }
 
 div.content-box-row {
-	padding: 10px 0;
+	padding: 5px 0;
 	text-decoration: none;
+	border-bottom: gray 1px solid;
+}
+
+div.content-box-row a{
+	font-size: 12px;
 }
 
 div.content-box-row a:hover {
@@ -113,12 +118,13 @@ div.content-box-row a:hover {
 
 div.content-box-row span.date {
 	margin-right: 5px;
+	font-size: 12px;
 }
 
 div.content-box-header a {
 	color: white;
 	font-family: rationale_oneregular;
-	font-size: 18px;
+	font-size: 16px;
 	text-decoration: none;
 }
 
