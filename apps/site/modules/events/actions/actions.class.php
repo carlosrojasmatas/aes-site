@@ -10,17 +10,44 @@
  */
 class eventsActions extends sfActions
 {
-	
+
 
 	public function executeIndex(sfWebRequest $request)
 	{
-		$this->pager= Advert::getEventPager();
+		$this->form = new AdvertForm();
+		if($request->getMethod() == sfRequest::POST){
+			$this->form->bind($request->getParameter($this->form->getName()), $request->getFiles($this->form->getName()));
+			if ($this->form->isValid())
+			{
+				$advert= Advert::create($this->form);
+			}
+		}
+
+		$this->regions= Dojo::$regions;
+
+		$this->pager= Advert::getMultiPager();
 		$this->pager->setPage($request->getParameter('page', 1));
 		$this->pager->init();
-		$this->form = new EventForm();
+
+	}
+
+	public function executeShowDetails(sfWebRequest $request){
+		$id= $request->getParameter("id");
+		$this->advert= Advert::getRepository()->find($id);
+	}
+	
+	
+
+
+	public function executeFilterByRegion(sfWebRequest $request){
+		$region= $request->getParameter("region");
+		$year= $request->getParameter("year");
+		$this->content=$this->buildEventWrappers(Advert::getRepository()->getEventsByRegion($region,$year));
+		$this->setTemplate("json");
 	}
 
 	public function executeNew(sfWebRequest $request)
+	
 	{
 		$this->form = new EventForm();
 		if($request->getMethod() == sfRequest::POST){
@@ -33,7 +60,7 @@ class eventsActions extends sfActions
 		$this->forward("events", "index");
 	}
 
-	
+
 	/**
 	 * @deprecated
 	 */
@@ -48,17 +75,17 @@ class eventsActions extends sfActions
 		$pager->init();
 		return $this->renderPartial("eventList",array("pager"=>$pager));
 	}
-	
+
 	public function executeFetchEvents2(sfWebRequest $request){
 		$year= $request->getParameter("year");
 		$this->content=$this->buildEventWrappers(Advert::getRepository()->getEvents($year));
 		$this->setTemplate("json");
 	}
-	
-	
+
+
 	private function buildEventWrappers($eventModel){
 		$events= array();
-		
+
 		foreach ($eventModel as $eventKey => $event){
 			$start= $event["start_date"];
 			$end= $event["end_date"];
@@ -82,13 +109,13 @@ class eventsActions extends sfActions
 		Advert::getRepository()->find($id)->delete();
 		$this->forward("events","index");
 	}
-	
-   public function executeEventDetail(sfWebRequest $request){
-		
-   		$id= $request->getParameter("id");
+
+	public function executeEventDetail(sfWebRequest $request){
+
+		$id= $request->getParameter("id");
 		$this->event= Advert::getRepository()->find($id);
-		
+
 	}
-	
+
 
 }

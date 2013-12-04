@@ -25,6 +25,7 @@ class dojosActions extends sfActions
 		$this->pager->setPage($request->getParameter('page', 1));
 		$this->pager->init();
 		
+		
 		if($request->getParameter("ajax")){
 			return $this->renderPartial("dojoList",array("pager"=>$this->pager));
 		}

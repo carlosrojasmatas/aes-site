@@ -13,6 +13,7 @@
  * @property string $start_time
  * @property string $end_time
  * @property string $place
+ * @property string $province
  * @property enum $type
  * @property string $f_image_path
  * @property string $f_image_name
@@ -27,6 +28,7 @@
  * @method string  getStartTime()    Returns the current record's "start_time" value
  * @method string  getEndTime()      Returns the current record's "end_time" value
  * @method string  getPlace()        Returns the current record's "place" value
+ * @method string  getProvince()     Returns the current record's "province" value
  * @method enum    getType()         Returns the current record's "type" value
  * @method string  getFImagePath()   Returns the current record's "f_image_path" value
  * @method string  getFImageName()   Returns the current record's "f_image_name" value
@@ -40,6 +42,7 @@
  * @method Advert  setStartTime()    Sets the current record's "start_time" value
  * @method Advert  setEndTime()      Sets the current record's "end_time" value
  * @method Advert  setPlace()        Sets the current record's "place" value
+ * @method Advert  setProvince()     Sets the current record's "province" value
  * @method Advert  setType()         Sets the current record's "type" value
  * @method Advert  setFImagePath()   Sets the current record's "f_image_path" value
  * @method Advert  setFImageName()   Sets the current record's "f_image_name" value
@@ -86,6 +89,10 @@ abstract class BaseAdvert extends sfDoctrineRecord
              'notnull' => false,
              ));
         $this->hasColumn('place', 'string', null, array(
+             'type' => 'string',
+             'notnull' => false,
+             ));
+        $this->hasColumn('province', 'string', null, array(
              'type' => 'string',
              'notnull' => false,
              ));

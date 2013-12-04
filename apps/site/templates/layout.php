@@ -39,8 +39,7 @@
 				<li <?php echo ($selected=="home/about")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/about")?>">Quienes Somos</a></li>
 				<li <?php echo ($selected=="hombu/index")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("hombu/index")?>">Hombu Dojo</a></li>
 				<li <?php echo ($selected=="news/comms" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/comms")?>">Comunicaciones</a></li>
-				<li <?php echo ($selected=="news/index" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/index")?>">Noticias</a></li>
-				<li <?php echo ($selected=="events/index" || $selected=="events/eventDetail")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Calendario</a></li>
+				<li <?php echo ($selected=="events/index" || $selected=="events/eventDetail")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Noticias y Eventos</a></li>
 				<li <?php echo ($selected=="dojos/index" || $selected=="dojos/new")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("dojos/index")?>">Dojos</a></li>
 				<li <?php echo ($selected=="albums/index" || $selected=="albums/showResources")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("albums/index")?>">Fotos y Videos</a></li>
 				<li <?php echo ($selected=="home/contact")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/contact")?>">Contacto</a></li>

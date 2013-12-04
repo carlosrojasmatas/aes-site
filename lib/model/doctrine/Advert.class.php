@@ -18,6 +18,7 @@ class Advert extends BaseAdvert
 	const INST= "inst";
 	const HOMBU= "hombu";
 
+
 	private $months =array("01"=>"Enero",
 						"02"=>"Febrero",
 						"03"=>"Marzo",
@@ -62,6 +63,7 @@ class Advert extends BaseAdvert
 			$this->setEndDate($data->getValue("end_date"));
 			$this->setEndTime($data->getValue("end_time"));
 			$this->setPlace($data->getValue("place"));
+			$this->setProvince($data->getValue("province"));
 
 		}
 	}
@@ -122,6 +124,23 @@ class Advert extends BaseAdvert
 			$q=Doctrine_Query::create()
 			->from("Advert a")
 			->addWhere("a.type= 'event'");
+		}
+		$q->addOrderBy("start_date DESC");
+		$pager=new sfDoctrinePager("Advert",4);
+		$pager->setQuery($q);
+		return $pager;
+	}
+
+	public static function getMultiPager($month=false){
+		if($month){
+			$q= Doctrine_Query::create()
+			->addFrom("Advert a")
+			->addWhere("type= :type",array("type"=>"event"))
+			->addWhere("month(start_date) = :month OR month(end_date)= :month",array("month"=>$month));
+		}else{
+			$q=Doctrine_Query::create()
+			->from("Advert a")
+			->addWhere("a.type= 'event' or a.type='advert'");
 		}
 		$q->addOrderBy("start_date DESC");
 		$pager=new sfDoctrinePager("Advert",4);

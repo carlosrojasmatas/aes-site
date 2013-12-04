@@ -19,17 +19,16 @@
 	<?php if(sfContext::getInstance()->getUser()->hasCredential("admin")):?>
 		<button id="create-album" style="margin:20px;">Crear Album</button>
 	<?php endif;?>
+		<select id="album-select">
+			<?php foreach ($pager->getResults() as $album): ?>
+				<option value="<?php $album->id?>"><?php $album->name?></option>
+			<?php endforeach; ?>
+		</select>
+	
 </div>
 <div class="album-list">
 
-<?php foreach ($pager->getResults() as $album): ?>
-	<div class="album-cover">
-		<img src="<?php echo $album->getFrontImage()?>"/>
-		<a href="<?php echo url_for("albums/showResources")."?type=image&albumId=".$album->getId()?>"><?php echo $album->getName()?></a>
-		
-		
-	</div>
-<?php endforeach; ?>
+
 <div style="clear: both;"></div>
 	
 	<div class="paginator">

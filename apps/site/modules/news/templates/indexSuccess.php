@@ -40,6 +40,9 @@
 				<dd><?php echo $form["type"]->render()?></dd>
 				
 			<div id="event-details" style="display: none;">	
+				<dt><label for="<?php echo $form['province']->renderId() ?>"<?php echo $form['province']->hasError() ? ' class="error"' : '' ?>>Provincia:</label></dt>
+					<dd><?php echo $form["province"]->render()?></dd>
+					
 				<dt><label for="<?php echo $form['place']->renderId() ?>"<?php echo $form['place']->hasError() ? ' class="error"' : '' ?>>Lugar:</label></dt>
 					<dd><?php echo $form["place"]->render()?></dd>
 					
@@ -54,13 +57,13 @@
 	
 				<dt><label for="<?php echo $form['end_time']->renderId() ?>"<?php echo $form['end_time']->hasError() ? ' class="error"' : '' ?>>Hora de Fin:</label></dt>
 					<dd><?php echo $form["end_time"]->render()?></dd>
-			</div>	
 			<dt><label for="<?php echo $form['image']->renderId() ?>"<?php echo $form['image']->hasError() ? ' class="error"' : '' ?>>Imagen:</dt>
 				<dd><?php echo $form["image"]->render()?></dd>
 				
 			<dt><label for="<?php echo $form['f_image']->renderId() ?>"<?php echo $form['f_image']->hasError() ? ' class="error"' : '' ?>>Imagen frontal:</dt>
 				<dd><?php echo $form["f_image"]->render()?></dd>
 			
+			</div>	
 			<dt id="attachementList" style="display: none;">Adjuntos:</dt>
 				<dd style="display: none;"><input type="file"  value="Seleccionar" name="advert[attachements][]"></dd>
 				<dd style="display: none;"><input type="file" value="Seleccionar" name="advert[attachements][]"></dd>

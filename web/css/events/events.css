@@ -1,12 +1,9 @@
-
-
-div#calendarContainer{
-	background: url("/images/home/tiger.jpg") no-repeat scroll center center transparent;
+div#calendarContainer {
+	background: url("/images/home/tiger.jpg") no-repeat scroll center center
+		transparent;
 	height: 100%;
 	width: auto;
-	
 }
-
 
 /*Deprecated --> old style --> DELETE!*/
 div.events-brief {
@@ -77,7 +74,7 @@ div.events-brief span {
 
 div#eventDetails {
 	padding: 15px;
-	font: Georgia, "Times New Roman", Times, serif;
+	font-family: "Georgia", "Times New Roman", "Times", "serif";
 }
 
 .title-field {
@@ -92,7 +89,7 @@ div#eventDetails h2 {
 	padding-bottom: 10px;
 }
 
-div.event-detail{
+div.event-detail {
 	height: 100px;
 }
 
@@ -195,4 +192,25 @@ div#event-image {
 	-moz-box-shadow: 0 0 20px black;
 	-ms-box-shadow: 0 0 20px black;
 	-webkit-box-shadow: 0 0 20px black;
+}
+
+.region-combo {
+/*	border: 1px solid #990000;*/
+	padding: 5px;
+	float:right;
+	margin-right:115px;
+	margin-bottom:15px;
+	font-size: 15px;
+	position:relative;
+	z-index: 10000;
+	color: #3D3D3D;
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+}
+
+.region-combo label {
+	padding: 5px;
+	font-weight: bold;
+	font-family: rationale_oneregular;
 }

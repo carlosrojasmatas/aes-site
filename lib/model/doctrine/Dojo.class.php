@@ -28,7 +28,7 @@ class Dojo extends BaseDojo
 				"Mendoza"=>"Mendoza",
 				"Misiones"=>"Misiones",
 				"Neuquen"=>"Neuquen",
-				"Río Negro"=>"Río Negro",
+				"Rio Negro"=>"Rio Negro",
 				"Salta"=>"Salta",
 				"San Juan"=>"San Juan",
 				"San Luis"=>"San Luis",

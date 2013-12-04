@@ -24,6 +24,7 @@ class AdvertForm extends BaseAdvertForm
   	$this->setWidget("end_date", new sfWidgetFormInputText());
   	$this->setWidget("end_time", new sfWidgetFormInputText());
   	$this->setWidget("type",new sfWidgetFormChoice(array('choices' => array('advert' => 'Noticia', 'event' => 'Evento','inst' => 'Institucional','hombu' => 'Hombu'))));
+  	$this->setWidget("province",new sfWidgetFormChoice(array('choices' => Dojo::$regions)));
   	
   	
   	
@@ -38,10 +39,11 @@ class AdvertForm extends BaseAdvertForm
   	$this->setValidator('title',new sfValidatorString(array('required' => true)));
   	$this->setValidator('type',new sfValidatorString(array('required' => true)));
   	$this->setValidator('description',new sfValidatorString(array('required' => true)));
+  	$this->setValidator('province',new sfValidatorString(array('required' => true)));
   	$this->setValidator("attachements", new sfValidatorSchemaForEach(new sfValidatorFile(array("required" => false, "max_size" => 2097152)), $this->MAX_ATTACHEMENTS));
   	
   	
-  	$this->useFields(array("image","f_image","title","description","type","start_date","end_date","start_time","end_time","place"));
+  	$this->useFields(array("image","f_image","title","description","type","start_date","end_date","start_time","end_time","place","province"));
   	
   }
 }

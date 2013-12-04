@@ -5,7 +5,7 @@
 <?php use_stylesheet("albums/albums.css")?>
 <?php use_stylesheet("gallery/jquery.ad-gallery.css")?>
 <?php use_stylesheet("prettyPhoto.css")?>
-<?php use_stylesheet("jquery-ui/smoothness/jquery-ui-1.8.12.custom.css")?>
+<?php use_stylesheet("jquery-ui/ui-lightness/jquery-ui-1.10.3.custom.min.css")?>
 
 
 <div id="toolbar" class="gallery-header" >
