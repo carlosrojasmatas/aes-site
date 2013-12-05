@@ -1,10 +1,9 @@
-<?php use_javascript("jquery-qtip-1.0.0-rc3140944/jquery.qtip-1.0.js")?>
-<?php use_javascript("jquery-ui-1.8.12.custom.min.js")?>
-<?php use_javascript("tiny_mce/jquery.tinymce.js")?>
+<?php use_javascript("jquery-ui-1.10.3.custom.min.js")?>
 <?php use_javascript("dojos/dojos.js")?>
+<?php use_javascript("tiny_mce/jquery.tinymce.js")?>
 <?php use_stylesheet("dojos/dojos.css")?>
-<?php use_stylesheet("jquery-ui/smoothness/jquery-ui-1.8.12.custom.css")?>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry&sensor=false"></script>
+<?php use_stylesheet("magnific-popup.css")?>
+<?php use_stylesheet("jquery-ui/ui-lightness/jquery-ui-1.10.3.custom.css")?>
 
 <div class="separator-line"></div>
 <div class="intro-line">
@@ -30,6 +29,7 @@
 <div class="list-dojo" >
 		<?php include_partial("dojoList",array("pager"=>$pager))?>
 </div>
+
 <div id="map-container" style="display: none;">
 	<div id="map" style="display: none;"></div>
 </div>

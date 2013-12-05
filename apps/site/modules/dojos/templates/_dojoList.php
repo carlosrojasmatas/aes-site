@@ -27,14 +27,25 @@
 				</tr>
 				<tr class="dojo-footer">
 					<td colspan="2" >
-						<a href="#Dojo" class="dojo-map-linker" address="<?php echo $dojo->getAddress()?>" 
-						fullAddress="<?php echo $dojo->getFullAddress()?>" 
-						dojo="<?php echo $dojo->getName()?>" style="float: left; outline: none;"><img title="Ver en mapa" src="/images/maps.png"/></a></td>
+						<a class="popup-gmaps" href="https://maps.google.com/maps?<?php echo $dojo->getFullAddress()?>" ><img title="Ver en mapa" src="/images/maps.png"/></a></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </div>
+<script src="/js/magnific.js" type="text/javascript"></script>
+<script lang="text/javascript">
+            $('.popup-gmaps').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                removalDelay: 160,
+                mainClass: 'mfp-zoom',
+                preloader: false,
+                fixedContentPos: false
+             });
+    </script>
+
+
 <?php endforeach;?>
 <div style="clear: both;"></div>
 <div class="paginator">

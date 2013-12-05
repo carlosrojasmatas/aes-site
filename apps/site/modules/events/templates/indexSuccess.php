@@ -8,6 +8,7 @@
 <?php use_stylesheet("events/events.css")?>
 <?php use_stylesheet("news/news.css")?>
 <?php use_stylesheet("events/core.css")?>
+<?php use_stylesheet("jquery.timepicker.css")?>
 <?php use_stylesheet("jquery-ui/ui-lightness/jquery-ui-1.10.3.custom.min.css")?>
 
 

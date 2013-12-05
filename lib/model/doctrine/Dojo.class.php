@@ -79,10 +79,11 @@ class Dojo extends BaseDojo
 	}
 	
 	public function getFullAddress(){
-		$address= $this->getAddress();
-		$city= $this->getCity();
-		$province= $this->getProvince();
-		return $address.",".$city.",".$province.", Argentina";
+		$address= str_replace(" ", "+",$this->getAddress());
+		$city= str_replace(" ", "+", $this->getCity());
+		$province= str_replace(" ", "+", $this->getProvince());
+		$fullAddress = "q=+".$address.",+".$city.",+". $province.",+Argentina";
+		return $fullAddress;
 	}
 	
 	public static function getPager($province=false){
