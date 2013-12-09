@@ -1,11 +1,14 @@
 <?php use_javascript("jquery.qtip.min.js")?>
 <?php use_javascript("jMonthCalendar.min.js")?>
+<?php use_javascript("calendar/fullcalendar.min.js")?>
 <?php use_javascript("events/events.js")?>
 <?php use_javascript("jquery.timepicker.min.js")?>
 <?php use_javascript("jquery-ui-1.10.3.custom.min.js")?>
 <?php use_javascript("tiny_mce/jquery.tinymce.js")?>
 <?php use_stylesheet("jquery.qtip.min.css")?>
 <?php use_stylesheet("events/events.css")?>
+<?php use_stylesheet("calendar/fullcalendar.css")?>
+<?php use_stylesheet("calendar/fullcalendar.print.css")?>
 <?php use_stylesheet("news/news.css")?>
 <?php use_stylesheet("events/core.css")?>
 <?php use_stylesheet("jquery.timepicker.css")?>
@@ -38,9 +41,12 @@
 	</div>
 </div>
 
-<div id="calendarContainer">
-	<div id="jMonthCalendar"></div>
+<div id ="calendar-container">
+<div id="calendar-background"></div>
+<div id="calendar">
 </div>
+</div>
+
 <div class="news-list">
 		<?php include_partial("eventList",array("pager"=>$pager))?>
 </div>

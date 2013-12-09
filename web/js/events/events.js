@@ -2,42 +2,62 @@ var eventsBuffer = new Array();
 
 
 var options = {
-	height : 600,
-	width : 800,
-	navHeight : 10,
-	calendarStartDate:new Date(),
-	labelHeight : 25,
-	navLinks: {
-		enableToday: true,
-		enableNextYear: false,
-		enablePrevYear: false,
-		p:'&lsaquo; Ant', 
-		n:'Sig &rsaquo;', 
-		t:'Hoy'
-	},
-	locale: {
-		days: ["Domingo", "Lunes", "Martes", "Mi&eacute;rcoles", "Jueves", "Viernes", "S&aacute;bado", "Domingo"],
-		daysShort: ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"],
-		daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"],
-		months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-		monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
-		weekMin: 'sm'
-	},
-	onDayLinkClick: function(dateIn) { 
-    },
-    onEventLinkClick: function(event) {
-		return false; 
-	},
-    onMonthChanging: function(dateIn) {
-    	var year= dateIn.getFullYear();
-    	var date= new Date();
-    	var currYear= date.getFullYear();
-    	if(year != currYear){
-    		alert("Solo es posible acceder a eventos del año en curso.");
-    	}
-		return false;
+		editable: true,
+        theme: false,
+		weekmode:'liquid',
+		contentHeight:400,
+		allDayText: "Dia completo",
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: '',
+		},
+		eventClick: function(calEvent, jsEvent, view) {
+
+		},
+		dayRender: function(date,cell){
+		}
 	}
-};
+
+function yearLoader(start,end, callback) {
+	var date = new Date();
+	var year= date.getFullYear();
+	var date = new Date();
+	var year= date.getFullYear();
+	$.getJSON("../events/fetchEvents2?year=" + year,
+			function(data) {
+					var events = []
+					$(data).each(function(idx){
+						var startDate = data[idx].start_date +"T" + data[idx].start_time
+						events.push({
+							title: data[idx].title,
+							start: startDate,
+							url: data[idx].url
+						});
+					});
+					callback(events)
+			});
+}
+
+var regionLoader = function(start,end, callback) {
+	var date = new Date();
+	var year= date.getFullYear();
+	var region = $("#regions").val()
+	$.getJSON("../events/filterByRegion?year=" + year + "&region="+region,
+			function(data) {
+					var events = []
+					$(data).each(function(idx){
+						var startDate = data[idx].start_date +"T" + data[idx].start_time
+						events.push({
+							title: data[idx].title,
+							start: startDate,
+							url: data[idx].url
+						});
+					});
+					callback(events)
+			});
+}
+
 
 $(function() {
 	
@@ -45,8 +65,7 @@ $(function() {
 	$('#advert_end_time').timepicker();
 	
 	
-	var date= new Date();
-	loadsEventsForCurrentYear(options);
+	loadsEventsForCurrentYear(options,yearLoader);
 	
 	bindRegionCombo();
 	
@@ -54,21 +73,20 @@ $(function() {
 		$("#pageBody").append("<div id='popup-overlay'></div>");
 		$("#new-form").show("slow");	
 		$("#new-form").css("z-index","999999");	
-		
 	});
+	
 	$("#button-cancel").click(function(){
 		$("#popup-overlay").remove();
 		$("#new-form").hide("slow");
 	});
+	
 	$(".deleteButton").click(function(){
-		
 			var attrId= $(this).prop("id");
 			var id= attrId.substr(attrId.indexOf("_")+1,attrId.length);
 			$("#form_" + id).submit();
-			
 	});
 	
-	//initialize tinymce
+	// initialize tinymce
 	$('textarea').tinymce({
 		// Location of TinyMCE script
 		script_url : '/js/tiny_mce/tiny_mce.js',
@@ -126,60 +144,21 @@ $(function() {
 });
 
 function bindRegionCombo(){
+	
 	$("#regions").click(function(){
 		var region = $(this).val()
-		var date = new Date();
-		var year= date.getFullYear();
-		$.getJSON("../events/filterByRegion/?year=" + year + "&region="+region,
-			function(data) {
-					$.jMonthCalendar.Initialize(options,data);
-					
-					for(ev in data){
-						var id= data[ev].EventID;
-						var selector= "#Event_"+ id;
-						var description= data[ev].Description.substring(0,400) + "...";
-						$(selector).qtip({
-							content: "<h3>" + data[ev].Title + "</h3> <br>" + description,
-							show: {
-								delay:1000,
-							},
-							style: { 
-								classes:'qtip-red qtip-shadow',
-								 width: 500, // Overrides width set by CSS
-												// (but no max-width!)
-							     height: 200 
-							}
-						});
-					}
-			});
+		var loader = region == "Argentina"?yearLoader:regionLoader
+		loadsEventsForCurrentYear(options, loader)
+		
 	})
 }
 
 
-function loadsEventsForCurrentYear(options){
-		var date = new Date();
-		var year= date.getFullYear();
-		$.getJSON("../events/fetchEvents2/?year=" + year,
-			function(data) {
-					$.jMonthCalendar.Initialize(options,data);
-					
-					for(ev in data){
-						var id= data[ev].EventID;
-						var selector= "#Event_"+ id;
-						var description= data[ev].Description.substring(0,400) + "...";
-						$(selector).qtip({
-							content: "<h3>" + data[ev].Title + "</h3> <br>" + description,
-							show: {
-								delay:1000,
-							},
-							style: { 
-								classes:'qtip-red qtip-shadow',
-								 width: 500, // Overrides width set by CSS
-												// (but no max-width!)
-							     height: 200 
-							}
-						});
-					}
-			});
+function loadsEventsForCurrentYear(options,loader){
+	
+		$('#calendar').fullCalendar('destroy');
+		options.events = loader
+		$('#calendar').fullCalendar(options);
+	
 		
 }

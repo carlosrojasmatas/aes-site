@@ -35,9 +35,6 @@ class eventsActions extends sfActions
 		$id= $request->getParameter("id");
 		$this->advert= Advert::getRepository()->find($id);
 	}
-	
-	
-
 
 	public function executeFilterByRegion(sfWebRequest $request){
 		$region= $request->getParameter("region");
@@ -92,11 +89,15 @@ class eventsActions extends sfActions
 			$days = abs(strtotime($end) - strtotime($start)) / (60*60*24);
 			sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url', 'Asset', 'Tag'));
 			for($i=0;$i<=$days;$i++){
-				$eventHolder["EventID"]= $i."-".$event["id"];
-				$eventHolder["StartDateTime"]= date("Y-m-d"	, strtotime( "+".$i." days",strtotime($start)));
-				$eventHolder["Title"]= $event["title"];
-				$eventHolder["URL"]= url_for("news/showDetails")."?id=".$event["id"];
-				$eventHolder["Description"]= $event["description"];
+				$eventHolder["eventId"]= $i."-".$event["id"];
+//				$eventHolder["start"]= date("Y-m-d"	, strtotime( "+".$i." days",strtotime($start)));
+				$eventHolder["start_date"]= date("Y-m-d"	, strtotime( "+".$i." days",strtotime($start)));;
+				$eventHolder["end_date"]= $end;
+				$eventHolder["start_time"]= $event["start_time"];
+				$eventHolder["end_time"]= $event["end_time"];
+				$eventHolder["title"]= $event["title"];
+				$eventHolder["url"]= url_for("events/showDetails")."?id=".$event["id"];
+				$eventHolder["description"]= $event["description"];
 				$events[]=$eventHolder;
 			}
 		}
