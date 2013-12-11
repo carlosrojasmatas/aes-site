@@ -45,7 +45,6 @@ div.separator-line {
 .intro-text { /*	float: left;*/
 	width: auto;
 }
-
 .intro-text h3 {
 	font-family: rationale_oneregular;
 	font-size: 26px;
@@ -78,7 +77,7 @@ div.line {
 
 #header {
 	background: white url(../images/new_logo.png) no-repeat;
-	height: 150px;
+	height: 210px;
 /*	border-bottom:2px solid gray;*/
 	background-position: bottom left;
 	position:relative;
@@ -334,7 +333,7 @@ ul,li {
 	border: 0px;
 }
 
-#new-form {
+.new-form {
 	position: absolute;
 	top: 50%;
 	padding: 20px;
@@ -352,11 +351,11 @@ ul,li {
 	-webkit-box-shadow: 0 0 20px black;
 }
 
-#new-form input[type=text] {
+.new-form input[type=text] {
 	width: 228px;
 }
 
-#new-form form p.success {
+.new-form form p.success {
 	background-color: #FFF4C2;
 	border-bottom: 1px solid #FFCC34;
 	border-top: 1px solid #FFCC34;
@@ -365,7 +364,7 @@ ul,li {
 	padding: 10px;
 }
 
-#new-form dl dd.tiny-content {
+.new-form dl dd.tiny-content {
 	width: 800px;
 }
 
@@ -425,7 +424,7 @@ div.paginator-number a:HOVER {
 }
 
 /*Form errors*/
-div#new-form form dl dt {
+div.new-form form dl dt {
 	float: left;
 	width: 160px;
 	padding: 5px 0;
@@ -433,11 +432,11 @@ div#new-form form dl dt {
 	position: relative;
 }
 
-div#new-form form dl.details {
+div.new-form form dl.details {
 	
 }
 
-div#new-form form dl.details dd p {
+div.new-form form dl.details dd p {
 	display: inline;
 	padding: 5px;
 	border: 1px dashed #DDD;
@@ -450,7 +449,7 @@ div#new-form form dl.details dd p {
 	color: #555;
 }
 
-div#new-form form dl dt span.required {
+div.new-form form dl dt span.required {
 	color: #DD0000;
 	font: 20px/12px Arial, sans-serif;
 	position: absolute;
@@ -458,29 +457,29 @@ div#new-form form dl dt span.required {
 	top: 14px;
 }
 
-div#new-form form dl dt label {
+div.new-form form dl dt label {
 	font-weight: bold;
 	color: #666;
 }
 
-div#new-form form dl dt label.error {
+div.new-form form dl dt label.error {
 	color: #DD0000;
 }
 
-div#new-form form dl dd {
+div.new-form form dl dd {
 	min-height: 22px;
 	line-height: 22px;
 	padding: 5px 10px;
 	padding-left: 100px;
 }
 
-div#new-form form dl dd.only {
+div.new-form form dl dd.only {
 	padding: 0;
 	border-bottom: 1px solid #DDD;
 	margin: -10px 0 20px;
 }
 
-div#new-form form dl dd.only p {
+div.new-form form dl dd.only p {
 	font: bold 12px Arial, sans-serif;
 	padding: 5px 5px 5px 0;
 	background-color: #FFF;
@@ -490,12 +489,12 @@ div#new-form form dl dd.only p {
 	color: #F60;
 }
 
-div#new-form form dl dd input,div#new-form form dl dd select,div#new-form form dl dd textarea
+div.new-form form dl dd input,div.new-form form dl dd select,div.new-form form dl dd textarea
 	{
 	padding: 3px;
 }
 
-div#new-form form dl dd input.text,div#new-form form dl dd select,div#new-form form dl dd textarea
+div.new-form form dl dd input.text,div.new-form form dl dd select,div.new-form form dl dd textarea
 	{
 	border: 1px solid #E4E4E4;
 	border-top: 1px solid #D4D4D4;
@@ -505,57 +504,57 @@ div#new-form form dl dd input.text,div#new-form form dl dd select,div#new-form f
 	border-radius: 2px;
 }
 
-div#new-form form dl dd input.text:focus,div#new-form form dl dd select:focus,div#new-form form dl dd textarea:focus
+div.new-form form dl dd input.text:focus,div.new-form form dl dd select:focus,div.new-form form dl dd textarea:focus
 	{
 	border: 1px solid #DDD;
 	border-top: 1px solid #CCC;
 	border-left: 1px solid #CCC;
 }
 
-div#new-form form dl dd select {
+div.new-form form dl dd select {
 	padding: 3px 1px;
 	width: 240px;
 }
 
-div#new-form form dl dd select option {
+div.new-form form dl dd select option {
 	padding: 0 2px;
 }
 
-div#new-form form dl dd textarea {
+div.new-form form dl dd textarea {
 	width: 350px;
 	height: 50px;
 	font: 12px Arial, sans-serif;
 	resize: none;
 }
 
-div#new-form form dl dd input.medium {
+div.new-form form dl dd input.medium {
 	width: 200px;
 }
 
-div#new-form form dl dd select.medium {
+div.new-form form dl dd select.medium {
 	width: 210px;
 }
 
-div#new-form form dl dd input.small {
+div.new-form form dl dd input.small {
 	width: 50px;
 }
 
-div#new-form form dl dd input.large {
+div.new-form form dl dd input.large {
 	width: 350px;
 }
 
-div#new-form form dl {
+div.new-form form dl {
 	width: 450px;
 }
 
-div#new-form form dl dd input.error {
+div.new-form form dl dd input.error {
 	background-color: #FEF6F8;
 	border: 1px solid #E897AF;
 	border-right: 1px solid #F6D5DE;
 	border-bottom: 1px solid #F6D5DE;
 }
 
-div#new-form form dl dd p.note {
+div.new-form form dl dd p.note {
 	color: #888;
 	font-size: 12px;
 	line-height: 0px;
@@ -563,7 +562,7 @@ div#new-form form dl dd p.note {
 	margin-left: 20px;
 }
 
-div#new-form form dl dd p.note.error {
+div.new-form form dl dd p.note.error {
 	color: #DD0000;
 	font-style: normal;
 }

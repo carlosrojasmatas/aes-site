@@ -22,5 +22,22 @@ $(function() {
 		$("#popup-overlay").remove();
 		$("#new-form").hide("slow");
 	});
+	
+	$("#album-select").click(function(){
+		var albumId = $(this).val()
+		$.getJSON( "../albums/showResources?type=image&albumId=" + albumId, function( data ) {
+			  if(data.length > 0 ){
+				  	$(data).each(function(idx){
+				  		$(".gallery").append("<li><a rel=\"prettyPhoto\" href='"+data[idx].path+"'><img src=\"" +data[idx].path+ "\"/></a></li>");
+				  	});	
+				  	console.log("the html" + $("a[rel^='prettyPhoto']").html())
+				
+//				  $( ".album-list" ).html( data );
+			  }
+			});
+		
+		
+	  	$("a[rel^='prettyPhoto']").prettyPhoto();
+	})
 
 });

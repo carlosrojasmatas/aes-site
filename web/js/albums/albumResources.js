@@ -1,19 +1,21 @@
 $(function() {
+	
 	$("a[rel^='prettyPhoto']").prettyPhoto({
-		animation_speed: 'fast', /* fast/slow/normal */
+		animation_speed: 'normal', /* fast/slow/normal */
 		horizontal_padding: 20, /* The padding on each side of the picture */
+		autoplay_slideshow:true,
 		ie6_fallback: true,
-		social_tools: false
+		social_tools: true
 	});
 
-	$("#add-resource").click(function() {
+	$("#add-photo").click(function() {
 		$("#pageBody").append("<div id='popup-overlay'></div>");
-		$("#new-form").show("slow");
+		$("#new-photo-form").show("slow");
 	});
 
-	$("#button-cancel").click(function() {
+	$("#button-cancel-photo").click(function() {
 		$("#popup-overlay").remove();
-		$("#new-form").hide("slow");
+		$("#new-photo-form").hide("slow");
 	});
 
 });

@@ -28,8 +28,8 @@ class AlbumResourceForm extends BaseAlbumResourceForm
   	$this->setValidator("sender",new sfValidatorString(array("required"=>true)));
   	$this->setValidator('status',new sfValidatorString(array('required' => false)));
   	$this->setValidator("city",new sfValidatorString(array("required"=>true)));
-  	$this->setValidator('captcha',new sfCaptchaGDValidator());
+//  	$this->setValidator('captcha',new sfCaptchaGDValidator());
   	$this->setValidator("parent_id",new sfValidatorString(array("required"=>true)));
-  	$this->useFields(array("name","description","parent_id","path","sender","city","captcha","status"));
+  	$this->useFields(array("name","description","parent_id","path","sender","city","status"));
   }
 }

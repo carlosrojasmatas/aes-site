@@ -7,6 +7,11 @@ div.album-title {
 	display: inline;
 }
 
+.bar {
+	width: 100%;
+	border-bottom: 1px solid grey;
+}
+
 div#toolbar h2 {
 	border-bottom: 1px solid;
 	color: #4E4E4E;
@@ -16,23 +21,21 @@ div#toolbar h2 {
 }
 
 div.image-container {
-	padding-top:10px;
+	padding-top: 10px;
 	margin: 30px auto;
 	width: 700px;
 	border: 1px solid #CCCCCC;
 }
 
-div.image-container img{
+div.image-container img {
 	border: none;
 }
 
-div.image-container img{
+div.image-container img {
 	-moz-border-radius: 5px 5px 5px 5px;
-    border: 2px solid #000000;
-    line-height: 0;
+	border: 2px solid #000000;
+	line-height: 0;
 }
-
-
 
 div.album-list .album-cover {
 	margin: 30px;
@@ -50,7 +53,6 @@ div.album-list p {
 	top: 50px;
 }
 
-
 div.empty-album h2 {
 	text-align: center;
 	color: #4E4E4E;
@@ -62,19 +64,21 @@ div.empty-album h2 {
 ul.gallery {
 	width: 708px; /*--Adjust width according to your scenario--*/
 	list-style: none;
-	margin: 0; padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-ul.gallery img{
+ul.gallery img {
 	border: none 0px;
 }
 
-ul.gallery li a{
-	outline:0;
+ul.gallery li a {
+	outline: 0;
 }
+
 ul.gallery li {
 	float: left;
-	margin-left: 10px; 
+	margin-left: 10px;
 	padding: 0;
 	text-align: center;
 	-moz-border-radius: 3px; /*--CSS3 Rounded Corners--*/
@@ -82,6 +86,7 @@ ul.gallery li {
 	-webkit-border-radius: 3px; /*--CSS3 Rounded Corners--*/
 	display: inline; /*--Gimp Fix aka IE6 Fix - Fixes double margin bug--*/
 }
+
 ul.gallery li a.thumb {
 	width: 204px; /*--Width of image--*/
 	height: 182px; /*--Height of image--*/
@@ -89,46 +94,53 @@ ul.gallery li a.thumb {
 	border-bottom: 1px solid #ccc;
 	cursor: pointer;
 }
+
 ul.gallery li span { /*--Used to crop image--*/
 	width: 80px;
 	height: 70px;
 	overflow: hidden;
 	display: block;
 }
+
 ul.gallery li a.thumb:hover {
 	background: #333; /*--Hover effect for browser with js turned off--*/
 }
+
 ul.gallery li h2 {
 	font-size: 1em;
 	font-weight: normal;
 	text-transform: uppercase;
-	margin: 0; padding: 10px;
+	margin: 0;
+	padding: 10px;
 	background: #f0f0f0;
 	border-top: 1px solid #fff; /*--Subtle bevel effect--*/
 }
-ul.gallery li a {text-decoration: none; color: #777; display: block;}
 
-div.gallery-header{
-  border-bottom: 1px solid #660000;
-  color: #660000;
-  font-weight: bold;
-  height: 35px;
-  margin: 15px 10px;
-  overflow: hidden;
-  padding: 12px 15px 0;
-  white-space: nowrap;
+ul.gallery li a {
+	text-decoration: none;
+	color: #777;
+	display: block;
 }
 
+div.gallery-header {
+	border-bottom: 1px solid #660000;
+	color: #660000;
+	font-weight: bold;
+	height: 35px;
+	margin: 15px 10px;
+	overflow: hidden;
+	padding: 12px 15px 0;
+	white-space: nowrap;
+}
 
-div.album-list div.album-cover a{
+div.album-list div.album-cover a {
 	margin: 0 10px;
 }
 
-img.captcha{
+img.captcha {
 	padding: 10px;
 	margin: 10px 10px 0 10px;
 }
-
 
 div#add-photo-banner {
 	display: block;
@@ -138,7 +150,7 @@ div#add-photo-banner {
 	font-size: 12px;
 	color: #666666;
 	padding: 10px 10px 10px 30px;
-	float:right;
+	float: right;
 }
 
 div#add-photo-banner a {

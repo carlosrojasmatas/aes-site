@@ -16,7 +16,9 @@ class albumsActions extends sfActions
 		$this->pager->setPage($request->getParameter('page', 1));
 		$this->pager->init();
 		$this->form= new AlbumForm();
+		$this->rForm = new AlbumResourceForm();
 	}
+
 
 	public function executeNew(sfWebRequest $request)
 	{
@@ -30,7 +32,7 @@ class albumsActions extends sfActions
 		}
 		$this->forward("albums", "index");
 	}
-	
+
 	public function executeNewResource(sfWebRequest $request)
 	{
 		$type= $request->getPostParameter("type");
@@ -46,18 +48,35 @@ class albumsActions extends sfActions
 		$request->setParameter("albumId", $tainedValues["parent_id"]);
 		$this->forward("albums", "showResources");
 	}
-	
-	
-	
+
+
+
 	public function executeShowResources(sfWebRequest $request){
-		if(!$this->form){
-			$this->form= new AlbumResourceForm();
-		}
+		//		if(!$this->form){
+		//			$this->form= new AlbumResourceForm();
+		//		}
 		$albumId= $request->getParameter("albumId");
-		$this->album= Album::getRepository()->findOneBy("id",$albumId);
+		$album= Album::getRepository()->find($albumId);
 		$this->type=$request->getParameter("type");
+
+		$this->resources = $this->buildWrappers($album->getPhotos());
 	}
 
+
+	private function buildWrappers($resources){
+		$wrapperResources= array();
+
+		foreach ($resources as $resKey => $resource){
+			$wrapper["name"] = $resource["name"];
+			$wrapper["desc"] = $resource["description"];
+			$wrapper["sender"] = $resource["sender"];
+			$wrapper["path"] = $resource["path"];
+			$wrapper["thumb"] = $resource["thumbnail_path"];
+			$wrapperResources[]=$wrapper;
+		}
+		return $wrapperResources;
+	}
+	
 	public function executeInsideAlbum(sfWebRequest $request){
 		$type= $request->getParameter("type");
 		$alId= $request->getParameter("album");

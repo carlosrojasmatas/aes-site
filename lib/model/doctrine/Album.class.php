@@ -55,7 +55,7 @@ class Album extends BaseAlbum
 			->addFrom("Album a")
 			->innerJoin("a.Resources r")
 			->addWhere("a.id=?",array($this->getId()))
-			->addWhere("r.status='enabled'",array())
+//			->addWhere("r.status='enabled'",array())
 			->addWhere("r.type =?",array($type));
 		return $q->execute()->getFirst();
 	}

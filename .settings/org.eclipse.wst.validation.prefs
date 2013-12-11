@@ -1,4 +1,4 @@
-#Sun Feb 17 17:05:22 ART 2013
+#Wed Dec 11 18:08:02 ART 2013
 DELEGATES_PREFERENCE=delegateValidatorList
 USER_BUILD_PREFERENCE=enabledBuildValidatorList
 USER_MANUAL_PREFERENCE=enabledManualValidatorList
@@ -6,12 +6,4 @@ USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationtrueversion1.2.
 eclipse.preferences.version=1
 override=true
 suspend=true
-vals/org.eclipse.jst.jsp.core.JSPContentValidator/global=FF01
-vals/org.eclipse.php.ui.HTMLValidatorForPHP/global=FF01
-vals/org.eclipse.wst.dtd.core.dtdDTDValidator/global=FF01
-vals/org.eclipse.wst.html.ui.HTMLValidator/global=FF01
-vals/org.eclipse.wst.wsdl.validation.wsdl/global=FF02158org.eclipse.wst.wsdl.validation.internal.eclipse.Validator
-vals/org.eclipse.wst.xml.core.xml/global=FF03
-vals/org.eclipse.wst.xsd.core.xsd/global=FF02162org.eclipse.wst.xsd.core.internal.validation.eclipse.Validator
-vals/org.eclipse.wst.xsl.core.xsl/global=FF02
 vf.version=3
