@@ -8,8 +8,11 @@
 <div class="separator-line"></div>
 <div class="introline">
 	<div class="intro-text" >
-		<h3><span>Comunicacione AES</span></h3>
-		<p>En esta secci&oacute;n encontrar&aacute;s las comunicaciones oficiales de la asociaci&oacute;n</p>
+		<h3><span>Comunicaciones oficiales AES</span></h3>
+		<p>Esta secci&oacute;n est&aacute; pensada para mantener informados a los practicantes e instructores
+		acerca de las novedades de caracter institucional. Recordamos que este canal es el <b>&uacute;nico autorizado</b>
+		a difundir las noticias organizacionales de nuestra Asociaci&oacute;n a nivel nacional. Cualquier inquietud no dudes en 
+		contactarte con nosotros</p>
 	</div>
 </div>
 <div class="separator-line"></div>

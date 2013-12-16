@@ -142,7 +142,7 @@ class Advert extends BaseAdvert
 			->from("Advert a")
 			->addWhere("a.type= 'event' or a.type='advert'");
 		}
-		$q->addOrderBy("start_date DESC");
+		$q->addOrderBy("created_at DESC");
 		$pager=new sfDoctrinePager("Advert",4);
 		$pager->setQuery($q);
 		return $pager;

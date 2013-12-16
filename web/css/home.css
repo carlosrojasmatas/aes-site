@@ -144,7 +144,7 @@ div.add-dojo {
 	height:150px;
 	padding: 12px 17px 0;
 	margin: 42px auto;
-	background: url("../images/home/dojo-icon.png") no-repeat scroll 85px #F7F7F7;
+	background: url("../images/home/dojo-icon.png") no-repeat scroll 85px;
 	background-position: center right;
 	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
 	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
@@ -153,6 +153,14 @@ div.add-dojo {
 
 div.add-dojo span {
 	margin-right: 20px;
+	line-height: 120%;
+	text-align: justify;
+	
+}
+
+div.add-dojo-text {
+	width: 80%;
+	
 }
 
 div.add-dojo h2{

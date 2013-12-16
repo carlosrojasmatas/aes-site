@@ -40,8 +40,8 @@ class AlbumResource extends BaseAlbumResource
 		$path= $resource->saveFile($file,$folder);
 		if($type=="image"){
 			$resource->setType("image");
-			$resource->createIcon($folder);
-			$resource->createThumbnail($folder);
+// 			$resource->createIcon($folder);
+// 			$resource->createThumbnail($folder);
 		}else{
 			$resource->setType("video");
 		}

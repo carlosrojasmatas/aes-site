@@ -66,7 +66,7 @@ class newsActions extends sfActions
 		if($id){
 			Advert::getRepository()->find($id)->delete();
 		}
-		$this->redirect("news/index", 200);
+		$this->redirect("events/index", 200);
 	}
 
 

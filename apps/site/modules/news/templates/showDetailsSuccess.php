@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<div id="news-footer">
-			<a href="index" class="back-button"><img src="/images/back-btn.png"><p>Volver al listado</p> </a>
+			<a href="comms" class="back-button"><img src="/images/back-btn.png"><p>Volver al listado</p> </a>
 	</div>
 </div>
 

@@ -43,6 +43,9 @@ Advert:
     id:             { type: integer, primary: true, autoincrement: true }
     title:          { type: string, notnull: true }
     description:    { type: string, notnull: true }
+    shortDesc:   { type: string, notnull: true }
+    isMain:   { type: boolean, notnull: true }
+    province:      	{ type: string, notnull: false }
     start_date:     { type: date, notnull: false }
     end_date:     	{ type: date, notnull: false }
     start_time:     { type: string, notnull: false }

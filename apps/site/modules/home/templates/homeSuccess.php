@@ -10,9 +10,9 @@
 <div class="separator-line"></div>
 <div class="introline">
 	<div class="intro-text" >
-		<h3>Bienvenidos al sitio oficial de la <span>Asociaci&oacute;n de Escuelas Shotokan</span></h3>
-		<p>Aquí encontraras toda la informaci&oacute;n relacionada con la actividad deportiva y organizacional a nivel nacional. Torneos, 
-		exámenes, cursos, notas, fotos, videos, dojos y mucho más! </p>
+		<h3><span>Asociaci&oacute;n de Escuelas Shotokan de Karate</span></h3>
+		<p>Te damos la bienvenida al sitio oficial de <b>AES Argentina</b>, &uacute;nico representante autorizado de la <b>Japan Karate Asociation</b>. Aquí encontraras toda la informaci&oacute;n relacionada		 con la actividad deportiva y organizacional a nivel nacional. 
+		Torneos, ex&aacute;menes, cursos, notas, fotos, videos, datos de dojos y mucho más.</p>
 	</div>
 </div>
 <div class="separator-line"></div>
@@ -20,17 +20,15 @@
 
 <div id="mix-in" class="slidorion">
 	<div class="slider">
-		<div class="slide"><img src="<?php echo $news[0]->getImage()?>" /></div>
-        <div class="slide"><img src="<?php echo $news[1]->getImage()?>" /></div>
-        <div class="slide"><img src="<?php echo $news[2]->getImage()?>" /></div>
+	<?php foreach($news as $new):?>
+		<div class="slide"><img height="350px" width="100%" src="<?php echo $new->getImage()?>" /></div>
+	<?php endforeach;?>
     </div>
     <div class="accordion">
-    	<div class="header"><?php echo $news[0]->getTitle()?></div>
-        <div class="content"><?php echo strip_tags(strlen($news[0]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[0]->getDescription())?></div>
-    	<div class="header"><?php echo $news[1]->getTitle()?></div>
-        <div class="content"><?php echo strip_tags(strlen($news[1]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[1]->getDescription())?></div>
-    	<div class="header"><?php echo $news[2]->getTitle()?></div>
-        <div class="content"><?php echo strip_tags(strlen($news[2]->getDescription())>110?substr($news[0]->getDescription(),0,110)."...":$news[2]->getDescription())?></div>
+    <?php foreach($news as $new):?>
+    	<div class="header"><?php echo $new->getTitle()?></div>
+        <div class="content"><?php echo strip_tags(strlen($new->getDescription())>110?substr($new->getDescription(),0,110)."...":$new->getDescription())?><br><a href="<?php if($new->type=="inst"): echo url_for('news/showDetails'); else: echo url_for('events/showDetails'); endif;?>?id=<?php echo $news[0]->getId();?>">ver mas</a></div>
+	<?php endforeach;?>
     </div>    
 </div>
 <div class="clear"></div>
@@ -105,8 +103,11 @@
 </div>
 <div class="add-dojo"> 
 	<h2>Carga tu Dojo!</h2>
-	<span>Envianos tus datos  haciendo click <a href="<?php echo url_for("dojos/new")?>"> >>ACA<< </a> <br><br>
-	Complet&aacute; el formulario y registrate en el <a href="<?php echo url_for("dojos/new")?>"> listado oficial </a> de Dojos AES!!!</span>
+	<div class="add-dojo-text">
+	<span>Si sos instructor en cualquier parte del pa&iacute;s y queres formar parte del <a href="<?php echo url_for("dojos/new")?>"> listado oficial </a> 
+	envianos tus datos  haciendo click <a href="<?php echo url_for("dojos/new")?>"> ACA </a>. <br>
+	Una vez recibidos los mismos nos pondremos en contacto contigo para validarlos. Ayudanos a difundir los lugares de pr&aacute;ctica!</span>
+	</div>
 </div>
 <div class="clear"></div>
 </div>

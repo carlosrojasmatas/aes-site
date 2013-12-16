@@ -18,15 +18,13 @@
 <div class="separator-line"></div>
 <div class="introline">
 	<div class="intro-text" >
-		<h3><span>Calendario AES</span></h3>
-		<p>Cursos, examenes y torneos. Cronograma oficial de AES</p>
+		<h3><span>Noticias y eventos</span></h3>
+		<p>En esta secci&oacute;n se encuentra publicado el cronograma oficial AES para torneos, cursos, y ex&aacute;menes a nivel nacional.
+		En el mismo se pueden visualizar las actividades de cada una de las provincias en el marco de la Asociaci&oacute;n. Contactanos y contanos
+		tu cronograma local para poder reflejarlo en este sitio y as&iacute; difundir nuestra actividad.</p>
 	</div>
 </div>
 <div class="separator-line"></div>
-
-<?php if(sfContext::getInstance()->getUser()->hasCredential("admin")):?>
-	<input type="button" class="button" id="addNew" value="Agregar Noticia"/>
-<?php endif;?>
 
 
 <div class="region-combo" >
@@ -39,6 +37,10 @@
 			<?php endforeach;?>
 	</select>
 	</div>
+	<?php if(sfContext::getInstance()->getUser()->hasCredential("admin")):?>
+	<div style="float:right;"><input type="button" class="button" id="addNew" value="Agregar Noticia"/></div>
+<?php endif;?>
+	
 </div>
 
 <div id ="calendar-container">
@@ -56,7 +58,7 @@
 <!-- agregar noticias -->
 
 <div id="new-form" style="<?php echo $form->hasErrors()?"display:block":"display:none".";"?>">
-		<form class="news-form" method="post" enctype="multipart/form-data" action="<?php echo url_for("events/index")?>">
+		<form class="new-form" method="post" enctype="multipart/form-data" action="<?php echo url_for("events/index")?>">
 		<dl style="width: 860px">
 			<dt><label for="<?php echo $form['title']->renderId() ?>"<?php echo $form['title']->hasError() ? ' class="error"' : '' ?>>Nombre:</label> </dt>
 				<dd><?php echo $form["title"]->render()?></dd>
@@ -66,6 +68,12 @@
 				
 			<dt><label for="<?php echo $form['type']->renderId() ?>"<?php echo $form['type']->hasError() ? ' class="error"' : '' ?>>Tipo:</label></dt>
 				<dd><?php echo $form["type"]->render()?></dd>
+			
+			<dt><label for="<?php echo $form['image']->renderId() ?>"<?php echo $form['image']->hasError() ? ' class="error"' : '' ?>>Imagen:</dt>
+				<dd><?php echo $form["image"]->render()?></dd>
+				
+			<dt><label for="<?php echo $form['f_image']->renderId() ?>"<?php echo $form['f_image']->hasError() ? ' class="error"' : '' ?>>Imagen frontal:</dt>
+				<dd><?php echo $form["f_image"]->render()?></dd>
 				
 			<div id="event-details" style="display: none;">	
 				<dt><label for="<?php echo $form['province']->renderId() ?>"<?php echo $form['province']->hasError() ? ' class="error"' : '' ?>>Provincia:</label></dt>
@@ -85,11 +93,6 @@
 	
 				<dt><label for="<?php echo $form['end_time']->renderId() ?>"<?php echo $form['end_time']->hasError() ? ' class="error"' : '' ?>>Hora de Fin:</label></dt>
 					<dd><?php echo $form["end_time"]->render()?></dd>
-			<dt><label for="<?php echo $form['image']->renderId() ?>"<?php echo $form['image']->hasError() ? ' class="error"' : '' ?>>Imagen:</dt>
-				<dd><?php echo $form["image"]->render()?></dd>
-				
-			<dt><label for="<?php echo $form['f_image']->renderId() ?>"<?php echo $form['f_image']->hasError() ? ' class="error"' : '' ?>>Imagen frontal:</dt>
-				<dd><?php echo $form["f_image"]->render()?></dd>
 			
 			</div>	
 			<dt id="attachementList" style="display: none;">Adjuntos:</dt>

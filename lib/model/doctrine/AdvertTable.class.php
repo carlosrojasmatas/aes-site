@@ -35,13 +35,16 @@ class AdvertTable extends Doctrine_Table
 	public function getTop($nr,$type=null){
 		$query = Doctrine_Query::create()->
 		addFrom("Advert a")
-		->addOrderBy("start_date DESC")
+		->addOrderBy("created_at DESC")
 		->limit(5);
 		
-		if($type){
-			$query->addWhere("a.type = ?",array($type));
-//			$query->addWhere("a.start_date >= ?",array(date("Y-n-j")));
+		if ($type == "home"){
+			$query->addWhere("type = ? or type = ? or type=?",array("inst","event", "advert"));
 		}
+		else if($type){
+			$query->addWhere("a.type = ?",array($type));
+		}
+		
 		return $query->execute();
 	}
 	

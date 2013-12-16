@@ -1,12 +1,13 @@
 $(function() {
 	
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		animation_speed: 'normal', /* fast/slow/normal */
-		horizontal_padding: 20, /* The padding on each side of the picture */
-		autoplay_slideshow:true,
-		ie6_fallback: true,
-		social_tools: true
-	});
+	$("a[rel^='prettyPhoto']").prettyPhoto();
+//	$("a[rel^='prettyPhoto']").prettyPhoto({
+//		animation_speed: 'normal', /* fast/slow/normal */
+//		horizontal_padding: 20, /* The padding on each side of the picture */
+//		autoplay_slideshow:true,
+//		ie6_fallback: true,
+//		social_tools: true
+//	});
 
 	$("#add-photo").click(function() {
 		$("#pageBody").append("<div id='popup-overlay'></div>");

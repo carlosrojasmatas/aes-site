@@ -3,16 +3,13 @@
 /**
  * home
  *
- * @package    gmills
- * @subpackage auth
  * @author     Carlos
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class homeActions extends sfActions
 {
 	
 	public function executeHome(sfWebRequest $request){
-		$this->news= Advert::getRepository()->getTop(5);	
+		$this->news= Advert::getRepository()->getTop(5,"home");	
 		$this->events= Advert::getRepository()->getTop(5,Advert::EVENT);
 		$this->insts= Advert::getRepository()->getTop(5,Advert::INST);
 		$this->hombus= Advert::getRepository()->getTop(5,Advert::HOMBU);

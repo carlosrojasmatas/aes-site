@@ -13,6 +13,7 @@ class albumsActions extends sfActions
 	public function executeIndex(sfWebRequest $request)
 	{
 		$this->pager= Album::getPager();
+		$this->fAlbum = $this->pager->getResults()[0];
 		$this->pager->setPage($request->getParameter('page', 1));
 		$this->pager->init();
 		$this->form= new AlbumForm();

@@ -9,7 +9,7 @@
 <div class="intro-line">
 	<div class="intro-text" >
 		<h3><span>Listado de Dojos<span></h3>
-		<p>Este es el listado oficial de Dojos certificados de AES. Si no apareces en el mismo pod&eacute;s enviarnos tus datos haciendo click <a href="<?php echo url_for("dojos/new")?>"> >>ACA<< </a>
+		<p>Este es el listado oficial de Dojos certificados de AES. Envianos tus datos y ayudanos a mantener actualizada la lista haciendo click <a href="<?php echo url_for("dojos/new")?>"> ac&aacute; </a>
 		</p>
 	</div>
 </div>

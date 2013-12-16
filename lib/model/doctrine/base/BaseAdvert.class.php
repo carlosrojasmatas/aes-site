@@ -8,12 +8,14 @@
  * @property integer $id
  * @property string $title
  * @property string $description
+ * @property string $shortDesc
+ * @property boolean $isMain
+ * @property string $province
  * @property date $start_date
  * @property date $end_date
  * @property string $start_time
  * @property string $end_time
  * @property string $place
- * @property string $province
  * @property enum $type
  * @property string $f_image_path
  * @property string $f_image_name
@@ -23,12 +25,14 @@
  * @method integer getId()           Returns the current record's "id" value
  * @method string  getTitle()        Returns the current record's "title" value
  * @method string  getDescription()  Returns the current record's "description" value
+ * @method string  getShortDesc()    Returns the current record's "shortDesc" value
+ * @method boolean getIsMain()       Returns the current record's "isMain" value
+ * @method string  getProvince()     Returns the current record's "province" value
  * @method date    getStartDate()    Returns the current record's "start_date" value
  * @method date    getEndDate()      Returns the current record's "end_date" value
  * @method string  getStartTime()    Returns the current record's "start_time" value
  * @method string  getEndTime()      Returns the current record's "end_time" value
  * @method string  getPlace()        Returns the current record's "place" value
- * @method string  getProvince()     Returns the current record's "province" value
  * @method enum    getType()         Returns the current record's "type" value
  * @method string  getFImagePath()   Returns the current record's "f_image_path" value
  * @method string  getFImageName()   Returns the current record's "f_image_name" value
@@ -37,12 +41,14 @@
  * @method Advert  setId()           Sets the current record's "id" value
  * @method Advert  setTitle()        Sets the current record's "title" value
  * @method Advert  setDescription()  Sets the current record's "description" value
+ * @method Advert  setShortDesc()    Sets the current record's "shortDesc" value
+ * @method Advert  setIsMain()       Sets the current record's "isMain" value
+ * @method Advert  setProvince()     Sets the current record's "province" value
  * @method Advert  setStartDate()    Sets the current record's "start_date" value
  * @method Advert  setEndDate()      Sets the current record's "end_date" value
  * @method Advert  setStartTime()    Sets the current record's "start_time" value
  * @method Advert  setEndTime()      Sets the current record's "end_time" value
  * @method Advert  setPlace()        Sets the current record's "place" value
- * @method Advert  setProvince()     Sets the current record's "province" value
  * @method Advert  setType()         Sets the current record's "type" value
  * @method Advert  setFImagePath()   Sets the current record's "f_image_path" value
  * @method Advert  setFImageName()   Sets the current record's "f_image_name" value
@@ -72,6 +78,18 @@ abstract class BaseAdvert extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => true,
              ));
+        $this->hasColumn('shortDesc', 'string', null, array(
+             'type' => 'string',
+             'notnull' => true,
+             ));
+        $this->hasColumn('isMain', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             ));
+        $this->hasColumn('province', 'string', null, array(
+             'type' => 'string',
+             'notnull' => false,
+             ));
         $this->hasColumn('start_date', 'date', null, array(
              'type' => 'date',
              'notnull' => false,
@@ -89,10 +107,6 @@ abstract class BaseAdvert extends sfDoctrineRecord
              'notnull' => false,
              ));
         $this->hasColumn('place', 'string', null, array(
-             'type' => 'string',
-             'notnull' => false,
-             ));
-        $this->hasColumn('province', 'string', null, array(
              'type' => 'string',
              'notnull' => false,
              ));

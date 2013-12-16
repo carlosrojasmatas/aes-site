@@ -25,20 +25,20 @@ form.news-form dl dt label {
 	text-shadow: 0 1px 0 #FFFFFF;
 }
 
-input.button {
-	-moz-border-radius: 3px 3px 3px 3px;
-	background: -moz-linear-gradient(center top, #7A7A7A, #B8B8B8) repeat
-		scroll 0 0 transparent;
-	border: 1px solid #000000;
-	float: right;
-	margin: 5px 5px;
-	color: #000000;
-	cursor: pointer;
-	font: bold 11px Arial;
-	padding: 4px 3px;
-	text-shadow: 0 1px 0 #444444;
-	text-transform: uppercase;
-}
+/* input.button { */
+/* 	-moz-border-radius: 3px 3px 3px 3px; */
+/* 	background: -moz-linear-gradient(center top, #7A7A7A, #B8B8B8) repeat */
+/* 		scroll 0 0 transparent; */
+/* 	border: 1px solid #000000; */
+/* 	float: right; */
+/* 	margin: 5px 5px; */
+/* 	color: #000000; */
+/* 	cursor: pointer; */
+/* 	font: bold 11px Arial; */
+/* 	padding: 4px 3px; */
+/* 	text-shadow: 0 1px 0 #444444; */
+/* 	text-transform: uppercase; */
+/* } */
 
 div#section-news {
 	background: white url(/images/news-banner.png) repeat-x 0 0 scroll;

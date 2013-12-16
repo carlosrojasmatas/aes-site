@@ -9,8 +9,8 @@
 <div class="intro-line">
 	<div class="intro-text" >
 		<h3><span>Fotos y Videos<span></h3>
-		<p>Esta secci&oacute;n contiene fotos y videos de torneos, cursos y encuentros y todo tipo de actividades desarrolladas en el marco de AES. 
-		A trav&eacute;s de esta p&aacute;gina podr&aacute;s enviarnos tus propias fotos para que formen parte del sitio.</a>
+		<p>Esta secci&oacute;n contiene material audiovisual de torneos, cursos, encuentros y todo tipo de actividades desarrolladas en el marco de la Asociaci&oacute;n.
+		Si ten&eacute;s fotos de alg&uacute;n evento y quer&eacute; que lo subamos al sitio mandalas a aes@web-aes.com.ar</a>
 		</p>
 	</div>
 </div>
@@ -29,16 +29,18 @@
 		</select>
 	
 </div>
-<div class="album-list" >
-<ul class="gallery">
-		<li><a href="<?php echo $photo->getPath()?>" rel="prettyPhoto[pp_gal]" title="Enviado por <?php echo $photo->getSender()?> - <?php echo $photo->getCity()?>"><img src="<?php echo $photo->getThumbnailPath()?>" width="60" height="60" alt="<?php echo $photo->getDescription()?>" /></a></li>
-</ul>
+<div class="image-container" >
+   <?php foreach($fAlbum->getPhotos() as $photo): ?>
+   		<a href="<?php echo $photo->getPath()?>" rel="prettyPhoto[gallery1]" ><img height="60" src="<?php echo $photo->getPath()?>" /></a>
+   <?php endforeach;?>
 </div>
+
 <div style="clear: both;"></div>
 	
 	<?php if ($form->hasErrors()):?>
 	  	<div id="popup-overlay" ></div>
     <?php endif;?>
+    
 	<div id="new-form" class="new-form" style="display: none;">
 		<form class="album-form" method="post"
 			action="<?php echo url_for("albums/new")?>">
@@ -65,17 +67,15 @@
 		</div>
 		</form>
 	</div>
-</div>
-
-<div id="new-photo-form" class="new-form" style="display: none;">
-	<form class="resource-form"  enctype="multipart/form-data" method="post" 
-		action="<?php echo url_for("albums/newResource")?>">
+	<div id="new-photo-form" class="new-form" style="display: none;">
+		<form class="resource-form"  enctype="multipart/form-data" method="post" 
+			action="<?php echo url_for("albums/newResource")?>">
 		<dl>
 			<dt>
 				<label for="<?php echo $rForm['description']->renderId() ?>"<?php echo $rForm['description']->hasError() ? ' class="error"' : '' ?>>Descripci&oacute;n:</label><span class="required">*</span>
 			</dt>
 			<dd>
-				<input id="album_resource_parent_id" type="hidden" name="album_resource[parent_id]" value="<?php echo $album->getId()?>"/>
+				<input id="album_resource_parent_id" type="hidden" name="album_resource[parent_id]" />
 				<input id="type" type="hidden" name="type" value="image"/>
 				<?php echo $rForm["description"]->render()?>
 				<p class="note<?php echo $rForm['description']->hasError() ? ' error' : '' ?>">Ingresa una descripci&oacute;n de la foto</p>
@@ -114,7 +114,7 @@
 		</dl>
 			<div class="clearfix"></div>
 		<div style="float: right; margin: 5px;">
-			<input type="submit" value="Enviar"/> <input id="button-cancel-photo" type="button" value="Cancelar"/>
+			<input type="button" id="send-resource" value="Enviar"/> <input id="button-cancel-photo" type="button" value="Cancelar"/>
 		</div>
-	</form>
-</div>
+		</form>
+	</div>

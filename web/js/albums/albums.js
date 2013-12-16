@@ -1,5 +1,12 @@
 $(function() {
-
+	
+	$("#send-resource").button().click(function(){
+		var albumId = $("#album-select").val()
+		$("#album_resource_parent_id").val(albumId)
+		console.log("album: " + albumId)
+		$(".resource-form").submit();
+	});
+	
 	$("ul.gallery li").hover(function() {
 		$(this).animate({
 			boxShadow : '0 0 30px #969696'
@@ -23,21 +30,42 @@ $(function() {
 		$("#new-form").hide("slow");
 	});
 	
+	$("#add-photo").button().click(function() {
+		$("#pageBody").append("<div id='popup-overlay'></div>");
+		$("#new-photo-form").show("slow");
+	});
+
+	$("#button-cancel-photo").click(function() {
+		$("#popup-overlay").remove();
+		$("#new-photo-form").hide("slow");
+	});
+	
 	$("#album-select").click(function(){
 		var albumId = $(this).val()
 		$.getJSON( "../albums/showResources?type=image&albumId=" + albumId, function( data ) {
+			$(".image-container").html("")
 			  if(data.length > 0 ){
 				  	$(data).each(function(idx){
-				  		$(".gallery").append("<li><a rel=\"prettyPhoto\" href='"+data[idx].path+"'><img src=\"" +data[idx].path+ "\"/></a></li>");
+				  		$(".image-container").append("<a  rel=\"prettyPhoto[gallery1]\"  href='"+data[idx].path+"'><img height=\"60\" src=\"" +data[idx].path+ "\" /></a>");
 				  	});	
-				  	console.log("the html" + $("a[rel^='prettyPhoto']").html())
-				
-//				  $( ".album-list" ).html( data );
 			  }
+			}).always(function(){
+				$("a[rel^='prettyPhoto']").prettyPhoto(
+						{
+							animation_speed: 'normal', /* fast/slow/normal */
+							horizontal_padding: 20, /* The padding on each side of the picture */
+							autoplay_slideshow:true,
+							ie6_fallback: true,
+							social_tools: false
+						}		
+				)
 			});
 		
-		
-	  	$("a[rel^='prettyPhoto']").prettyPhoto();
+	  	
 	})
 
 });
+
+function alert1(){
+	alert("yes again")
+}

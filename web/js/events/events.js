@@ -63,13 +63,12 @@ $(function() {
 	
 	$('#advert_start_time').timepicker();
 	$('#advert_end_time').timepicker();
-	
-	
+
 	loadsEventsForCurrentYear(options,yearLoader);
 	
 	bindRegionCombo();
 	
-	$("#addNew").click(function() {
+	$("#addNew").button().click(function() {
 		$("#pageBody").append("<div id='popup-overlay'></div>");
 		$("#new-form").show("slow");	
 		$("#new-form").css("z-index","999999");	

@@ -23,18 +23,17 @@ div#toolbar h2 {
 div.image-container {
 	padding-top: 10px;
 	margin: 30px auto;
-	width: 700px;
+	width: auto;
 	border: 1px solid #CCCCCC;
 }
 
-div.image-container img {
-	border: none;
-}
 
 div.image-container img {
 	-moz-border-radius: 5px 5px 5px 5px;
 	border: 2px solid #000000;
 	line-height: 0;
+	padding:10px;
+	margin: 5px;
 }
 
 div.album-list .album-cover {

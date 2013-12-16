@@ -11,7 +11,7 @@ $(document).ready(function() {
 //	});
 	$('#mix-in').slidorion({
 		effect: 'slideRandom',
-		autoPlay: true,
+		autoPlay: false,
 		hoverPause: true,
 		interval: 5000,
 		speed: 800

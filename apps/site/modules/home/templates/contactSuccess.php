@@ -11,7 +11,7 @@
 	</div>
 </div>
 <div class="separator-line"></div>
-<div id="new-form" >
+<div id="new-form" class="new-form">
 
 	<form class="contact-form" method="post" enctype="multipart/form-data" action="<?php echo url_for("home/contact")?>">
 		<?php if (sfContext::getInstance()->getUser()->hasFlash("contact_success")): ?>

@@ -7,6 +7,7 @@
 <?php include_title() ?>
 <?php include_stylesheets() ?>
 <?php include_javascripts() ?>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 </head>
 <body>
 	<div id="pageWrap">
@@ -39,7 +40,7 @@
 				<li <?php echo ($selected=="home/about")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/about")?>">Quienes Somos</a></li>
 				<li <?php echo ($selected=="hombu/index")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("hombu/index")?>">Hombu Dojo</a></li>
 				<li <?php echo ($selected=="news/comms" || $selected=="news/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("news/comms")?>">Comunicaciones</a></li>
-				<li <?php echo ($selected=="events/index" || $selected=="events/eventDetail")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Noticias y Eventos</a></li>
+				<li <?php echo ($selected=="events/index" || $selected=="events/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Noticias y Eventos</a></li>
 				<li <?php echo ($selected=="dojos/index" || $selected=="dojos/new")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("dojos/index")?>">Dojos</a></li>
 				<li <?php echo ($selected=="albums/index" || $selected=="albums/showResources")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("albums/index")?>">Fotos y Videos</a></li>
 				<li <?php echo ($selected=="home/contact")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/contact")?>">Contacto</a></li>
@@ -57,7 +58,7 @@
 				<a href="http://www.jka.or.jp/english/e_index.html" target="_blank"><img src="/images/logo-jka.png" /></a> 
 			</div>
 			<div class="link-to-pages">
-				<img src="/images/aessm.png" /> <span>Asociaci&#243;n Escuelas Shotokan - Argentina</span>
+				<img src="/images/footer-aes.png" />
 			</div>
 		</div>
 	</div>
