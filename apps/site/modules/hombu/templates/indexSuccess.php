@@ -30,9 +30,6 @@
     <li>
       <img src="/images/hombu/slide3.jpg" height="400px"/>
     </li>
-    <li>
-      <img src="/images/hombu/slider4.jpg" height="400px"/>
-    </li>
   </ul>
 </div>
 

@@ -25,12 +25,12 @@
 					<td class="dojo-field">Email:</td>
 					<td><?php echo $dojo->getEmail()?></td>
 				</tr>
-				<tr class="dojo-footer">
-					<td colspan="2" >
-						<a class="popup-gmaps" href="https://maps.google.com/maps?<?php echo $dojo->getFullAddress()?>" ><img title="Ver en mapa" src="/images/maps.png"/></a></td>
-				</tr>
+				
 			</tbody>
 		</table>
+	</div>
+	<div class="dojo-footer">
+			<a class="popup-gmaps" href="https://maps.google.com/maps?<?php echo $dojo->getFullAddress()?>" ><img title="Ver en mapa" src="/images/maps.png"/></a>
 	</div>
 </div>
 <script src="/js/magnific.js" type="text/javascript"></script>

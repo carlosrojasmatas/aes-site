@@ -34,6 +34,7 @@
 <div class="clear"></div>
 
 <div class="boxes" >
+<div id="boxes-container">
 <!-- Institucionales -->
 <div class="content-box">
 	<div class="content-box-header" >
@@ -101,6 +102,10 @@
 	<div class="content-box-footer" >
 	</div>
 </div>
+</div>
+</div>
+
+
 <div class="add-dojo"> 
 	<h2>Carga tu Dojo!</h2>
 	<div class="add-dojo-text">
@@ -110,5 +115,5 @@
 	</div>
 </div>
 <div class="clear"></div>
-</div>
+
 

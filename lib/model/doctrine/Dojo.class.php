@@ -13,33 +13,38 @@
 class Dojo extends BaseDojo
 {
 	public static $regions= array(
-	            "Capital Federal"=>"Capital Federal",
-				"Buenos Aires"=>"Buenos Aires",
-				"Catamarca"=>"Catamarca",
-				"Chaco"=>"Chaco",
-				"Chubut"=>"Chubut",
-				"Cordoba"=>"Cordoba",
-				"Corrientes"=>"Corrientes",
-				"Entre Rios"=>"Entre Rios",
-				"Formosa"=>"Formosa",
-				"Jujuy"=>"Jujuy",
-				"La Pampa"=>"La Pampa",
-				"La Rioja"=>"La Rioja",
-				"Mendoza"=>"Mendoza",
-				"Misiones"=>"Misiones",
-				"Neuquen"=>"Neuquen",
-				"Rio Negro"=>"Rio Negro",
-				"Salta"=>"Salta",
-				"San Juan"=>"San Juan",
-				"San Luis"=>"San Luis",
-				"Santa Cruz"=>"Santa Cruz",
-				"Santa Fe"=>"Santa Fe",
-				"Santiago del Estero"=>"Santiago del Estero",
-				"Tierra del Fuego"=>"Tierra del Fuego",
-				"Tucuman"=>"Tucuman");
+			"Uruguay" => "Uruguay",
+			"Brasil" => "Brasil",
+			"Chile" => "Chile",
+			"Paraguay" => "Paraguay",
+			"Capital Federal"=>"Capital Federal",
+			"Buenos Aires"=>"Buenos Aires",
+			"Catamarca"=>"Catamarca",
+			"Chaco"=>"Chaco",
+			"Chubut"=>"Chubut",
+			"Cordoba"=>"Cordoba",
+			"Corrientes"=>"Corrientes",
+			"Entre Rios"=>"Entre Rios",
+			"Formosa"=>"Formosa",
+			"Jujuy"=>"Jujuy",
+			"La Pampa"=>"La Pampa",
+			"La Rioja"=>"La Rioja",
+			"Mendoza"=>"Mendoza",
+			"Misiones"=>"Misiones",
+			"Neuquen"=>"Neuquen",
+			"Rio Negro"=>"Rio Negro",
+			"Salta"=>"Salta",
+			"San Juan"=>"San Juan",
+			"San Luis"=>"San Luis",
+			"Santa Cruz"=>"Santa Cruz",
+			"Santa Fe"=>"Santa Fe",
+			"Santiago del Estero"=>"Santiago del Estero",
+			"Tierra del Fuego"=>"Tierra del Fuego",
+			"Tucuman"=>"Tucuman"
+	);
 	/**
 	 * @return DojoTable
-	 */
+	*/
 	public static function getRepository(){
 		return Doctrine::getTable(__CLASS__);
 	}
@@ -52,7 +57,7 @@ class Dojo extends BaseDojo
 		$dojo->savePhoto($form);
 		return $dojo;
 	}
-	
+
 	public function modify(DojoForm $data){
 		$this->setName($data->getValue("name"));
 		$this->setSensei($data->getValue("sensei"));
@@ -77,7 +82,7 @@ class Dojo extends BaseDojo
 			$this->save();
 		}
 	}
-	
+
 	public function getFullAddress(){
 		$address= str_replace(" ", "+",$this->getAddress());
 		$city= str_replace(" ", "+", $this->getCity());
@@ -85,18 +90,18 @@ class Dojo extends BaseDojo
 		$fullAddress = "q=+".$address.",+".$city.",+". $province.",+Argentina";
 		return $fullAddress;
 	}
-	
+
 	public static function getPager($province=false){
 		if($province){
-		  $q= Doctrine_Query::create()
+			$q= Doctrine_Query::create()
 			->addFrom("Dojo d")
-			->addWhere("province= :province",array("province"=>$province));
+			->addWhere("d.province= :province",array("province"=>$province));
 		}else{
 			$q=Doctrine_Query::create()
-			->from("Dojo a");
+			->from("Dojo d");
 		}
-		$q->addWhere("status= :status",array("status"=>"enabled"));
-		$q->addOrderBy("name DESC");
+		$q->addWhere("d.status= :status",array("status"=>"enabled"));
+		$q->addOrderBy("d.created_at DESC");
 		$pager=new sfDoctrinePager("Dojo",6);
 		$pager->setQuery($q);
 		return $pager;

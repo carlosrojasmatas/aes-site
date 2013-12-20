@@ -82,7 +82,7 @@ div.line {
 	/*	border-bottom:2px solid gray;*/
 	background-position: bottom left;
 	position: relative;
-	width: 1024px;
+	width: 96%;
 	left: 20px;
 	float: left;
 	clear: left;
@@ -593,4 +593,9 @@ a.close-button {
 #menu {
 	position: relative;
 	margin: auto;
+}
+
+#menucontainer {
+	margin:auto;
+	width: 950px;
 }

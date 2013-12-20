@@ -48,12 +48,11 @@ $(function() {
 	$("#combo-regions").change(function() {
 		var region = $(this).val();
 		$("#dojos-title").html("Dojos de " + region);
-		// locate dojos on map
-		locateRegion(region);
 		// reload regions list
 		var params = "?region=" + region.replace(" ", "%20") + "&ajax=true";
+		
 		$(".list-dojo").load("index" + params, function() {
-			rebindControls();
+			console.log("reloaded regions")
 		})
 	});
 

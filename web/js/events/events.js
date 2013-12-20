@@ -24,6 +24,7 @@ function yearLoader(start,end, callback) {
 	var year= date.getFullYear();
 	var date = new Date();
 	var year= date.getFullYear();
+	if(date.getDayOfYear() >= 353) year = year +1;
 	$.getJSON("../events/fetchEvents2?year=" + year,
 			function(data) {
 					var events = []

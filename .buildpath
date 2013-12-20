@@ -2,11 +2,8 @@
 <buildpath>
 	<buildpathentry kind="src" path="apps"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="lib"/>
 	<buildpathentry kind="src" path="config"/>
-	<buildpathentry kind="src" path="lib/form"/>
-	<buildpathentry kind="src" path="lib/migration"/>
-	<buildpathentry kind="src" path="lib/model"/>
-	<buildpathentry kind="src" path="lib/filter"/>
 	<buildpathentry kind="src" path="test"/>
 	<buildpathentry kind="src" path="web"/>
 </buildpath>

@@ -140,7 +140,7 @@ div.add-dojo {
 	float: left;
 	border: 1px solid #990000;
 	color: #828282;
-	width: 90%;
+	width: 95%;
 	height:150px;
 	padding: 12px 17px 0;
 	margin: 42px auto;
@@ -373,4 +373,10 @@ div.transbox a {
 
 #featured .info a:hover {
 	text-decoration: underline;
+}
+
+#boxes-container {
+	width:1024px;
+	position:relative;
+	margin:0 auto;
 }
