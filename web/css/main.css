@@ -77,12 +77,12 @@ div.line {
 }
 
 #header {
-	background: white url(../images/new_logo.png) no-repeat;
+	background: white url(../images/new_logo.png) no-repeat;				
 	height: 210px;
 	/*	border-bottom:2px solid gray;*/
 	background-position: bottom left;
 	position: relative;
-	width: 96%;
+	width: 90%;
 	left: 20px;
 	float: left;
 	clear: left;
@@ -223,7 +223,6 @@ div#footer {
 	background: #747474 url(../images/bg-footer.png) repeat-x top;
 	margin: 30px 0 0 0;
 	padding: 20px 0 10px;
-	min-width: 1000px;
 }
 
 div#footer span {
@@ -280,7 +279,7 @@ html,body {
 
 #container {
 	margin: 3% auto;
-	width: 85%;
+	width: 95%;
 }
 
 ul,li {
@@ -308,13 +307,12 @@ ul,li {
 	position: relative;
 	background: #292929;
 	float: left;
+	width: 100%
 }
 
 #nav li {
 	float: left;
 	list-style: none;
-	border-right: 1px solid #4a4a4a;
-	border-left: 1px solid black;
 }
 
 #nav li a {
@@ -327,10 +325,11 @@ ul,li {
 	font-size: 14px;
 	font-family: helvetica, arial, sans-serif;
 	text-decoration: none;
-	padding: 20px 18px;
+	padding: 21px 0px 15px 0px;
 	width: 100%;
 	border: none;
 	font-weight: normal;
+	text-align: center;
 }
 
 #nav li a:HOVER {
@@ -597,5 +596,5 @@ a.close-button {
 
 #menucontainer {
 	margin:auto;
-	width: 950px;
+	width: 100%;
 }

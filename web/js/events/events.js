@@ -29,7 +29,7 @@ function yearLoader(start,end, callback) {
 			function(data) {
 					var events = []
 					$(data).each(function(idx){
-						var startDate = data[idx].start_date +"T" + data[idx].start_time
+						var startDate = data[idx].start_date
 						events.push({
 							title: data[idx].title,
 							start: startDate,
@@ -43,12 +43,13 @@ function yearLoader(start,end, callback) {
 var regionLoader = function(start,end, callback) {
 	var date = new Date();
 	var year= date.getFullYear();
+	if(date.getDayOfYear() >= 353) year = year +1;
 	var region = $("#regions").val()
 	$.getJSON("../events/filterByRegion?year=" + year + "&region="+region,
 			function(data) {
 					var events = []
 					$(data).each(function(idx){
-						var startDate = data[idx].start_date +"T" + data[idx].start_time
+						var startDate = data[idx].start_date
 						events.push({
 							title: data[idx].title,
 							start: startDate,
@@ -62,9 +63,6 @@ var regionLoader = function(start,end, callback) {
 
 $(function() {
 	
-	$('#advert_start_time').timepicker();
-	$('#advert_end_time').timepicker();
-
 	loadsEventsForCurrentYear(options,yearLoader);
 	
 	bindRegionCombo();
@@ -138,8 +136,8 @@ $(function() {
 		showButtonPanel : true,
 		dateFormat : 'yy-mm-dd'
 	});
-	$("#advert_start_date").datepicker('setDate', new Date());
-	$("#advert_end_date").datepicker('setDate', new Date());
+//	$("#advert_start_date").datepicker('setDate', new Date());
+//	$("#advert_end_date").datepicker('setDate', new Date());
 	
 });
 

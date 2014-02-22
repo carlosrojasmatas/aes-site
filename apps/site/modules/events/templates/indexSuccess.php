@@ -56,8 +56,7 @@
 
 
 <!-- agregar noticias -->
-
-<div id="new-form" style="<?php echo $form->hasErrors()?"display:block":"display:none".";"?>">
+<div id="new-form" class="new-form" style="<?php echo $form->hasErrors()?"display:block":"display:none".";"?>">
 		<form class="new-form" method="post" enctype="multipart/form-data" action="<?php echo url_for("events/index")?>">
 		<dl style="width: 860px">
 			<dt><label for="<?php echo $form['title']->renderId() ?>"<?php echo $form['title']->hasError() ? ' class="error"' : '' ?>>Nombre:</label> </dt>

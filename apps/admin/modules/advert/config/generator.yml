@@ -30,8 +30,10 @@ generator:
         batch_actions: {}
       filter:
         display: [title, description, start_date, end_date, place]
-      form:    ~
+      form:
+        display: [title, description, start_date, end_date, type, place]
       edit:
-        title: Edici&oacute; de Noticias y Eventos
+        title: Edici&oacute;n de Noticias y Eventos
+        display: [title, description, start_date, end_date, type, place]
       new:
         title: Agregar Noticias y Eventos

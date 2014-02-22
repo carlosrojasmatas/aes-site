@@ -24,11 +24,11 @@ class EventForm extends BaseAdvertForm
   	
   	$this->setValidator("main_image", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
 //  	$this->setValidator("attachements", new sfValidatorSchemaForEach(new sfValidatorFile(array("required" => false, "max_size" => 2097152)), $this->MAX_ATTACHEMENTS));
-  	$this->setValidator('start_date',new sfValidatorDate(array('required' => true)));
-  	$this->setValidator('start_time',new sfValidatorString(array('required' => true)));
-  	$this->setValidator('end_date',new sfValidatorDate(array('required' => true)));
-  	$this->setValidator('end_time',new sfValidatorString(array('required' => true)));
-  	$this->setValidator('place',new sfValidatorString(array('required' => true)));
+  	$this->setValidator('start_date',new sfValidatorDate(array('required' => false)));
+  	$this->setValidator('start_time',new sfValidatorString(array('required' => false)));
+  	$this->setValidator('end_date',new sfValidatorDate(array('required' => false)));
+  	$this->setValidator('end_time',new sfValidatorString(array('required' => false)));
+  	$this->setValidator('place',new sfValidatorString(array('required' => false)));
   	$this->useFields(array("main_image","title","description","start_date","end_date","start_time","end_time","place"));
   	
   }

@@ -56,6 +56,7 @@ div.news-list div.news-row {
 	height: 110px;
 	/*	border: 1px solid #6b6b6b;*/
 	box-shadow: 0 0 34px #bbb;
+	overflow: hidden;
 }
 
 div.news-list div.news-row p {

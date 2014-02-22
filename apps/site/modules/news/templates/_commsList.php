@@ -21,19 +21,19 @@
 	<?php if ($pager->haveToPaginate()): ?>
 	<div
 		style="width: 20px; float: left; margin-top: 3px; margin-right: 20px; ">
-		<a href="<?php echo url_for('news/index').'?page='.$pager->getFirstPage() ?>">
+		<a href="<?php echo url_for('news/comms').'?page='.$pager->getFirstPage() ?>">
 			<img src="/images/ad_prev.png"/>
 		</a>
 	</div>
 	<div>
 	<?php $links = $pager->getLinks(); foreach ($links as $page): ?>
 		<div class="paginator-number">
-			<?php echo ($page == $pager->getPage()) ? $page : link_to($page, 'news/index?page='.$page) ?>
+			<?php echo ($page == $pager->getPage()) ? $page : link_to($page, 'news/comms?page='.$page) ?>
 		</div>
 		<?php endforeach ?>
 	</div>
 	<div style="width: 20px; float: left; margin-left: 20px; margin-top: 3px;">
-		<a href="<?php echo url_for('news/index').'?page='.$pager->getLastPage() ?>">
+		<a href="<?php echo url_for('news/comms').'?page='.$pager->getLastPage() ?>">
 			<img src="/images/ad_next.png"/>
 		</a>
 	</div>

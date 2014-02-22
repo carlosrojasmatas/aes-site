@@ -60,15 +60,13 @@ body {
 
 div.content-box { /* 	border: 1px solid #990000; */
 	float: left;
-	height: 250px;
 	margin: 48px 7px 0 0;
 	position: relative;
 	width: 220px;
 	background-color: white;
 	/*	padding: 10px;*/
-	height: 250px;
 	border: 1px solid #cc0000;
-	height: 250px;
+	height: 270px;
 }
 
 div.content-box-body {
@@ -376,7 +374,7 @@ div.transbox a {
 }
 
 #boxes-container {
-	width:1024px;
+	width:100%;
 	position:relative;
 	margin:0 auto;
 }

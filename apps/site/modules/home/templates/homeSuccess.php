@@ -106,7 +106,7 @@
 </div>
 
 
-<div class="add-dojo"> 
+<div class="add-dojo" style="display: none;"> 
 	<h2>Carga tu Dojo!</h2>
 	<div class="add-dojo-text">
 	<span>Si sos instructor en cualquier parte del pa&iacute;s y queres formar parte del <a href="<?php echo url_for("dojos/new")?>"> listado oficial </a> 

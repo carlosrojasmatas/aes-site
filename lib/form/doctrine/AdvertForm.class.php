@@ -31,15 +31,15 @@ class AdvertForm extends BaseAdvertForm
   	$this->setValidator("image", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
   	$this->setValidator("f_image", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
   	$this->setValidator("attachements", new sfValidatorSchemaForEach(new sfValidatorFile(array("required" => false, "max_size" => 2097152)), $this->MAX_ATTACHEMENTS));
-  	$this->setValidator('start_date',new sfValidatorDate(array('required' => true)));
+  	$this->setValidator('start_date',new sfValidatorDate(array('required' => false)));
   	$this->setValidator('start_time',new sfValidatorString(array('required' => false)));
-  	$this->setValidator('end_date',new sfValidatorDate(array('required' => true)));
+  	$this->setValidator('end_date',new sfValidatorDate(array('required' => false)));
   	$this->setValidator('end_time',new sfValidatorString(array('required' => false)));
   	$this->setValidator('place',new sfValidatorString(array('required' => false)));
-  	$this->setValidator('title',new sfValidatorString(array('required' => true)));
-  	$this->setValidator('type',new sfValidatorString(array('required' => true)));
-  	$this->setValidator('description',new sfValidatorString(array('required' => true)));
-  	$this->setValidator('province',new sfValidatorString(array('required' => true)));
+  	$this->setValidator('title',new sfValidatorString(array('required' => false)));
+  	$this->setValidator('type',new sfValidatorString(array('required' => false)));
+  	$this->setValidator('description',new sfValidatorString(array('required' => false)));
+  	$this->setValidator('province',new sfValidatorString(array('required' => false)));
   	$this->setValidator("attachements", new sfValidatorSchemaForEach(new sfValidatorFile(array("required" => false, "max_size" => 2097152)), $this->MAX_ATTACHEMENTS));
   	
   	
