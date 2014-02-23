@@ -27,7 +27,7 @@
     <div class="accordion">
     <?php foreach($news as $new):?>
     	<div class="header"><?php echo $new->getTitle()?></div>
-        <div class="content"><?php echo strip_tags(strlen($new->getDescription())>110?substr($new->getDescription(),0,110)."...":$new->getDescription())?><br><a href="<?php if($new->type=="inst"): echo url_for('news/showDetails'); else: echo url_for('events/showDetails'); endif;?>?id=<?php echo $news[0]->getId();?>">ver mas</a></div>
+        <div class="content"><?php echo strip_tags(strlen($new->getDescription())>110?substr($new->getDescription(),0,110)."...":$new->getDescription())?><br><a href="<?php if($new->type=="inst"): echo url_for('news/showDetails'); else: echo url_for('events/showDetails'); endif;?>?id=<?php echo $new->getId();?>">ver mas</a></div>
 	<?php endforeach;?>
     </div>    
 </div>

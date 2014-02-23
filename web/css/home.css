@@ -60,13 +60,13 @@ body {
 
 div.content-box { /* 	border: 1px solid #990000; */
 	float: left;
-	margin: 48px 7px 0 0;
+	margin: 0 7px 0 0;
 	position: relative;
 	width: 220px;
 	background-color: white;
 	/*	padding: 10px;*/
 	border: 1px solid #cc0000;
-	height: 270px;
+	height: 300px;
 }
 
 div.content-box-body {
@@ -174,8 +174,9 @@ div.add-dojo a {
 }
 
 div.boxes {
-	margin: auto;
-	padding-left: 60px;
+	margin: 60px auto;
+	width: 100%;
+	text-align: center;
 }
 
 div.content-box.news {
@@ -374,7 +375,5 @@ div.transbox a {
 }
 
 #boxes-container {
-	width:100%;
-	position:relative;
-	margin:0 auto;
+	display:inline-block;
 }

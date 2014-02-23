@@ -12,23 +12,39 @@
 	<div class="intro-text" >
 		<h3><span>Nuestro Hombu Dojo<span></h3>
 		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu tellus, dictum sed lectus nec, sagittis mattis justo. Nunc iaculis orci in nisi vulputate malesuada quis in ligula. Proin eleifend tortor vel velit pellentesque, sed lacinia magna eleifend. Etiam tempus, metus vel accumsan condimentum, nisi lorem dictum urna, non tincidunt tortor neque posuere nulla. Fusce hendrerit non sem pharetra pretium. Quisque nec lacinia metus. Sed mi diam, iaculis non ultrices nec, dapibus id orci. Suspendisse lacinia dui enim, ac rutrum leo suscipit et.
+		Gracias al liderazgo de nuestro maestro Mitsuo Inoue, luego de incansables años de trabajo de AES Argentina y la colaboración de instructores y practicantes afiliados, se ha concretado el tan anhelado sueño de contar con un Honbu Dojo.
+		La importancia del Honbu Dojo radica en lo que éste representa para toda la comunidad de practicantes de la Asociación Escuelas Shotokan de Karate. 
+		<br>Como sede central de AES Nacional, el Honbu tiene la tarea de administrar, organizar y regular todas las actividades de los dojos a nivel nacional. 
+		Como Dojo Central, es el lugar de práctica al que pueden acceder todos los afiliados a nuestra Escuela. 
+		Así, el 22 de diciembre del 2013, en un marco de confraternidad y con la presencia del agregado cultural de la embajada de Japón Don Yoshihiko Sato,  la comisión directiva de AES Argentina, instructores de todo el país e invitados especiales, se inauguró el Honbu Dojo de la Asociación Escuelas Shotokan de Karate, primer y único Dojo Central en Sudamérica.
 		</p>
 	</div>
 </div>
 
 <div class="separator-line"></div>		
 
-<div class="flexslider" style="margin:auto; width: 80%">
+<div class="flexslider" style="margin:auto; width: 800px; height: 450px">
   <ul class="slides">
     <li>
-      <img src="/images/hombu/slide1.jpg" height="400px"/>
+      <img src="/images/hombu/jka_argentina_hombu_1.jpg" height="450px"/>
     </li>
     <li>
-      <img src="/images/hombu/slide2.jpg" height="400px"/>
+      <img src="/images/hombu/jka_argentina_hombu_2.jpg" height="450px"/>
     </li>
     <li>
-      <img src="/images/hombu/slide3.jpg" height="400px"/>
+      <img src="/images/hombu/jka_argentina_hombu_3.jpg" height="450px"/>
+    </li>
+    <li>
+      <img src="/images/hombu/jka_argentina_hombu_4.jpg" height="450px"/>
+    </li>
+    <li>
+      <img src="/images/hombu/jka_argentina_hombu_5.jpg" height="450px"/>
+    </li>
+    <li>
+      <img src="/images/hombu/jka_argentina_hombu_6.jpg" height="450px"/>
+    </li>
+    <li>
+      <img src="/images/hombu/jka_argentina_hombu_7.jpg" height="450px"/>
     </li>
   </ul>
 </div>
@@ -39,18 +55,22 @@
 
 <div class="info-container">
 			<div class="partial-info">
-				<h2>Donde estamos</h2>
-				<p>Nos encontramos ubicados en Capital Federal, barrio de Villa Crespo, en las intersecciones de las 
-				calles Corrientes y Malabia.</p>
+				<h3>Donde estamos</h3>
+				<p>Nos encontramos ubicados en el barrio de Villa Crespo, calle Padilla N° 777, CP. 1414, Ciudad Autonoma de Buenos Aires. </p>
+
+				<h3>Datos de contacto:</h3>
+				<p><b>Telefono: </b>+ 54 (11) 4854 - 5143</p>
+				<p><b>Email: </b>secretariaaes@yahoo.com.ar</p>
+				
 				
 				<h3> Lineas de colectivos</h3>
-				<p>120, 121, 122, 123</p>
+				<p>71, 168, 109, 124</p>
 				
 				<h3> Subtes</h3>
-				<p>Linea B estaci&oacute;n <b>Malabia</b></p>
+				<p>Metrovias Linea "B" Estación Malabia - <a href="http://comollego.ba.gob.ar/">Como llego</a> </p>
 			</div>
 			
 			<div class="map-container">
-				<div id="hombu-map" style="width:400px; height:250px"></div>
+				<div id="hombu-map" style="width:435px; height:390px"></div>
 			</div>
 </div>

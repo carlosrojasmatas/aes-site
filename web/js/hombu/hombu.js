@@ -9,7 +9,7 @@ $(window).load(function() {
 
 
 function startMaps() {
-	var myLatlng = new google.maps.LatLng(-34.598984,-58.439766);
+	var myLatlng = new google.maps.LatLng(-34.599118,-58.443509);
 	var myOptions = {
 		zoom : 16,
 		center : myLatlng,
@@ -24,6 +24,14 @@ function startMaps() {
 		}
 	}
 	map = new google.maps.Map(document.getElementById("hombu-map"), myOptions);
+	
+	var marker = new google.maps.Marker({
+	    position: myLatlng,
+	    title:"AES Honbu Dojo"
+	});
+	
+	marker.setMap(map);
+	
 	map.redraw = function() {
 		gmOnLoad = true;
 		if (gmOnLoad) {

@@ -18,7 +18,7 @@ div.info-container {
 	padding: 10px;
 	margin: 60px 20px;
 	border: 1px solid #990000;
-	height: 280px;
+	height: 390px;
 }
 
 div.partial-info {
@@ -49,4 +49,12 @@ div.map-container {
 	border: solid 1px #C9C9C9;
 	float:left;
 	position: relative;
+}
+
+.schedule-container table{
+	border: 1px solid gray;
+}
+
+.schedule-container td{
+	padding: 1px solid gray;
 }
