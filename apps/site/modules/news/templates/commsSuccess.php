@@ -20,6 +20,4 @@
 
 <div class="news-list">
 		<?php include_partial("commsList",array("pager"=>$pager))?>
-		
-		<div class="news-footer"></div>
 </div>

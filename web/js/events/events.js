@@ -70,7 +70,6 @@ $(function() {
 	$("#addNew").button().click(function() {
 		$("#pageBody").append("<div id='popup-overlay'></div>");
 		$("#new-form").show("slow");	
-		$("#new-form").css("z-index","999999");	
 	});
 	
 	$("#button-cancel").click(function(){
@@ -96,7 +95,7 @@ $(function() {
 		height:500,
 		// Theme options
 		theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,formatselect",
-		theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,insertdate,inserttime,|,forecolor,backcolor",
+		theme_advanced_buttons2 : "cut,copy,upaste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,insertdate,inserttime,image,link,code,|,forecolor,backcolor",
 		theme_advanced_toolbar_location : "top",
 		theme_advanced_toolbar_align : "left",
 		theme_advanced_resizing : true,

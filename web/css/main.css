@@ -387,16 +387,12 @@ div#popup-overlay {
 }
 
 a.adminLink {
-	color: black;
-	font-weight: bold;
-	text-decoration: none;
-	background-color: #BFBFBF;
 	padding: 4px;
-	border: 1px solid #828282;
+	font-size: 10px;
+	
 }
 
 a.adminLink:hover {
-	color: white;
 	font-weight: bolder;
 }
 

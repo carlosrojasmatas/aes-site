@@ -19,7 +19,7 @@
 					<a class="adminLink" href=<?php echo sfConfig::get("app_admin_url")?>>Administraci&oacute;n</a>
 					<a class="adminLink" href=<?php echo url_for("auth/logout")?>>Salir</a>
 				<?php else:?>
-					<a class="adminLink" href=<?php echo url_for("auth/login")?>>Ingresar</a>
+					<a class="adminLink" href=<?php echo url_for("auth/login")?>>Ingreso administradores</a>
 				<?php endif;?>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 					<li style="width: 15%" <?php echo ($selected=="events/index" || $selected=="events/showDetails")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("events/index")?>">Noticias y Eventos</a></li>
 					<li style="width: 10%" <?php echo ($selected=="dojos/index" || $selected=="dojos/new")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("dojos/index")?>">Dojos</a></li>
 					<li style="width: 14%" <?php echo ($selected=="albums/index" || $selected=="albums/showResources")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("albums/index")?>">Fotos y Videos</a></li>
-					<li style="width: 10%" <?php echo ($selected=="home/contact")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/contact")?>">Contacto</a></li>
+					<li style="width: 12%" <?php echo ($selected=="home/contact")?"id='selected'":""?>><a class="menu-link" href="<?php echo url_for("home/contact")?>">Contacto</a></li>
 				</ul>
 				</div>
 			</div>
