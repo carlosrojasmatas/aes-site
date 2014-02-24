@@ -52,7 +52,7 @@
 	<div class="content-box-footer" ></div>
 </div>
 <!-- Hombu dojo -->
-<div class="content-box">
+<div class="content-box" style="display: none;">
 	<div class="content-box-header" >
 		<a href="<?php echo url_for("news/index")?>">Desde el Hombu</a>
 	</div>
