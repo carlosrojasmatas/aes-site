@@ -11,7 +11,6 @@
 					<div class="news-title">
 						<a href="<?php echo url_for('news/showDetails').'?id='.$advert->getId()?>"><?php echo $advert->getTitle()?></a>
 					</div>
-					<?php echo strlen($advert->getDescription()) > 200?substr($advert->getDescription(),0,200)."...":$advert->getDescription()?>
 				</div>
 			</div>
 <?php endforeach;?>
