@@ -10,7 +10,7 @@
 <div class="separator-line"></div>
 <div class="intro-line">
 	<div class="intro-text" >
-		<h3><span>Nuestro Hombu Dojo<span></h3>
+		<h3><span>Nuestro Honbu Dojo<span></h3>
 		<p>
 		Gracias al liderazgo de nuestro maestro Mitsuo Inoue, luego de incansables años de trabajo de AES Argentina y la colaboración de instructores y practicantes afiliados, se ha concretado el tan anhelado sueño de contar con un Honbu Dojo.
 		La importancia del Honbu Dojo radica en lo que éste representa para toda la comunidad de practicantes de la Asociación Escuelas Shotokan de Karate. 
@@ -68,6 +68,86 @@
 				
 				<h3> Subtes</h3>
 				<p>Metrovias Linea "B" Estación Malabia - <a href="http://comollego.ba.gob.ar/">Como llego</a> </p>
+				
+				<h3>Horarios</h3>
+				<div style="width: 100%">
+					<table cellspacing="0">
+						<tbody>
+							<tr>
+								<th width="100px">Horario</th>
+								<th width="100px">Lunes</th>
+								<th width="100px">Martes</th>
+								<th width="100px">Miercoles</th>
+								<th width="100px">Jueves</th>
+								<th width="100px">Viernes</th>
+							</tr>
+							<tr>
+								<td>9:30 a 10:30</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+							</tr>
+							<tr>
+								<td>10:30 a 11:30</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+							</tr>
+							<tr>
+								<td>15 a 16</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+							</tr>
+							<tr>
+								<td>16 a 17</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+							</tr>
+							<tr>
+								<td>18 a 19</td>
+								<td>NIÑOS</td>
+								<td>NIÑOS</td>
+								<td>NIÑOS</td>
+								<td>NIÑOS</td>
+								<td>NIÑOS</td>
+							</tr>
+							<tr>
+								<td>19 a 20</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+							</tr>
+							<tr>
+								<td>20 a 21</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+								<td>MIXTO</td>
+							</tr>
+							<tr>
+								<td>21 a 22</td>
+								<td>-</td>
+								<td>MIXTO</td>
+								<td>-</td>
+								<td>MIXTO</td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 			
 			<div class="map-container">

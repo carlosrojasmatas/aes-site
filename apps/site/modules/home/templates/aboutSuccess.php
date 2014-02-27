@@ -19,7 +19,7 @@
 				<li><a id="org-menu">Organigrama</a></li>
 			</ul>
 		</li>
-		<li><a href="#"><span>Hombu Dojo</span></a>
+		<li><a href="#"><span>Honbu Dojo</span></a>
 			<ul>
 				<li><a id="abouthombu-menu">Acerca del Dojo</a></li>
 				<li><a id="locationhombu-menu">Ubicaci&oacute;n</a></li>

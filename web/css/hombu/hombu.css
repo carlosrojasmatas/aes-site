@@ -11,18 +11,19 @@ div.info {
 }
 
 div.info h2 {
-  color: #990000;
+	color: #990000;
 }
 
 div.info-container {
 	padding: 10px;
 	margin: 60px 20px;
 	border: 1px solid #990000;
-	height: 390px;
+	/* 	height: 390px; */
+	display: inline-block;
 }
 
 div.partial-info {
-	float:left;
+	float: left;
 	position: relative;
 	margin: 0px 10px;
 	padding: 10px;
@@ -31,30 +32,43 @@ div.partial-info {
 }
 
 div.partial-info h2 {
-	color:#990000;
+	color: #990000;
 	font-family: rationale_oneregular;
 }
 
 div.partial-info h3 {
-	color:#990000;
+	color: #990000;
 	font-family: rationale_oneregular;
 }
 
-div.partial-info p{
+div.partial-info p {
 	font-family: rationale_oneregular;
 }
 
 div.map-container {
-	border: 1px solid #990000;
 	border: solid 1px #C9C9C9;
-	float:left;
+	float: left;
 	position: relative;
 }
 
-.schedule-container table{
+.schedule-container table {
 	border: 1px solid gray;
 }
 
-.schedule-container td{
+.schedule-container td {
 	padding: 1px solid gray;
+}
+
+div.partial-info table {
+	table-layout: fixed;
+	width: 100%;
+	margin: 10px auto;
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 30px rgba(50, 50, 50, 1);
+}
+
+div.partial-info td,div.partial-info th {
+	border: solid 1px #C9C9C9;
+	padding: 10px;
 }
