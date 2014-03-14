@@ -71,9 +71,6 @@
 			<dt><label for="<?php echo $form['image']->renderId() ?>"<?php echo $form['image']->hasError() ? ' class="error"' : '' ?>>Imagen:</dt>
 				<dd><?php echo $form["image"]->render()?></dd>
 				
-			<dt><label for="<?php echo $form['f_image']->renderId() ?>"<?php echo $form['f_image']->hasError() ? ' class="error"' : '' ?>>Imagen frontal:</dt>
-				<dd><?php echo $form["f_image"]->render()?></dd>
-				
 			<div id="event-details" style="display: none;">	
 				<dt><label for="<?php echo $form['province']->renderId() ?>"<?php echo $form['province']->hasError() ? ' class="error"' : '' ?>>Provincia:</label></dt>
 					<dd><?php echo $form["province"]->render()?></dd>
