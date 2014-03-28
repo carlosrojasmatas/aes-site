@@ -1,3 +1,8 @@
+BackofficeBundle_admin_backoffice_bundle_admin:
+    resource: "@BackofficeBundle/Controller/Admin/"
+    type:     admingenerator
+    prefix:   /admin/backoffice_bundle/admin
+
 jka_site:
     resource: "@JKASiteBundle/Resources/config/routing.xml"
     prefix:   /

@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Acme\HelloBundle\AcmeHelloBundle(),
             new JKA\SiteBundle\JKASiteBundle(),
+            new JKA\BackofficeBundle\BackofficeBundle(),
         	new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
         	new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         	new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(), 
