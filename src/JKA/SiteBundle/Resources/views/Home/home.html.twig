@@ -1,0 +1,99 @@
+ {% extends '::base.html.twig' %}
+
+{% block intro%}
+	<h3><span>Asociaci&oacute;n de Escuelas Shotokan de Karate</span></h3>
+	<p>Te damos la bienvenida al sitio oficial de <b>AES Argentina</b>, &uacute;nico representante autorizado de la <b>Japan Karate Asociation</b>. Aquí encontraras toda la informaci&oacute;n relacionada		 con la actividad deportiva y organizacional a nivel nacional. 
+	Torneos, ex&aacute;menes, cursos, notas, fotos, videos, datos de dojos y mucho más.</p>
+{% endblock %}
+{% block body %}
+	 <div class = "header cols-xs-18 col-md-12">
+		<div id="mix-in" class="slidorion">
+			<div class="slider">
+				{% for new in news%}
+					<div class="slide"><img height="350px" width="100%" src="{{ new.image }}" /></div>
+				{% endfor%}
+		    </div>
+		    <div class="accordion">
+				{% for new in news%}
+			    	<div class="header">{{ new.title }}</div>
+			        <div class="content"> 
+			        	<p>{{ new.description }}<p> 
+						<a href="#">ver mas</a>
+					</div>
+				{% endfor%}
+		    </div>    
+		</div>	
+	 </div>
+	 
+	 <div class="clear"></div>
+	 
+	<div class = "header cols-xs-18 col-md-12">
+		<div class="boxes" >
+			<div id="boxes-container">
+			<!-- Institucionales -->
+			<div class="content-box">
+				<div class="content-box-header" >
+					<a href="#">Comunicaciones </a>
+				</div>
+				<div class="content-box-body">
+					<div class="content-box-list">
+						{% for inst in insts%}
+							<div class="content-box-row">
+								<a href="#">{{ inst.title }}</a>
+							</div>
+						{% endfor%}
+					</div>
+				</div>
+				<div class="content-box-footer" ></div>
+			</div>
+			<!-- Eventos -->
+			<div class="content-box">
+				<div class="content-box-header" >
+					<a href="#">Pr&oacute;ximos Eventos</a>
+				</div>
+				<div class="content-box-body">
+					<div class="content-box-list">
+						{% for event in events%}
+							<div class="content-box-row">
+								<span class="date">{{ event.startpreformattedDate }}</span>
+								<a href="#">{{ event.title }}</a>
+							</div>
+						{% endfor%}
+					</div>
+				</div>
+				<div class="content-box-footer" ></div>
+			</div>
+			<!-- Nuevos dojos -->
+			<div class="content-box">
+				<div class="content-box-header" >
+					<a href="<?php echo url_for("albums/index")?>">Nuevos Dojos</a>
+				</div>
+				<div class="content-box-body">
+					<div class="content-box-list">
+						<?php foreach($dojos as $dojo):?>
+							<!-- aqui irian los eventos que faltan del 2010 -->
+							<div class="content-box-row">
+								<a href="<?php echo url_for("albums/showResources")?>?type=image&albumId=<?php echo $dojo->getId();?>"><?php echo $dojo->getName();?></a>
+							</div>
+						<?php endforeach;?>
+					</div>	
+				</div>
+				<div class="content-box-footer" >
+				</div>
+			</div>
+			</div>
+		</div>
+	 </div>
+	 {% block stylesheets%}
+	 	{{ parent() }}
+	 	<link href="{{ asset('bundles/site/css/gallery/slidorion.css') }}" rel="stylesheet">
+	 	<link href="{{ asset('bundles/site/css/gallery/flexslider.css') }}" rel="stylesheet">
+	 {% endblock%}	
+
+	 {% block javascripts%}	
+	 	{{ parent() }}
+		<script src="{{ asset('bundles/site/js/gallery/jquery.easing.js')}}"></script>
+		<script src="{{ asset('bundles/site/js/gallery/jquery.slidorion.js')}}"></script>
+		<script src="{{ asset('bundles/site/js/gallery/jquery.flexslider-min.js')}}"></script>
+	 {% endblock%}	
+ {% endblock %}

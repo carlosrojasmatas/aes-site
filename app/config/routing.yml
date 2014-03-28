@@ -1,0 +1,8 @@
+jka_site:
+    resource: "@JKASiteBundle/Resources/config/routing.xml"
+    prefix:   /
+    
+acme_hello:
+    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+    prefix:   /helloBundle
+

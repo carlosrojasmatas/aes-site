@@ -1,0 +1,39 @@
+ {% extends '::base.html.twig' %}
+
+  {% block navbar %}
+    <li><a href="{{ path('homepage')}}">Home</a></li>
+    <li><a href="#">Quienes Somos</a></li>
+    <li><a href="#">Comunicaciones</a></li>
+    <li><a href="#">Noticias y Eventos</a></li>
+    <li><a href="#">Dojos</a></li>
+    <li><a href="#">Fotos y videos</a></li>
+    <li><a href="#">Contacto</a></li>
+    <li class="active"><a href="{{ path('create_entry') }}">Nueva entrada</a></li>
+ {% endblock %}
+ 
+ {% block body %}
+  <div class = "header cols-xs-8 col-md-4">
+		{{ form_start(form)}}
+			<div class="form-group">
+    			{{ form_label(form.title) }}
+    			{{ form_widget(form.title,{'attr':{'class':'form-control'}}) }}
+    		</div>
+	  		<div class="form-group">
+    			{{ form_label(form.shortDescription) }}
+    			{{ form_widget(form.shortDescription,{'attr':{'class':'form-control'}}) }}
+    		</div>
+    		<div class="form-group">
+    			{{ form_label(form.description) }}
+    			{{ form_widget(form.description,{'attr':{'class':'form-control'}}) }}
+    		</div>
+    		<div class="form-group">
+    			{{ form_label(form.type) }}
+    			{{ form_widget(form.type,{'attr':{'class':'form-control'}}) }}
+    		</div>
+    		<div class="form-group">
+    			{{ form_label(form.image) }}
+    			{{ form_widget(form.image,{'attr':{'class':'form-control'}}) }}
+    		</div>
+  		{{ form_end(form)}}			
+</div>
+{% endblock %}

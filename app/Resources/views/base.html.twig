@@ -2,12 +2,62 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Sitio oficial de JKA Argentina{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}" />
+        {% block stylesheets %}
+	        <link href="{{ asset('bundles/site/css/bootstrap.min.css') }}" rel="stylesheet">
+    	    <link href="{{ asset('bundles/site/css/main.css') }}" rel="stylesheet">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    
+    	<div class = "main-header"></div>
+    
+    	<div class ="container-fluid" style="padding-left:0px;padding-right:0px;">
+			 <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		      <div class="container-fluid">
+		        <div class="navbar-header">
+		        </div>
+		        <div class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		          	{% block navbar %}
+			            <li class="active"><a href="{{ path('homepage')}}">Home</a></li>
+			            <li><a href="#">Quienes Somos</a></li>
+			            <li><a href="#">Comunicaciones</a></li>
+			            <li><a href="{{ path('news_index') }}">Noticias y Eventos</a></li>
+			            <li><a href="#">Dojos</a></li>
+			            <li><a href="#">Fotos y videos</a></li>
+			            <li><a href="#">Contacto</a></li>
+    					<li><a href="{{ path('create_entry') }}">Nueva entrada</a></li>
+			        {% endblock %}
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		
+    		<div class = "row" >
+    		
+    			<div class = "header cols-xs-18 col-md-12">
+     				<div class="separator-line"></div>
+					<div class="introline">
+						<div class="intro-text" >
+						    {% block intro%}{% endblock%}
+						</div>
+					</div>
+					<div class="separator-line"></div>
+ 				</div>
+	        	{% block body %}{% endblock %}
+
+    		</div>
+        </div>
+        
+        {% block javascripts %}
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    			<!-- Include all compiled plugins (below), or include individual files as needed -->
+    			<script src="{{ asset('bundles/site/js/bootstrap.min.js')}}"></script>
+        {% endblock %}
+        
     </body>
 </html>
