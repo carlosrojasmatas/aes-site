@@ -1,10 +1,10 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-
+    - { resource: "@JKASiteBundle/Resources/config/services.xml"}
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: es }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        ['JKASiteBundle','AdmingeneratorGeneratorBundle']
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -73,3 +73,7 @@ admingenerator_generator:
     use_propel:           false
     use_doctrine_orm:     true
     use_doctrine_odm:     false
+    base_admin_template:  JKASiteBundle::base_admin.html.twig
+stfalcon_tinymce:
+        include_jquery: true
+        tinymce_jquery: true

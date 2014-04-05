@@ -1,0 +1,68 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: JKA\SiteBundle\Entity\Entry
+    namespace_prefix: JKA
+    concurrency_lock: ~
+    bundle_name: SiteBundle
+    pk_requirement: ~
+    fields:
+      image:
+        label: Imagen
+        dbType: string
+      title:
+        label: Titulo
+      shortDescription:
+        label: Resumen
+      description:
+        label: Description
+      type:
+        label: Tipo
+
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: Lista de Entradas
+            display: [title,shortDescription,type]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    excel:
+        params: ~
+        filename: ~
+        filetype: ~
+    filters:
+        params:
+            display: ~
+    new:
+        params:
+            title: New object for SiteBundle
+            display: [title,shortDescription,description,type,start,end,enabled,image]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title: "Editando \"%object%\"|{ %object%: Entry.title }|"
+            display: [title,shortDescription,description,type,start,end,enabled,image]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title: "Detalle de \"%object%\"|{ %object%: Entry.title }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

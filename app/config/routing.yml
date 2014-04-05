@@ -1,13 +1,23 @@
-BackofficeBundle_admin_backoffice_bundle_admin:
-    resource: "@BackofficeBundle/Controller/Admin/"
+JKASiteBundle_admin_jka_site_bundle_resource:
+    resource: "@JKASiteBundle/Controller/Resource/"
     type:     admingenerator
-    prefix:   /admin/backoffice_bundle/admin
+    prefix:   /admin/resource
+
+JKASiteBundle_admin_jka_site_bundle_Album:
+    resource: "@JKASiteBundle/Controller/Album/"
+    type:     admingenerator
+    prefix:   /admin/album
+
+JKASiteBundle_admin_jka_site_bundle_dojo:
+    resource: "@JKASiteBundle/Controller/Dojo/"
+    type:     admingenerator
+    prefix:   /admin/dojo
+
+JKASiteBundle_admin_jka_site_bundle_entry:
+    resource: "@JKASiteBundle/Controller/Entry/"
+    type:     admingenerator
+    prefix:   /admin/entry
 
 jka_site:
     resource: "@JKASiteBundle/Resources/config/routing.xml"
     prefix:   /
-    
-acme_hello:
-    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
-    prefix:   /helloBundle
-

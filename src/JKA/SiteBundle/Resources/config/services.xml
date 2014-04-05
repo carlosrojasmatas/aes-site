@@ -4,22 +4,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
-    <parameters>
-        <parameter key="jka_site.example.class">JKA\SiteBundle\Example</parameter>
-    </parameters>
-
-    <services>
-        <service id="jka_site.example" class="%jka_site.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
-        </service>
-    </services>
-    -->
 	<services>
-		<service id="jka.form.type.entry" class="JKA\SiteBundle\Form\Type\EntryType">
-			<tag name="form.type" alias="entry"/>
+		<service id="file.service" class="JKA\SiteBundle\Service\FileService">
 		</service>
 	</services>
+
 </container>

@@ -16,4 +16,9 @@
     	<default key="_controller">JKASiteBundle:Entry:create</default>
     </route>
 
+	<!-- Admin routes -->
+    <route id="listEntries" pattern="/entry/list">
+    	<default key="_controller">JKASiteBundle:Entry:create</default>
+    </route>
+
 </routes>
