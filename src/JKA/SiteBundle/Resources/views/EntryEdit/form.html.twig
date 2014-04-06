@@ -2,6 +2,9 @@
 {%block form%}
 	{{ parent() }}
 	{{ tinymce_init()}}
+{%endblock%}
+ 
+{% block form_buttons %}
 	<img src="/{{ image_path}}" />
-    
+    {{ parent() }}       
 {%endblock%}
