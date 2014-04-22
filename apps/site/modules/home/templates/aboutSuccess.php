@@ -124,12 +124,6 @@
 </div>
 <div class="board">
 	<img src="/images/about/jka_argentina_board.jpg" align="left" height="150px"/>
-	<h3>Asesor Permanente</h3>
-	<p>Prof. Ricardo Morikone</p>
-	<a href="mailto:secretariaaes@yahoo.com.ar">Contacto</a>
-</div>
-<div class="board">
-	<img src="/images/about/jka_argentina_board.jpg" align="left" height="150px"/>
 	<h3>Director T&eacute;cnico AES</h3>
 	<p>Maestro Mitsuo Inoue</p>
 	<a href="mailto:secretariaaes@yahoo.com.ar">Contacto</a>

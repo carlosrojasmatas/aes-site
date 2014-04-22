@@ -13,7 +13,7 @@
 						<b>Provincia: </b> <?php echo $advert->getProvince()?><br>
 						<b>Lugar: </b> <?php echo $advert->getPlace()?>
 					<?php endif;?>
-					<a id="show-image" href="#"><img height="220" src="<?php echo $advert->getImage()?>" /></a>
+					<img src="<?php echo $advert->getImage()?>" />
 					<?php echo $advert->getDescription()?>
 	     		</p>	
 		</div>

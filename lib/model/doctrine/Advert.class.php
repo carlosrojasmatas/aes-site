@@ -45,6 +45,7 @@ class Advert extends BaseAdvert
 		$advert->modify($form);
 		$advert->save();
 		$advert->saveImage($form);
+		$advert->saveFrontImage($form);
 		foreach ($form->getValue("attachements") as $attachement){
 			if($attachement){
 				$this->addResource($attachement);
@@ -70,6 +71,10 @@ class Advert extends BaseAdvert
 
 	public function getImage(){
 		return $this->getImagePath() . $this->getImageName();
+	}
+	
+	public function getFImage(){
+		return $this->getFImagePath() . $this->getFImageName();
 	}
 
 	//	public function saveResizedImage(){
@@ -103,6 +108,21 @@ class Advert extends BaseAdvert
 			$imageFile->save($imagePath."/".$imageName);
 			$this->setImagePath("/uploads/resources/".$this->getId()."/");
 			$this->setImageName($imageName);
+			$this->save();
+		}
+	}
+	
+	public function saveFrontImage($form){
+		if($form->getValue("f_image")){
+			$imageFile= $form->getValue("f_image");
+			$imageName="f_".$imageFile->generateFileName();
+			$imagePath=sfConfig::get("app_resource_upload").$this->getId();
+			if(!file_exists($imagePath)){
+				mkdir($imagePath,0777);
+			}
+			$imageFile->save($imagePath."/".$imageName);
+			$this->setFImagePath("/uploads/resources/".$this->getId()."/");
+			$this->setFImageName($imageName);
 			$this->save();
 		}
 	}

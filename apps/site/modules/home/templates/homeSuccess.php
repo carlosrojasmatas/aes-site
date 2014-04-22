@@ -21,7 +21,8 @@
 <div id="mix-in" class="slidorion">
 	<div class="slider">
 	<?php foreach($news as $new):?>
-		<div class="slide"><img height="350px" width="100%" src="<?php echo $new->getImage()?>" /></div>
+		<?php $frontImage = ($new->getFImage() != null ? $new->getFImage():$new->getImage());?>
+		<div class="slide"><img height="350px" width="100%" src="<?php echo $frontImage?>" /></div>
 	<?php endforeach;?>
     </div>
     <div class="accordion">

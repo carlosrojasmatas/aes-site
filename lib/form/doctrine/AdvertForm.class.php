@@ -15,7 +15,7 @@ class AdvertForm extends BaseAdvertForm
   {
   	
   	$this->setWidget("image", new sfWidgetFormInputFile(array("label"=>"Seleccionar")));
-//   	$this->setWidget("f_image", new sfWidgetFormInputFile(array("label"=>"Seleccionar")));
+  	$this->setWidget("f_image", new sfWidgetFormInputFile(array("label"=>"Seleccionar")));
   	$this->setWidget("title", new sfWidgetFormInputText());
   	$this->setWidget("description", new sfWidgetFormTextarea());
   	$this->setWidget("place", new sfWidgetFormInputText());
@@ -29,7 +29,7 @@ class AdvertForm extends BaseAdvertForm
   	
   	
   	$this->setValidator("image", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
-//   	$this->setValidator("f_image", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
+  	$this->setValidator("f_image", new sfValidatorFile(array("required" => false, "max_size" => 2097152, "mime_types" => "web_images"), array("mime_types" => "Image should be jpeg png or gif.")));
   	$this->setValidator("attachements", new sfValidatorSchemaForEach(new sfValidatorFile(array("required" => false, "max_size" => 2097152)), $this->MAX_ATTACHEMENTS));
   	$this->setValidator('start_date',new sfValidatorDate(array('required' => false)));
   	$this->setValidator('start_time',new sfValidatorString(array('required' => false)));
@@ -43,7 +43,7 @@ class AdvertForm extends BaseAdvertForm
   	$this->setValidator("attachements", new sfValidatorSchemaForEach(new sfValidatorFile(array("required" => false, "max_size" => 2097152)), $this->MAX_ATTACHEMENTS));
   	
   	
-  	$this->useFields(array("image","title","description","type","start_date","end_date","start_time","end_time","place","province"));
+  	$this->useFields(array("image","f_image","title","description","type","start_date","end_date","start_time","end_time","place","province"));
   	
   }
 }

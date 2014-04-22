@@ -51,7 +51,7 @@
 		<div class="line"></div>
 		<div id="footer">
 			<div class="link-to-pages">
-				<a href="http://www.jka.or.jp/english/e_index.html" target="_blank"><img src="/images/logo-jka.png" /></a> 
+				<a href="http://www.jka.or.jp/english/e_index.html" target="_blank"><img src="/images/logo-jka-2.png" /></a> 
 			</div>
 			<div class="link-to-pages">
 				<img src="/images/footer-aes.png" />

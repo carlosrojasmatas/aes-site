@@ -33,8 +33,8 @@ class homeActions extends sfActions
 				$name = $this->form->getValue('name');
 				
 				$mailer= sfContext::getInstance()->getMailer();
-				sfContext::getInstance()->getLogger()->info("Sending mail from ".$from." to info@web-aes.com.ar");
-				$mailer->composeAndSend($from, "info@web-aes.com.ar", "Comentario de ".$name, $comment);
+				sfContext::getInstance()->getLogger()->info("Sending mail from ".$from." to info@jka-argentina.com.ar");
+				$mailer->composeAndSend("info@jka-argentina.com.ar", "info@jka-argentina.com.ar", "Comentario de ".$name." usando [".$from."]", $comment);
 				$this->getUser()->setFlash("contact_success", "Muchas gracias por sus comentarios!",false);
 			}
 		}

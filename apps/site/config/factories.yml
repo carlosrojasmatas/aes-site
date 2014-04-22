@@ -39,8 +39,8 @@ all:
       transport:
         class: Swift_SmtpTransport
         param:
-          host:       smtp.web-aes.com.ar
+          host:       smtp.jka-argentina.com.ar
           port:       25
           encryption: ~
-          username:   info@web-aes.com.ar
+          username:   info@jka-argentina.com.ar
           password:   jka1234
