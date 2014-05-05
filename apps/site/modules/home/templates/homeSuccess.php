@@ -88,14 +88,14 @@
 <!-- Nuevos dojos -->
 <div class="content-box">
 	<div class="content-box-header" >
-		<a href="<?php echo url_for("albums/index")?>">Nuevos Dojos</a>
+		<a href="<?php echo url_for("dojos/index")?>">Nuevos Dojos</a>
 	</div>
 	<div class="content-box-body">
 		<div class="content-box-list">
 			<?php foreach($dojos as $dojo):?>
 				<!-- aqui irian los eventos que faltan del 2010 -->
 				<div class="content-box-row">
-					<a href="<?php echo url_for("albums/showResources")?>?type=image&albumId=<?php echo $dojo->getId();?>"><?php echo $dojo->getName();?></a>
+					<a href="<?php echo url_for("dojos/index")?>"><?php echo $dojo->getName();?></a>
 				</div>
 			<?php endforeach;?>
 		</div>	

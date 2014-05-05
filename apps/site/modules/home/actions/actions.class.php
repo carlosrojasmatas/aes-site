@@ -28,7 +28,7 @@ class homeActions extends sfActions
 			if ($this->form->isValid())
 			{ 
 				//send the email
-				$comment = $this->form->getValue('comments');
+				$comment = $this->form->getValue('comment');
 				$from = $this->form->getValue('email');
 				$name = $this->form->getValue('name');
 				
