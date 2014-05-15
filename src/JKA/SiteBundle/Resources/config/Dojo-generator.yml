@@ -5,7 +5,10 @@ params:
     concurrency_lock: ~
     bundle_name: SiteBundle
     pk_requirement: ~
-    fields: ~
+    fields:
+        image:
+          label: Imagen
+          dbType: string
     object_actions:
         delete: ~
     batch_actions:
@@ -13,7 +16,7 @@ params:
 builders:
     list:
         params:
-            title: List for SiteBundle
+            title: Dojos
             display: [name,sensei,city,country]
             actions:
                 new: ~
@@ -29,21 +32,21 @@ builders:
             display: ~
     new:
         params:
-            title: New object for SiteBundle
-            display: ~
+            title: Nuevo Dojo
+            display: [name, sensei,address,city,country,mail,enabled,position,image]
             actions:
                 save: ~
                 list: ~
     edit:
         params:
-            title: "You're editing the object \"%object%\"|{ %object%: Dojo.title }|"
-            display: ~
+            title: "Editando \"%object%\"|{ %object%: Dojo.name }|"
+            display: [name, sensei,address,city,country,mail,enabled,position,image]
             actions:
                 save: ~
                 list: ~
     show:
         params:
-            title: "You're viewing the object \"%object%\"|{ %object%: Dojo.title }|"
+            title: "You're viewing the object \"%object%\"|{ %object%: Dojo.name }|"
             display: ~
             actions:
                 list: ~

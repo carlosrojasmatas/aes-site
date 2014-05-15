@@ -17,6 +17,8 @@ class MenuBuilder extends AdmingeneratorMenuBuilder {
 		$menu->addChild('Dojos', array('route' => 'JKA_SiteBundle_Dojo_list'));
 		$menu->addChild('Albums', array('route' => 'JKA_SiteBundle_Album_list'));
 		$menu->addChild('Fotos y videos', array('route' => 'JKA_SiteBundle_Resource_list'));
+		$menu->addChild('Paises', array('route' => 'JKA_SiteBundle_Country_list'));
+		$menu->addChild('Localidades', array('route' => 'JKA_SiteBundle_Location_list'));
 		
 		
 		return $menu;

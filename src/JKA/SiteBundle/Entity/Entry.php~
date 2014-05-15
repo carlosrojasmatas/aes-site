@@ -8,14 +8,29 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Console\Application;
 use JKA\SiteBundle\Service\FileService\FileService;
 /**
- *@ORM\Entity
+ *@ORM\Entity(repositoryClass="JKA\SiteBundle\Service\EntryRepository")
  *@ORM\Table(name="entry")
+ *
  */
 class Entry extends UploadableEntity{
 	
 	public static $COMUNICATION="com";
 	public static $NEW="new";
 	public static $EVENT="event";
+	
+	private $months =array("01"=>"Enero",
+			"02"=>"Febrero",
+			"03"=>"Marzo",
+			"04"=>"Abril",
+			"05"=>"Mayo",
+			"06"=>"Junio",
+			"07"=>"Julio",
+			"08"=>"Agosto",
+			"09"=>"Septiembre",
+			"10"=>"Octubre",
+			"11"=>"Noviembre",
+			"12"=>"Diciembre",
+	);
 	
 	/**
 	 * @ORM\Column(type="integer")
@@ -39,10 +54,15 @@ class Entry extends UploadableEntity{
 	 */
 	protected $description;
 	
-	 /**
+	/**
      * @Assert\File(maxSize="300k")
      */
 	protected $image;
+	
+	/**
+     * @Assert\File(maxSize="300k")
+     */
+	protected $frontImage;
 	
 	/**
 	 * @ORM\Column(type="string",length=10)
@@ -55,6 +75,11 @@ class Entry extends UploadableEntity{
 	protected $path;
 		
 	/**
+	 * @ORM\Column(type="string",length=100)
+	 */
+	protected $frontPath;
+		
+	/**
 	 * @ORM\Column(type="date")
 	 */
 	protected $start;
@@ -63,6 +88,24 @@ class Entry extends UploadableEntity{
 	 * @ORM\Column(type="date")
 	 */
 	protected $end;
+	
+	/**
+	 * @ORM\ManyToOne(targetEntity="Country")
+	 * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
+	 */
+	protected $country;
+
+	/**
+	 * @ORM\ManyToOne(targetEntity="Location")
+	 * @ORM\JoinColumn(name="location_id", referencedColumnName="id")
+	 */
+	protected $location;
+	
+	/**
+	 * @ORM\Column(type="text")
+	 */
+	protected $place;
+	
 	
 	/**
 	 * @ORM\Column(type="boolean")
@@ -295,5 +338,109 @@ class Entry extends UploadableEntity{
     
     public function getResource() {
     	return $this->getImage();
+    }
+
+    /**
+     * Set place
+     *
+     * @param string $place
+     * @return Entry
+     */
+    public function setPlace($place)
+    {
+        $this->place = $place;
+
+        return $this;
+    }
+
+    /**
+     * Get place
+     *
+     * @return string 
+     */
+    public function getPlace()
+    {
+        return $this->place;
+    }
+
+    /**
+     * Set country
+     *
+     * @param \JKA\SiteBundle\Entity\Country $country
+     * @return Entry
+     */
+    public function setCountry(\JKA\SiteBundle\Entity\Country $country = null)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return \JKA\SiteBundle\Entity\Country 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set location
+     *
+     * @param \JKA\SiteBundle\Entity\Location $location
+     * @return Entry
+     */
+    public function setLocation(\JKA\SiteBundle\Entity\Location $location = null)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return \JKA\SiteBundle\Entity\Location 
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+    
+    public function getStartPreformattedDate(){
+		$date = date('Y-m-d',$this->getStart()->getTimestamp());
+    	return $date;
+    }
+    
+    public function getEndPreformattedDate(){
+    	list($year, $month, $day) = preg_split('[-]', $this->getEnd());
+    	$date= $day." de ".$this->months[$month];
+    	return $date;
+    }
+    
+
+    /**
+     * Set frontPath
+     *
+     * @param string $frontPath
+     * @return Entry
+     */
+    public function setFrontPath($frontPath)
+    {
+        $this->frontPath = $frontPath;
+
+        return $this;
+    }
+
+    /**
+     * Get frontPath
+     *
+     * @return string 
+     */
+    public function getFrontPath()
+    {
+        return $this->frontPath;
     }
 }

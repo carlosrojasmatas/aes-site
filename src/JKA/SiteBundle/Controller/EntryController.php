@@ -12,8 +12,13 @@ class EntryController extends Controller{
 
 
 	public function indexNewsAction(){
-		$entries =  $this->getDoctrine()->getRepository("JKASiteBundle:Entry")->findAll();
-		return $this->render("JKASiteBundle:News:index.html.twig",array('entries' => $entries));
+		$entries =  $this->get("repo.entry")->findAll();
+		$dojos =  $this->get("dojo.entry")->findAll();
+		return $this->render("JKASiteBundle:News:index.html.twig",array('news' => $entries[Entry::$NEW],
+																		'event' => $entries[Entry::$EVENT],
+																		'inst' => $entries[Entry::$COMUNICATION],
+																		'dojos' => $dojos
+		));
 	}
 
 	public function createAction(Request $request){

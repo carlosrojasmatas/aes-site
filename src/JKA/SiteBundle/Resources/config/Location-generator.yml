@@ -1,0 +1,56 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: JKA\SiteBundle\Entity\Location
+    namespace_prefix: JKA
+    concurrency_lock: ~
+    bundle_name: SiteBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: Localidades
+            display: [name, country]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    excel:
+        params: ~
+        filename: ~
+        filetype: ~
+    filters:
+        params:
+            display: [name, country]
+    new:
+        params:
+            title: Nueva Localidad
+            display: [name, country]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title: "Editando \"%object%\"|{ %object%: Location.name }|"
+            display: [name, country]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title: "Viendo \"%object%\"|{ %object%: Location.name }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

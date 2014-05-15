@@ -1,0 +1,56 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: JKA\SiteBundle\Entity\Country
+    namespace_prefix: JKA
+    concurrency_lock: ~
+    bundle_name: SiteBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: Paises
+            display: ~
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    excel:
+        params: ~
+        filename: ~
+        filetype: ~
+    filters:
+        params:
+            display: ~
+    new:
+        params:
+            title: Nuevo pais
+            display: ~
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title: "Editando \"%object%\"|{ %object%: Country.name }|"
+            display: ~
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title: "Editando \"%object%\"|{ %object%: Country.name }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

@@ -1,1 +1,6 @@
 {% extends_admingenerated "JKASiteBundle:DojoEdit:form.html.twig" %}
+
+{% block form_buttons %}
+	<img src="/{{ image_path}}" />
+    {{ parent() }}       
+{%endblock%}

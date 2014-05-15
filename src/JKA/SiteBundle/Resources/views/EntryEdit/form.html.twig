@@ -5,6 +5,10 @@
 {%endblock%}
  
 {% block form_buttons %}
+	<label>Imagen:</label>
 	<img src="/{{ image_path}}" />
+	<br><br>
+	<label>Imagen frontal:</label>
+	<img src="/{{ f_image_path}}" />
     {{ parent() }}       
 {%endblock%}

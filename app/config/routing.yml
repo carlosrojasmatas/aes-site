@@ -1,3 +1,13 @@
+JKASiteBundle_admin_jka_site_bundle_Country:
+    resource: "@JKASiteBundle/Controller/Country/"
+    type:     admingenerator
+    prefix:   /admin/jka_site_bundle/Country
+
+JKASiteBundle_admin_jka_site_bundle_Location:
+    resource: "@JKASiteBundle/Controller/Location/"
+    type:     admingenerator
+    prefix:   /admin/jka_site_bundle/Location
+
 JKASiteBundle_admin_jka_site_bundle_resource:
     resource: "@JKASiteBundle/Controller/Resource/"
     type:     admingenerator

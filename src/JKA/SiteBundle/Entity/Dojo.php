@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Console\Application;
 
 /**
- *@ORM\Entity
+ *@ORM\Entity(repositoryClass="JKA\SiteBundle\Service\DojoRepository")
  *@ORM\Table(name="dojo")
  */
 class Dojo extends UploadableEntity{
@@ -42,9 +42,21 @@ class Dojo extends UploadableEntity{
 	protected $city;
 	
 	/**
-	 * @ORM\Column(type="string")
+	 * @ORM\ManyToOne(targetEntity="Country")
+	 * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
 	 */
 	protected $country;
+
+	/**
+	 * @ORM\ManyToOne(targetEntity="Location")
+	 * @ORM\JoinColumn(name="location_id", referencedColumnName="id")
+	 */
+	protected $location;
+	
+	/**
+	 * @ORM\Column(type="text")
+	 */
+	protected $place;
 	
 	/**
 	 * @ORM\Column(type="string")
@@ -59,7 +71,7 @@ class Dojo extends UploadableEntity{
 	/**
 	 * @ORM\Column(type="integer")
 	 */
-	protected $order;
+	protected $position;
 	
 	 /**
      * @Assert\File(maxSize="300k")
@@ -67,7 +79,7 @@ class Dojo extends UploadableEntity{
 	protected $image;
 	
 	/**
-	 * @ORM\Column(type="string",length=10)
+	 * @ORM\Column(type="string")
 	 */
 	protected $path;
 	
@@ -245,29 +257,6 @@ class Dojo extends UploadableEntity{
     }
 
     /**
-     * Set order
-     *
-     * @param integer $order
-     * @return Dojo
-     */
-    public function setOrder($order)
-    {
-        $this->order = $order;
-
-        return $this;
-    }
-
-    /**
-     * Get order
-     *
-     * @return integer 
-     */
-    public function getOrder()
-    {
-        return $this->order;
-    }
-
-    /**
      * Set path
      *
      * @param string $path
@@ -303,4 +292,73 @@ class Dojo extends UploadableEntity{
     	return $this->image;
     }
     
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Dojo
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * Set place
+     *
+     * @param string $place
+     * @return Dojo
+     */
+    public function setPlace($place)
+    {
+        $this->place = $place;
+
+        return $this;
+    }
+
+    /**
+     * Get place
+     *
+     * @return string 
+     */
+    public function getPlace()
+    {
+        return $this->place;
+    }
+
+    /**
+     * Set location
+     *
+     * @param \JKA\SiteBundle\Entity\Location $location
+     * @return Dojo
+     */
+    public function setLocation(\JKA\SiteBundle\Entity\Location $location = null)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return \JKA\SiteBundle\Entity\Location 
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
 }

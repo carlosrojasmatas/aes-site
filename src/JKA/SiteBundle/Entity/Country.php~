@@ -1,0 +1,30 @@
+<?php
+
+namespace JKA\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert; 
+use Symfony\Component\Console\Application;
+
+/**
+ *@ORM\Entity
+ *@ORM\Table(name="country")
+ */
+class Country {
+	
+	/**
+	 * @ORM\Column(type="integer")
+	 * @ORM\Id
+	 */
+	protected $id;
+	/**
+	 * @ORM\Column(type="string",length=200)
+	 */
+	protected $name;
+	/**
+	 * @ORM\OneToMany(targetEntity="Location", mappedBy="country")
+	 */
+	protected $locations;
+
+}

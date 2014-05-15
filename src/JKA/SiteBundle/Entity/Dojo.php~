@@ -42,9 +42,21 @@ class Dojo extends UploadableEntity{
 	protected $city;
 	
 	/**
-	 * @ORM\Column(type="string")
+	 * @ORM\ManyToOne(targetEntity="Country")
+	 * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
 	 */
 	protected $country;
+
+	/**
+	 * @ORM\ManyToOne(targetEntity="Location")
+	 * @ORM\JoinColumn(name="location_id", referencedColumnName="id")
+	 */
+	protected $location;
+	
+	/**
+	 * @ORM\Column(type="text")
+	 */
+	protected $place;
 	
 	/**
 	 * @ORM\Column(type="string")
@@ -59,7 +71,7 @@ class Dojo extends UploadableEntity{
 	/**
 	 * @ORM\Column(type="integer")
 	 */
-	protected $order;
+	protected $position;
 	
 	 /**
      * @Assert\File(maxSize="300k")
@@ -67,7 +79,7 @@ class Dojo extends UploadableEntity{
 	protected $image;
 	
 	/**
-	 * @ORM\Column(type="string",length=10)
+	 * @ORM\Column(type="string")
 	 */
 	protected $path;
 	
@@ -245,29 +257,6 @@ class Dojo extends UploadableEntity{
     }
 
     /**
-     * Set order
-     *
-     * @param integer $order
-     * @return Dojo
-     */
-    public function setOrder($order)
-    {
-        $this->order = $order;
-
-        return $this;
-    }
-
-    /**
-     * Get order
-     *
-     * @return integer 
-     */
-    public function getOrder()
-    {
-        return $this->order;
-    }
-
-    /**
      * Set path
      *
      * @param string $path
@@ -290,9 +279,40 @@ class Dojo extends UploadableEntity{
         return $this->path;
     }
     
+
+    public function setImage($image){
+    	$this->image = $image;
+    }
+    
+    public function getImage(){
+    	return $this->getResource();	
+    }
     
     public function getResource(){
     	return $this->image;
     }
     
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Dojo
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
 }

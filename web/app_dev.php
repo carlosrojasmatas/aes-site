@@ -21,6 +21,7 @@ $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 Debug::enable();
 
 require_once __DIR__.'/../app/AppKernel.php';
+ini_set('memory_limit', '-1');
 
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
