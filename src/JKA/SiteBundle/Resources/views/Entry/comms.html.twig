@@ -1,0 +1,33 @@
+ {% extends '::base.html.twig' %} 
+
+ {% block intro%}
+	<h3><span>Comunicaciones oficiales AES</span></h3>
+		<p>Esta secci&oacute;n est&aacute; pensada para mantener informados a los practicantes e instructores
+		acerca de las novedades de caracter institucional. Recordamos que este canal es el <b>&uacute;nico autorizado</b>
+		a difundir las noticias organizacionales de nuestra Asociaci&oacute;n a nivel nacional. Cualquier inquietud no dudes en 
+		contactarte con nosotros</p>
+{% endblock %}
+
+ {% block body %}
+ 	{{ include(
+        'JKASiteBundle:Entry:list.html.twig',
+         { 'entries': comms}
+     ) }}
+ {% endblock %}
+
+{% block navbar %}
+	<li><a href="{{ path('homepage')}}">Home</a></li>
+	<li><a href="{{ path('about')}}">Quienes Somos</a></li>
+	<li><a href="{{ path('honbu')}}">Nuestro Honbu Dojo</a></li>
+	<li class="active"><a href="{{path('comms')}}">Comunicaciones</a></li>
+	<li><a href="{{ path('news_index') }}">Noticias y Eventos</a></li>
+	<li><a href="#">Dojos</a></li>
+	<li><a href="#">Fotos y videos</a></li>
+	<li><a href="#">Contacto</a></li>
+	<li><a href="{{ path('create_entry') }}">Nueva entrada</a></li>
+{% endblock %}
+ 
+{% block stylesheets%} 
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/entry.css') }}" rel="stylesheet" />
+{% endblock %}

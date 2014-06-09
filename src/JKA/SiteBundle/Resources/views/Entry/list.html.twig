@@ -1,0 +1,16 @@
+	<div class="entry-list">
+		{% for entry in entries %}
+		<div class="entry-row">
+				<div class="entry-image">
+					<img height="70" src="/{{ entry.path }}" />
+				</div>
+				<div class="title">
+					<h3><a href="#">{{ entry.title }}</a></h3>
+				</div>
+				<div>
+					<span>{{ entry.shortDescription }}</span>
+				</div>
+		</div>
+		{% endfor%}
+	</div>
+<div style="clear: both;"></div>

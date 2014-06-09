@@ -42,4 +42,8 @@ class HomeController extends Controller{
 	public function aboutAction(){
 		return $this->render("JKASiteBundle:Home:about.html.twig");
 	}
+	
+	public function honbuAction(){
+		return $this->render("JKASiteBundle:Home:honbu.html.twig");
+	}
 }

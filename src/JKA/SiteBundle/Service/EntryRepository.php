@@ -29,4 +29,14 @@ class EntryRepository extends EntityRepository{
 		return array(Entry::$NEW => $news,Entry::$COMUNICATION => $inst, Entry::$EVENT => $event);
 	}
 	
+	public function find($type,$asArray=false) {
+		$qb = $this->getEntityManager()->createQueryBuilder();
+		$qb->add("select", "e")
+		->from("JKASiteBundle:Entry", "e")
+		->andWhere("e.type = :type")
+		->setParameter("type",$type);
+		
+		return $qb->getQuery()->getResult($asArray?Query::HYDRATE_ARRAY:Query::HYDRATE_OBJECT);
+	}
+	
 }

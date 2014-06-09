@@ -10,8 +10,22 @@
         <requirement key="_format">html|json</requirement>
     </route>
     
+    <route id="listEntry" path="/entry/type/{type}/{_format}">
+        <default key="_controller">JKASiteBundle:Entry:listEntries</default>
+        <default key="_format">html</default>
+        <requirement key="_format">html|json</requirement>
+    </route>
+    
+    <route id="comms" path="/comms/list/">
+        <default key="_controller">JKASiteBundle:Entry:listComms</default>
+    </route>
+    
     <route id="about" path="/home/about/">
         <default key="_controller">JKASiteBundle:Home:about</default>
+    </route>
+    
+    <route id="honbu" path="/honbu/">
+        <default key="_controller">JKASiteBundle:Home:honbu</default>
     </route>
     
     <route id="news_index" pattern="/news">

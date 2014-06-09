@@ -7,6 +7,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use JKA\SiteBundle\Entity\Entry;
 use JKA\SiteBundle\Form\Type\EntryType;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class EntryController extends Controller{
 
@@ -19,6 +23,34 @@ class EntryController extends Controller{
 																		'inst' => $entries[Entry::$COMUNICATION],
 																		'dojos' => $dojos
 		));
+	}
+	
+	public function listEntriesAction($type,$_format) {
+		
+		$encoders = array(new XmlEncoder(), new JsonEncoder());
+		$normalizers = array(new GetSetMethodNormalizer());
+		
+		$serializer = new Serializer($normalizers, $encoders);
+		$asArray = $_format=="json"?true:false;
+		
+		$em = $this->getDoctrine()->getManager();
+		
+		$entries =  $em->getRepository("JKASiteBundle:Entry")->find($type,$_format == "json");
+		
+
+		if ($_format== "json"){
+			$json =$serializer->serialize(array("entries" => $entries),"json");
+			$res = new Response($json);
+		}else {
+			$res = $this->render("JKASiteBundle:Entry:index.html.twig",array('entries' => $entries));
+		}
+		return $res;
+	}
+	
+	public function listCommsAction(){
+		$em = $this->getDoctrine()->getManager();
+		$comms =  $em->getRepository("JKASiteBundle:Entry")->find("com");
+		return $this->render("JKASiteBundle:Entry:comms.html.twig",array('comms' => $comms));
 	}
 
 	public function createAction(Request $request){

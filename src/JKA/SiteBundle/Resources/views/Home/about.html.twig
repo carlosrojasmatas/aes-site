@@ -290,8 +290,9 @@
 
 {% block navbar %}
 	<li><a href="{{ path('homepage')}}">Home</a></li>
-	<li><a href="{{ path('about')}}" class="active">Quienes Somos</a></li>
-	<li><a href="#">Comunicaciones</a></li>
+	<li class="active"><a href="{{ path('about')}}">Quienes Somos</a></li>
+	<li><a href="{{ path('honbu')}}">Nuestro Honbu Dojo</a></li>
+	<li><a href="{{ path('comms')}}">Comunicaciones</a></li>
 	<li><a href="{{ path('news_index') }}">Noticias y Eventos</a></li>
 	<li><a href="#">Dojos</a></li>
 	<li><a href="#">Fotos y videos</a></li>
