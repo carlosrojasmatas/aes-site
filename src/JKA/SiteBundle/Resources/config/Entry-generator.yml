@@ -52,7 +52,7 @@ builders:
     edit:
         params:
             title: "Editando \"%object%\"|{ %object%: Entry.title }|"
-            display: [title,shortDescription,description,type,start,end,enabled,path,frontPath,image,frontImage]
+            display: [title,shortDescription,description,country,location,place,type,start,end,enabled,path,frontPath,image,frontImage]
             actions:
                 save: ~
                 list: ~

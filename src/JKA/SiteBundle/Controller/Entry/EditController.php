@@ -3,7 +3,6 @@
 namespace JKA\SiteBundle\Controller\Entry;
 
 use Admingenerated\JKASiteBundle\BaseEntryController\EditController as BaseEditController;
-use JKA\SiteBundle\Service\FileService\FileService;
 use JKA\SiteBundle\Entity\Entry;
 
 /**

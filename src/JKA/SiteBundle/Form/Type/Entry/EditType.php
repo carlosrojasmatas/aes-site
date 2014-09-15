@@ -26,7 +26,7 @@ class EditType extends BaseEditType
 				'data-theme' => 'bbcode')));
 		$builder->add('description', 'textarea', $formOptions);
 		
-		$formOptions = $this->getFormOption('type', array( 'label' => 'Tipo de entrada', 'choices'=> array("Noticia","Evento","Comunicacion") ));
+		$formOptions = $this->getFormOption('type', array( 'label' => 'Tipo de entrada', 'choices'=> array("new"=>"Noticia","event"=>"Evento","com"=>"Comunicacion") ));
 		$builder->add('type', 'choice', $formOptions);
 		
 		$formOptions = $this->getFormOption('start', array(  'required' => false,  'label' => 'Start',  'translation_domain' => 'Admin',));

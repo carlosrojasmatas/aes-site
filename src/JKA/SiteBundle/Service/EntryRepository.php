@@ -29,7 +29,7 @@ class EntryRepository extends EntityRepository{
 		return array(Entry::$NEW => $news,Entry::$COMUNICATION => $inst, Entry::$EVENT => $event);
 	}
 	
-	public function find($type,$asArray=false) {
+	public function findByType($type,$asArray=false) {
 		$qb = $this->getEntityManager()->createQueryBuilder();
 		$qb->add("select", "e")
 		->from("JKASiteBundle:Entry", "e")

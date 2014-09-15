@@ -13,7 +13,12 @@
     <route id="listEntry" path="/entry/type/{type}/{_format}">
         <default key="_controller">JKASiteBundle:Entry:listEntries</default>
         <default key="_format">html</default>
+        <default key="region">all</default>
         <requirement key="_format">html|json</requirement>
+    </route>
+    
+    <route id="showDetail" path="/entry/detail/{id}">
+        <default key="_controller">JKASiteBundle:Entry:detail</default>
     </route>
     
     <route id="comms" path="/comms/list/">

@@ -2,17 +2,19 @@
 
 namespace JKA\SiteBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert; 
 use Symfony\Component\Console\Application;
-use JKA\SiteBundle\Service\FileService\FileService;
+use JKA\SiteBundle\Entity\ViewObject;
+
 /**
  *@ORM\Entity(repositoryClass="JKA\SiteBundle\Service\EntryRepository")
  *@ORM\Table(name="entry")
  *
  */
-class Entry extends UploadableEntity{
+class Entry extends UploadableEntity implements ViewObject{
 	
 	public static $COMUNICATION="com";
 	public static $NEW="new";
@@ -111,8 +113,21 @@ class Entry extends UploadableEntity{
 	 * @ORM\Column(type="boolean")
 	 */
 	protected $enabled;
-
 	
+	/**
+	 * @var datetime $created
+	 *
+	 * @Gedmo\Timestampable(on="create")
+	 * @ORM\Column(type="datetime")
+	 */
+	protected $created;
+	
+	public function getCreated()
+	{
+		return $this->created;
+	}
+	
+		
 	public function setId($id){
 		$this->id=$id;
 		
@@ -408,6 +423,10 @@ class Entry extends UploadableEntity{
     {
         return $this->country;
     }
+    
+    public function getCountryAsString(){
+    	return $this->country->__toString();
+    }
 
     /**
      * Set location
@@ -434,15 +453,22 @@ class Entry extends UploadableEntity{
 
     
     public function getStartPreformattedDate(){
-		list($year, $month, $day) = preg_split('[-]', $this->getStart()->format("Y-m-d"));
-    	$date= $day." de ".$this->months[$month];
-    	return $date;
+    	return $this->formatDate($this->getStart());
     }
     
     public function getEndPreformattedDate(){
-    	list($year, $month, $day) = preg_split('[-]', $this->getEnd());
-    	$date= $day." de ".$this->months[$month];
-    	return $date;
+    	return $this->formatDate($this->getEnd());
+    }
+    
+    public function getFCreated(){
+    	return $this->formatDate($this->getCreated());
+    }
+    
+    private function formatDate($date) {
+    	list($year, $month, $day) = preg_split('[-]', $date->format("Y-m-d"));
+    	$fdate= $day." de ".$this->months[$month]." de ".$year;
+    	return $fdate;
+    	 
     }
     
 
@@ -470,5 +496,21 @@ class Entry extends UploadableEntity{
     		return $this->path;
     	}
         return $this->frontPath;
+    }
+    
+    public function __toString() {
+    	return $this->title;
+    }
+    
+    public function asViewObject() {
+    	
+    	return array(
+    		"title" => $this->title,
+    		"shortDescription" => $this->shortDescription,
+    		"path" => $this->frontPath,
+    		"from" => $this->getStartPreformattedDate(),
+    		"to" => $this->getEndPreformattedDate()
+    			
+    	);
     }
 }

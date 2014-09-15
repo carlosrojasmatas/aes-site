@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: doctrine_extensions.yml }
     - { resource: "@JKASiteBundle/Resources/config/services.xml"}
 framework:
     #esi:             ~
@@ -61,6 +62,7 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+   
 
 # Swiftmailer Configuration
 swiftmailer:

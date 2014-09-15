@@ -1,0 +1,20 @@
+ {% extends '::base.html.twig' %} 
+
+ {% block body %}
+	<h2>{{ entry.title}}</h2>
+	<p><i>{{ entry.fCreated}}</i></p> 	
+	<p><i>{{ entry.description}}</i></p> 	
+
+ {% endblock %}
+
+{% block navbar %}
+	<li><a href="{{ path('homepage')}}">Home</a></li>
+	<li><a href="{{ path('about')}}">Quienes Somos</a></li>
+	<li><a href="{{ path('honbu')}}">Nuestro Honbu Dojo</a></li>
+	<li class="active"><a href="{{path('comms')}}">Comunicaciones</a></li>
+	<li><a href="{{ path('news_index') }}">Noticias y Eventos</a></li>
+	<li><a href="#">Dojos</a></li>
+	<li><a href="#">Fotos y videos</a></li>
+	<li><a href="#">Contacto</a></li>
+	<li><a href="{{ path('create_entry') }}">Nueva entrada</a></li>
+{% endblock %}

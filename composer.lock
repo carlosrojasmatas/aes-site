@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "9a5c9ae36b82cf12f0d493850a630964",
+    "hash": "53db6588b83e7f18d1d1ec9e7e1838ec",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -38,6 +39,46 @@
             "description": "Defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.",
             "homepage": "http://paulirish.com/2011/the-history-of-the-html5-shiv/",
             "time": "2013-09-23 07:20:29"
+        },
+        {
+            "name": "behat/transliterator",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Behat/Transliterator.git",
+                "reference": "c93521d3462a554332d1ef5bb0e9b5b8ca4106c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/c93521d3462a554332d1ef5bb0e9b5b8ca4106c4",
+                "reference": "c93521d3462a554332d1ef5bb0e9b5b8ca4106c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Behat\\Transliterator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Artistic-1.0"
+            ],
+            "description": "String transliterator",
+            "keywords": [
+                "i18n",
+                "slug",
+                "transliterator"
+            ],
+            "time": "2014-05-15 22:08:22"
         },
         {
             "name": "cedriclombardot/admingenerator-generator-bundle",
@@ -996,6 +1037,87 @@
                 "orm"
             ],
             "time": "2014-02-08 16:35:09"
+        },
+        {
+            "name": "gedmo/doctrine-extensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
+                "reference": "fff460dfb1b2edeaaccc96a8327320555be1c023"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/fff460dfb1b2edeaaccc96a8327320555be1c023",
+                "reference": "fff460dfb1b2edeaaccc96a8327320555be1c023",
+                "shasum": ""
+            },
+            "require": {
+                "behat/transliterator": "~1.0",
+                "doctrine/common": "~2.2",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.4.0-RC3",
+                "doctrine/dbal": ">=2.4.0-RC1",
+                "doctrine/mongodb": ">=1.0.3",
+                "doctrine/mongodb-odm": ">=1.0.0-BETA9",
+                "doctrine/orm": ">=2.4.0-RC1",
+                "symfony/yaml": "2.3.1"
+            },
+            "suggest": {
+                "doctrine/dbal": ">=2.3.2",
+                "doctrine/mongodb": ">=1.0.1",
+                "doctrine/mongodb-odm": ">=1.0.0-BETA7",
+                "doctrine/orm": ">=2.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gedmo\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                },
+                {
+                    "name": "Gediminas Morkevicius",
+                    "email": "gediminas.morkevicius@gmail.com"
+                },
+                {
+                    "name": "Gustavo Falco",
+                    "email": "comfortablynumb84@gmail.com"
+                }
+            ],
+            "description": "Doctrine2 behavioral extensions",
+            "homepage": "http://gediminasm.org/",
+            "keywords": [
+                "Blameable",
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "timestampable",
+                "translatable",
+                "tree",
+                "uploadable"
+            ],
+            "time": "2014-09-12 15:07:29"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2266,8 +2388,10 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "cedriclombardot/admingenerator-generator-bundle": 20,
-        "stfalcon/tinymce-bundle": 20
+        "stfalcon/tinymce-bundle": 20,
+        "gedmo/doctrine-extensions": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },

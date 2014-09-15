@@ -25,21 +25,35 @@ class EntryController extends Controller{
 		));
 	}
 	
-	public function listEntriesAction($type,$_format) {
+	public function detailAction($id){
+		$em = $this->getDoctrine()->getManager();
 		
-		$encoders = array(new XmlEncoder(), new JsonEncoder());
-		$normalizers = array(new GetSetMethodNormalizer());
+		$entry =  $em->getRepository("JKASiteBundle:Entry")->find($id);
 		
-		$serializer = new Serializer($normalizers, $encoders);
-		$asArray = $_format=="json"?true:false;
+		return $this->render("JKASiteBundle:Entry:detail.html.twig",array('entry' => $entry));
+	}
+	
+	public function listEntriesAction($type,$_format,$region) {
+		
+		$encoders = array(new JsonEncoder());
+		$normalizer = new GetSetMethodNormalizer();
+		
+		$normalizer->setCallbacks(array('start'=>$dateCallback));
+		
+		$serializer = new Serializer(array($normalizer), $encoders);
 		
 		$em = $this->getDoctrine()->getManager();
 		
-		$entries =  $em->getRepository("JKASiteBundle:Entry")->find($type,$_format == "json");
-		
+		$entries =  $em->getRepository("JKASiteBundle:Entry")->findByType($type);
 
 		if ($_format== "json"){
-			$json =$serializer->serialize(array("entries" => $entries),"json");
+			$viewEntries = array();
+			
+			foreach ($entries as $entry){
+				$viewEntries += $entry->asViewObject();
+			}
+			
+			$json =$serializer->serialize(array("entries" => $viewEntries),"json");
 			$res = new Response($json);
 		}else {
 			$res = $this->render("JKASiteBundle:Entry:index.html.twig",array('entries' => $entries));
@@ -49,7 +63,7 @@ class EntryController extends Controller{
 	
 	public function listCommsAction(){
 		$em = $this->getDoctrine()->getManager();
-		$comms =  $em->getRepository("JKASiteBundle:Entry")->find("com");
+		$comms =  $em->getRepository("JKASiteBundle:Entry")->findByType("com");
 		return $this->render("JKASiteBundle:Entry:comms.html.twig",array('comms' => $comms));
 	}
 
