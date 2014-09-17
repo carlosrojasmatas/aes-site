@@ -41,19 +41,21 @@
 		        </div><!--/.nav-collapse -->
 		      </div>
 		    </div>
-		
-			<div class = "row" >
-				<div class = "cols-xs-18 col-md-12">
-	 				<div class="separator-line"></div>
-					<div class="introline">
-						<div class="intro-text" >
-					 	   {% block intro%}{% endblock%}
-						</div>
-					</div>
-					<div class="separator-line"></div>
-				</div>
-			</div>
 			
+			{% block description %}
+				<div class = "row" >
+					<div class = "cols-xs-18 col-md-12">
+		 				<div class="separator-line"></div>
+						<div class="introline">
+							<div class="intro-text" >
+						 	   {% block intro%}{% endblock%}
+							</div>
+						</div>
+						<div class="separator-line"></div>
+					</div>
+				</div>
+			{% endblock %}
+
 			<div class="row">
 				<div class = "cols-xs-18 col-md-12">
 					{% block body %}{% endblock %}

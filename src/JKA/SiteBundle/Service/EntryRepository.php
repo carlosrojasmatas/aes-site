@@ -36,7 +36,23 @@ class EntryRepository extends EntityRepository{
 		->andWhere("e.type = :type")
 		->setParameter("type",$type);
 		
+		
 		return $qb->getQuery()->getResult($asArray?Query::HYDRATE_ARRAY:Query::HYDRATE_OBJECT);
+	}
+	
+	public function entryPagination($type,$paginator,$page,$limit=5){
+		$qb = $this->getEntityManager()->createQueryBuilder();
+		$qb->add("select", "e")
+		->from("JKASiteBundle:Entry", "e")
+		->andWhere("e.type = :type")
+		->setParameter("type",$type);
+		
+		$pagination = $paginator->paginate(
+			$qb->getQuery(),
+				$page,
+				$limit
+		);
+		return $pagination;
 	}
 	
 }

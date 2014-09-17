@@ -24,7 +24,8 @@
 		"incenteev/composer-parameter-handler" : "~2.0",
 		"cedriclombardot/admingenerator-generator-bundle" : "2.3.*@dev",
 		"stfalcon/tinymce-bundle" : "dev-master",
-		"gedmo/doctrine-extensions": "dev-master"
+		"gedmo/doctrine-extensions" : "dev-master",
+		"knplabs/knp-paginator-bundle": "~2.4"
 	},
 	"scripts" : {
 		"post-install-cmd" : [

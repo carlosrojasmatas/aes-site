@@ -38,8 +38,6 @@ class EntryController extends Controller{
 		$encoders = array(new JsonEncoder());
 		$normalizer = new GetSetMethodNormalizer();
 		
-		$normalizer->setCallbacks(array('start'=>$dateCallback));
-		
 		$serializer = new Serializer(array($normalizer), $encoders);
 		
 		$em = $this->getDoctrine()->getManager();
@@ -63,8 +61,10 @@ class EntryController extends Controller{
 	
 	public function listCommsAction(){
 		$em = $this->getDoctrine()->getManager();
-		$comms =  $em->getRepository("JKASiteBundle:Entry")->findByType("com");
-		return $this->render("JKASiteBundle:Entry:comms.html.twig",array('comms' => $comms));
+		$page= $this->getRequest()->get("page",1);
+		$paginator = $this->get("knp_paginator");
+		$comms =  $em->getRepository("JKASiteBundle:Entry")->entryPagination("com",$paginator,$page);
+		return $this->render("JKASiteBundle:Entry:comms.html.twig",array('pagination' => $comms));
 	}
 
 	public function createAction(Request $request){

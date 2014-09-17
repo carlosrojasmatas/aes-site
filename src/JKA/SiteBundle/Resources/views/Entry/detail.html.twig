@@ -1,10 +1,18 @@
  {% extends '::base.html.twig' %} 
 
+ {% block description %} {% endblock %}	
  {% block body %}
-	<h2>{{ entry.title}}</h2>
-	<p><i>{{ entry.fCreated}}</i></p> 	
-	<p><i>{{ entry.description}}</i></p> 	
-
+	<div class="detail">
+		<h2>{{ entry.title}}</h2>
+		<p class="created" >{{ entry.fCreated}}</p> 	
+		<div class="entry-content">
+			<img height="300" src="/{{entry.path}}" />
+			{{ entry.description | raw }}
+		</div>
+	</div>
+	<div class="detail-footer">
+		<a href="{{path('comms')}}">Volver al listado</a>
+	</div>
  {% endblock %}
 
 {% block navbar %}
@@ -17,4 +25,9 @@
 	<li><a href="#">Fotos y videos</a></li>
 	<li><a href="#">Contacto</a></li>
 	<li><a href="{{ path('create_entry') }}">Nueva entrada</a></li>
+{% endblock %}
+ 
+{% block stylesheets%} 
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/news.css') }}" rel="stylesheet" />
 {% endblock %}

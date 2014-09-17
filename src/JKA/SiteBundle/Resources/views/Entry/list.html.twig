@@ -1,5 +1,8 @@
-	<div class="entry-list">
-		{% for entry in entries %}
+<div class="count">
+    {{ pagination.getTotalItemCount }}
+</div>	
+<div class="entry-list">
+		{% for entry in pagination %}
 		<div class="entry-row">
 				<div class="entry-image">
 					<img height="70" src="/{{ entry.path }}" />
@@ -12,5 +15,9 @@
 				</div>
 		</div>
 		{% endfor%}
-	</div>
+</div>
+{# display navigation #}
+<div class="navigation">
+    {{ knp_pagination_render(pagination) }}
+</div>
 <div style="clear: both;"></div>
