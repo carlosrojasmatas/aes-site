@@ -28,14 +28,6 @@ class EditType extends BaseEditType
 		$builder->add('address', 'text', $formOptions);
 	
 	
-		$formOptions = $this->getFormOption('city', array(  'required' => true,  'label' => 'Ciudad',  'translation_domain' => 'Admin',));
-		$builder->add('city', 'text', $formOptions);
-	
-	
-		$formOptions = $this->getFormOption('country', array(  'required' => true,  'label' => 'Pais',  'translation_domain' => 'Admin',));
-		$builder->add('country', 'text', $formOptions);
-	
-	
 		$formOptions = $this->getFormOption('mail', array(  'required' => true,  'label' => 'Email',  'translation_domain' => 'Admin',));
 		$builder->add('mail', 'text', $formOptions);
 	

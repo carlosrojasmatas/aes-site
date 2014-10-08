@@ -33,14 +33,14 @@ builders:
     new:
         params:
             title: Nuevo Dojo
-            display: [name, sensei,address,city,country,mail,enabled,position,image]
+            display: [name, sensei,address,country,location,city,mail,enabled,position,image]
             actions:
                 save: ~
                 list: ~
     edit:
         params:
             title: "Editando \"%object%\"|{ %object%: Dojo.name }|"
-            display: [name, sensei,address,city,country,mail,enabled,position,image]
+            display: [name, sensei,address,country,location,city,mail,enabled,position,image]
             actions:
                 save: ~
                 list: ~

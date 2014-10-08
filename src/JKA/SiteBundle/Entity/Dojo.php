@@ -43,7 +43,7 @@ class Dojo extends UploadableEntity implements ViewObject{
 	protected $city;
 	
 	/**
-	 * @ORM\ManyToOne(targetEntity="Country")
+	 * @ORM\ManyToOne(targetEntity="Country", inversedBy="dojos")
 	 * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
 	 */
 	protected $country;
@@ -191,10 +191,10 @@ class Dojo extends UploadableEntity implements ViewObject{
     /**
      * Set country
      *
-     * @param string $country
-     * @return Dojo
+     * @param \JKA\SiteBundle\Entity\Country $country
+     * @return Location
      */
-    public function setCountry($country)
+    public function setCountry(\JKA\SiteBundle\Entity\Country $country)
     {
         $this->country = $country;
 
@@ -204,7 +204,7 @@ class Dojo extends UploadableEntity implements ViewObject{
     /**
      * Get country
      *
-     * @return string 
+     * @return \JKA\SiteBundle\Entity\Country 
      */
     public function getCountry()
     {

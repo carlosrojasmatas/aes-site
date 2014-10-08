@@ -122,37 +122,4 @@ class Country {
     public function __toString(){
     	return $this->getName();
     }
-
-    /**
-     * Add dojos
-     *
-     * @param \JKA\SiteBundle\Entity\Dojo $dojos
-     * @return Country
-     */
-    public function addDojo(\JKA\SiteBundle\Entity\Dojo $dojos)
-    {
-        $this->dojos[] = $dojos;
-
-        return $this;
-    }
-
-    /**
-     * Remove dojos
-     *
-     * @param \JKA\SiteBundle\Entity\Dojo $dojos
-     */
-    public function removeDojo(\JKA\SiteBundle\Entity\Dojo $dojos)
-    {
-        $this->dojos->removeElement($dojos);
-    }
-
-    /**
-     * Get dojos
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getDojos()
-    {
-        return $this->dojos;
-    }
 }
