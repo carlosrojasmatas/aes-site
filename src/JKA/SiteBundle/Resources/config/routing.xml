@@ -4,42 +4,51 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="homepage" path="/home/{_format}">
+    <route id="homepage" pattern="/home/{_format}">
         <default key="_controller">JKASiteBundle:Home:home</default>
         <default key="_format">html</default>
         <requirement key="_format">html|json</requirement>
     </route>
     
-    <route id="listEntry" path="/entry/type/{type}/{_format}">
-        <default key="_controller">JKASiteBundle:Entry:listEntries</default>
+    <route id="listEntry" pattern="/entry/type/{type}/{_format}">
+        <default key="_controller">JKASiteBundle:CUstom:listEntries</default>
         <default key="_format">html</default>
         <default key="region">all</default>
         <requirement key="_format">html|json</requirement>
     </route>
     
-    <route id="showDetail" path="/entry/detail/{id}">
-        <default key="_controller">JKASiteBundle:Entry:detail</default>
+    <route id="showDetail" pattern="/entry/detail/{id}">
+        <default key="_controller">JKASiteBundle:Custom:detail</default>
     </route>
     
-    <route id="comms" path="/comms/list/">
-        <default key="_controller">JKASiteBundle:Entry:listComms</default>
+    <route id="comms" pattern="/comms/list/">
+        <default key="_controller">JKASiteBundle:Custom:listComms</default>
     </route>
     
-    <route id="about" path="/home/about/">
+    <route id="about" pattern="/home/about/">
         <default key="_controller">JKASiteBundle:Home:about</default>
     </route>
     
-    <route id="honbu" path="/honbu/">
+    <route id="honbu" pattern="/honbu/">
         <default key="_controller">JKASiteBundle:Home:honbu</default>
     </route>
     
     <route id="news_index" pattern="/news">
-        <default key="_controller">JKASiteBundle:Entry:indexNews</default>
+        <default key="_controller">JKASiteBundle:Custom:indexNews</default>
     </route>
     
     <route id="create_entry" pattern="/entry/create">
-    	<default key="_controller">JKASiteBundle:Entry:create</default>
+    	<default key="_controller">JKASiteBundle:Custom:create</default>
     </route>
+    
+    <route id="listDojos" pattern="/dojo/country/{country}/city/{city}/{_format}">
+        <default key="_controller">JKASiteBundle:Custom:listDojos</default>
+        <default key="_format">html</default>
+        <default key="country">all</default>
+        <default key="city">all</default>
+        <requirement key="_format">html|json</requirement>
+    </route>
+    
 
 	<!-- Admin routes -->
     <route id="listEntries" pattern="/entry/list">

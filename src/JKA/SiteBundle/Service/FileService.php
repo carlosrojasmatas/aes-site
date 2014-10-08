@@ -49,9 +49,12 @@ class FileService {
 		if (null != $entity->getResource()) {
 			
 			if($entity instanceof Entry){
+				
 				$path = $this->uploadEntryImage($entity->getResource());
 				$fpath = $this->uploadEntryFrontImage($entity->getFrontImage());
 				$entity->setFrontPath($fpath);
+				
+				
 			}else if($entity instanceof Dojo){
 				$path = $this->uploadDojoImage($entity->getResource());
 			}else{

@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry kind="src" path="web"/>
-	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
-	<buildpathentry kind="src" path="vendor"/>
-	<buildpathentry kind="src" path="app"/>
-	<buildpathentry kind="src" path="bin"/>
+	<buildpathentry kind="src" path="vendor/symfony/assetic-bundle"/>
+	<buildpathentry kind="src" path="vendor/psr/log"/>
+	<buildpathentry kind="src" path="vendor/behat/transliterator/src"/>
+	<buildpathentry excluding="Symfony/Component/HttpFoundation/Resources/stubs/|Symfony/Component/Intl/Resources/stubs/" kind="src" path="vendor/symfony/symfony/src"/>
+	<buildpathentry kind="src" path="vendor/doctrine/dbal/lib"/>
+	<buildpathentry kind="src" path="vendor/knplabs/knp-paginator-bundle"/>
+	<buildpathentry kind="src" path="vendor/gedmo/doctrine-extensions/lib"/>
+	<buildpathentry kind="src" path="vendor/composer"/>
+	<buildpathentry kind="src" path="vendor/doctrine/inflector/lib"/>
+	<buildpathentry kind="src" path="vendor/white-october/pagerfanta-bundle"/>
+	<buildpathentry kind="src" path="vendor/doctrine/collections/lib"/>
+	<buildpathentry kind="src" path="vendor/doctrine/cache/lib"/>
+	<buildpathentry kind="src" path="vendor/doctrine/annotations/lib"/>
+	<buildpathentry kind="src" path="vendor/cedriclombardot/twig-generator/src"/>
+	<buildpathentry kind="src" path="vendor/doctrine/common/lib"/>
+	<buildpathentry kind="src" path="vendor/twig/extensions/lib"/>
 	<buildpathentry kind="src" path="src"/>
+	<buildpathentry kind="src" path="vendor/symfony/icu"/>
+	<buildpathentry kind="src" path="vendor/incenteev/composer-parameter-handler"/>
+	<buildpathentry kind="src" path="vendor/swiftmailer/swiftmailer/lib"/>
+	<buildpathentry kind="src" path="vendor/knplabs/knp-components/src"/>
+	<buildpathentry kind="src" path="vendor/knplabs/knp-menu-bundle"/>
+	<buildpathentry kind="src" path="vendor/doctrine/orm/lib"/>
+	<buildpathentry kind="src" path="vendor/twig/twig/lib"/>
+	<buildpathentry kind="src" path="vendor/symfony/monolog-bundle"/>
+	<buildpathentry kind="src" path="vendor/knplabs/knp-menu/src"/>
+	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs"/>
+	<buildpathentry kind="src" path="vendor/doctrine/doctrine-bundle"/>
+	<buildpathentry kind="src" path="vendor/monolog/monolog/src/Monolog"/>
+	<buildpathentry kind="src" path="vendor/pagerfanta/pagerfanta/src"/>
+	<buildpathentry kind="src" path="vendor/sensio/generator-bundle"/>
+	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Resources/stubs"/>
+	<buildpathentry kind="src" path="vendor/sensio/framework-extra-bundle"/>
+	<buildpathentry kind="src" path="vendor/sensio/distribution-bundle"/>
+	<buildpathentry kind="src" path="vendor/symfony/swiftmailer-bundle"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="vendor/stfalcon/tinymce-bundle"/>
+	<buildpathentry kind="src" path="vendor/cedriclombardot/admingenerator-generator-bundle"/>
+	<buildpathentry kind="src" path="vendor/kriswallsmith/assetic/src"/>
+	<buildpathentry kind="src" path="vendor/jdorn/sql-formatter/lib"/>
+	<buildpathentry kind="src" path="vendor/doctrine/lexer/lib"/>
+	<buildpathentry kind="src" path="vendor/robloach/component-installer/src"/>
 </buildpath>

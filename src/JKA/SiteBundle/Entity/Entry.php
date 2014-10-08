@@ -104,6 +104,12 @@ class Entry extends UploadableEntity implements ViewObject{
 	protected $location;
 	
 	/**
+	 * @ORM\OneToMany(targetEntity="Attachment", mappedBy="entry")
+	 */
+	protected $attachments;
+	
+	
+	/**
 	 * @ORM\Column(type="text")
 	 */
 	protected $place;
@@ -512,5 +518,59 @@ class Entry extends UploadableEntity implements ViewObject{
     		"to" => $this->getEndPreformattedDate()
     			
     	);
+    }
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->attachments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Entry
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Add attachments
+     *
+     * @param \JKA\SiteBundle\Entity\Attachment $attachments
+     * @return Entry
+     */
+    public function addAttachment(\JKA\SiteBundle\Entity\Attachment $attachments)
+    {
+        $this->attachments[] = $attachments;
+
+        return $this;
+    }
+
+    /**
+     * Remove attachments
+     *
+     * @param \JKA\SiteBundle\Entity\Attachment $attachments
+     */
+    public function removeAttachment(\JKA\SiteBundle\Entity\Attachment $attachments)
+    {
+        $this->attachments->removeElement($attachments);
+    }
+
+    /**
+     * Get attachments
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAttachments()
+    {
+        return $this->attachments;
     }
 }

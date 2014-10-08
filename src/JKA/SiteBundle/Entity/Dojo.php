@@ -6,12 +6,13 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert; 
 use Symfony\Component\Console\Application;
+use JKA\SiteBundle\Entity\ViewObject;
 
 /**
  *@ORM\Entity(repositoryClass="JKA\SiteBundle\Service\DojoRepository")
  *@ORM\Table(name="dojo")
  */
-class Dojo extends UploadableEntity{
+class Dojo extends UploadableEntity implements ViewObject{
 	
 	
 	/**
@@ -361,4 +362,16 @@ class Dojo extends UploadableEntity{
     {
         return $this->location;
     }
+    
+	/* (non-PHPdoc)
+	 * @see \JKA\SiteBundle\Entity\ViewObject::asViewObject()
+	 */
+	public function asViewObject() {
+		return array(
+			"name" => $this->getName(),
+			"address"=>$this->getAddress()	
+		);
+
+	}
+
 }

@@ -1,0 +1,37 @@
+<?php
+namespace JKA\SiteBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ *@ORM\Entity
+ *@ORM\Table(name="attachment")
+ *
+ */
+class Attachment {
+	/**
+	 * @ORM\Column(type="integer")
+	 * @ORM\Id
+	 * @ORM\GeneratedValue(strategy="AUTO")
+	 */
+	private $id;
+
+	/**
+	 * @ORM\Column(type="string",length=100)
+	 */
+	private $path;
+	
+	/**
+	 * @Assert\File(maxSize="300k")
+	 */
+	private $file;
+	
+	
+	/**
+	 * @ORM\ManyToOne(targetEntity="Entry", inversedBy="attachments")
+	 * @ORM\JoinColumn(name="entry_id", referencedColumnName="id")
+	 */
+	
+	private $entry;
+}
